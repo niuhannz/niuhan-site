@@ -88,8 +88,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/uncertain-regards-thumb.jpg',
       heroImage: 'images/uncertain-regards-hero.jpg',
-      descEn: 'Drove across the North China Plain with Wang Xiaomu to photograph the Yan and Yellow Emperor statues. Along the way: a Sphinx with its head removed and placed beside its body — Egypt had threatened a copyright lawsuit, so human face and lion body were now legally separate entities. Nearby, a building that was half Temple of Heaven, half US Capitol. On the drive back, thick fog. Visibility: a few meters. Xiaomu said we\'ll make it, then fell asleep. I drove alone until dawn.',
-      descZh: '和王小木开车穿越华北平原，去炎黄二帝山拍参考照片。路上看见狮身人面像，头被截掉放在一边——因为埃及告侵权，所以人面是人面，狮身是狮身。旁边有座建筑，半边是天坛，半边是美国国会山。返程夜里起了大雾，能见度只有几米。小木说咱必干，然后睡着了。我一个人开到天亮。',
+      descEn: 'Cannes Film Festival. Outside the red carpet entrance. A director has one spare ticket. A girl approaches — she doesn\'t want one, she wants two. Her and her boyfriend. He gives her both. Then he stands outside alone.',
+      descZh: '戛纳电影节，红毯外。一个导演手里多出一张票。人群里，一个女孩走过来——她不要一张，她要两张，她和她男朋友一起进去。导演把两张票都给了她。然后他自己站在门外。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -137,15 +137,15 @@
     {
       id: 'home',
       titleZh: '回家',
-      titleEn: 'Home',
+      titleEn: 'Homecoming',
       year: 2015,
-      type: 'omnibus',
-      format: { en: 'Omnibus Film', zh: '合集片' },
+      type: 'short',
+      format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/home-thumb.jpg',
       heroImage: 'images/home-hero.jpg',
-      descEn: 'My son was born. I\'ve been thinking about what I\'ll tell him one day, if he ever wants to pick up a camera. I think I\'ll say: don\'t wait until you\'re ready. Just take the camera and go. Let yourself get lost.',
-      descZh: '儿子出生。我在想，等他长大，等他某一天也想拿起摄影机，我会告诉他什么。我想我会告诉他：不要等到准备好了再去拍。带上摄影机出门。让自己迷路。',
+      descEn: 'He just went to the harbor to hang around. Shanghai, 1949. He boarded a ship with some friends. The ship went to Taiwan. He spent the rest of his life there. Decades later, when the borders finally opened, he went back. His parents were gone. The streets didn\'t recognize him. Everything had changed. He just went to the harbor to hang around.',
+      descZh: '他只是去港口玩了一下。1949年，上海，他跟朋友上了一艘船。船去了台湾。他就这样在台湾过了一辈子。几十年后，两岸开放，他回去了。父母不在了，街道不认识了，什么都变了。他只是去港口玩了一下。',
       credits: { en: 'Directed by Niu Han', zh: '导演：牛涵' }
     },
     {
