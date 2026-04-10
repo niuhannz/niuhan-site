@@ -1085,6 +1085,12 @@ h1, h2, h3, h4 {
     animation: mobileMenuIn 0.2s ease-out;
   }
 
+  /* Force text color in overlay — overrides nav-transparent white */
+  .nav-links.mobile-open,
+  .nav-links.mobile-open .nav-link {
+    color: var(--color-text) !important;
+  }
+
   .nav-links.mobile-open .mobile-menu-close {
     display: block;
     position: absolute;
@@ -1121,6 +1127,7 @@ h1, h2, h3, h4 {
   .nav-links.mobile-open .nav-link.active::after {
     bottom: -2px;
     height: 2px;
+    background: var(--color-text) !important;
   }
 
   @keyframes mobileMenuIn {
