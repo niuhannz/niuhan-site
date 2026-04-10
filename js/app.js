@@ -216,17 +216,17 @@
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
     },
-    {
-      id: 'cinema-impromptu',
-      titleZh: '即兴电影',
-      titleEn: 'Cinema Impromptu',
-      year: 2026,
-      type: 'nonfiction',
-      format: { en: 'Non-Fiction', zh: '非虚构' },
-      descEn: 'A non-fiction work by Niu Han.',
-      descZh: '牛涵非虚构作品。',
-      publisher: { en: '', zh: '' }
-    }
+    // {
+    //   id: 'cinema-impromptu',
+    //   titleZh: '即兴电影',
+    //   titleEn: 'Cinema Impromptu',
+    //   year: 2026,
+    //   type: 'nonfiction',
+    //   format: { en: 'Non-Fiction', zh: '非虚构' },
+    //   descEn: 'A non-fiction work by Niu Han.',
+    //   descZh: '牛涵非虚构作品。',
+    //   publisher: { en: '', zh: '' }
+    // }
   ];
 
   // ---------- State ----------
