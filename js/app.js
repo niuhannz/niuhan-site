@@ -136,7 +136,7 @@
     },
     {
       id: 'home',
-      titleZh: '家',
+      titleZh: '回家',
       titleEn: 'Home',
       year: 2015,
       type: 'omnibus',
