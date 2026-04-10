@@ -121,6 +121,18 @@
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
+      id: 'melancholia-i',
+      titleZh: '忧郁 I',
+      titleEn: 'Melancholia I',
+      year: 2013,
+      type: 'short',
+      format: { en: 'Short Film', zh: '短片' },
+      duration: { en: 'TBD', zh: '待定' },
+      descEn: 'Description placeholder for Melancholia I.',
+      descZh: '《忧郁 I》简介占位。',
+      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+    },
+    {
       id: 'autumn-of-freedom',
       titleZh: '自由之丘',
       titleEn: 'Freedom Hills',
