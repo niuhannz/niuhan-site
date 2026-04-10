@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>牛涵 Niu Han — Filmmaker / Writer</title>
+  <meta name="description" content="Portfolio of Niu Han (牛涵) — filmmaker and writer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>牛</text></svg>">
+</head>
+<body>
+
+  <!-- ============ Navigation ============ -->
+  <nav class="nav">
+    <div class="nav-logo" data-nav="home">
+      <span class="lang-en">Niu Han</span>
+      <span class="lang-zh">牛涵</span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <button class="nav-link active" data-nav="home">
+        <span class="lang-en">Home</span>
+        <span class="lang-zh">首页</span>
+      </button>
+      <button class="nav-link" data-nav="films">
+        <span class="lang-en">Films</span>
+        <span class="lang-zh">电影</span>
+      </button>
+      <button class="nav-link" data-nav="writing">
+        <span class="lang-en">Writing</span>
+        <span class="lang-zh">著作</span>
+      </button>
+      <button class="nav-link" data-nav="about">
+        <span class="lang-en">About</span>
+        <span class="lang-zh">关于</span>
+      </button>
+      <button class="nav-link" data-nav="cv">
+        <span class="lang-en">CV</span>
+        <span class="lang-zh">简历</span>
+      </button>
+      <button class="nav-link" data-nav="journal">
+        <span class="lang-en">Journal</span>
+        <span class="lang-zh">日志</span>
+      </button>
+    </div>
+
+    <div class="nav-controls">
+      <button class="nav-btn" id="langToggle" aria-label="Toggle language">中 / EN</button>
+      <button class="nav-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <span id="themeIcon">◐</span>
+      </button>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ Home ============ -->
+  <section class="page active visible" id="page-home">
+    <div class="hero">
+      <h1 class="hero-name fade-in">
+        <span class="lang-zh">牛涵</span>
+        <span class="lang-en">Niu Han</span>
+      </h1>
+      <p class="hero-subtitle fade-in stagger-1">
+        <span class="lang-en">Filmmaker &amp; Writer</span>
+        <span class="lang-zh">电影导演 / 作家</span>
+      </p>
+
+      <div class="hero-featured fade-in stagger-2">
+        <div class="hero-featured-image" id="heroImage">
+          <!-- Placeholder — replace with actual featured image -->
+        </div>
+        <div class="hero-featured-caption">
+          <span>
+            <span class="lang-en">Featured: Commandment (2026)</span>
+            <span class="lang-zh">最新作品：诫命 (2026)</span>
+          </span>
+          <button class="nav-link" data-nav="films" style="font-size:0.75rem">
+            <span class="lang-en">View all films →</span>
+            <span class="lang-zh">查看全部电影 →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Films ============ -->
+  <section class="page" id="page-films">
+    <div class="page-inner">
+      <div class="works-header">
+        <h2 class="works-title">
+          <span class="lang-en">Films</span>
+          <span class="lang-zh">电影</span>
+        </h2>
+      </div>
+
+      <!-- Sub-filters -->
+      <div class="works-sub-filters" id="filmSubFilters">
+        <button class="sub-filter active" data-sub="all">
+          <span class="lang-en">All</span>
+          <span class="lang-zh">全部</span>
+        </button>
+        <button class="sub-filter" data-sub="feature">
+          <span class="lang-en">Features</span>
+          <span class="lang-zh">长片</span>
+        </button>
+        <button class="sub-filter" data-sub="short">
+          <span class="lang-en">Shorts</span>
+          <span class="lang-zh">短片</span>
+        </button>
+      </div>
+
+      <!-- Films Grid -->
+      <div class="works-grid" id="worksGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Work Detail Overlay ============ -->
+  <div class="work-detail" id="workDetail">
+    <button class="work-detail-close" id="workDetailClose">
+      <span class="lang-en">← Back</span>
+      <span class="lang-zh">← 返回</span>
+    </button>
+    <div class="work-detail-inner" id="workDetailInner">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- ============ Writing ============ -->
+  <section class="page" id="page-writing">
+    <div class="page-inner">
+      <div class="works-header">
+        <h2 class="works-title">
+          <span class="lang-en">Writing</span>
+          <span class="lang-zh">著作</span>
+        </h2>
+      </div>
+
+      <!-- Sub-filters -->
+      <div class="works-sub-filters" id="writingSubFilters">
+        <button class="writing-filter active" data-wsub="all">
+          <span class="lang-en">All</span>
+          <span class="lang-zh">全部</span>
+        </button>
+        <button class="writing-filter" data-wsub="novel">
+          <span class="lang-en">Novels</span>
+          <span class="lang-zh">小说</span>
+        </button>
+        <button class="writing-filter" data-wsub="nonfiction">
+          <span class="lang-en">Non-Fiction</span>
+          <span class="lang-zh">非虚构</span>
+        </button>
+        <button class="writing-filter" data-wsub="translation">
+          <span class="lang-en">Translation</span>
+          <span class="lang-zh">译作</span>
+        </button>
+      </div>
+
+      <!-- Writing Grid -->
+      <div class="works-grid" id="writingGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section class="page" id="page-about">
+    <div class="page-inner">
+      <div class="about-layout">
+        <div class="about-photo fade-in">
+          <!-- Placeholder — replace with headshot -->
+        </div>
+        <div class="about-content">
+          <h2 class="about-name fade-in">
+            <span class="lang-zh">牛涵</span>
+            <span class="lang-en">Niu Han</span>
+          </h2>
+          <div class="about-bio fade-in stagger-1">
+            <p class="lang-en" style="margin-bottom:1.5rem;">
+              Niu Han is a filmmaker and contemporary artist whose work explores memory, identity, and the poetics of everyday life. Working across narrative film, documentary, and installation, Han's practice is rooted in observation — the quiet rhythms of human experience, the spaces between words, and the textures of time.
+            </p>
+            <p class="lang-en" style="margin-bottom:1.5rem;">
+              His feature films have screened at international film festivals and art institutions. His latest work, <em>Commandment</em> (2026), continues his exploration of language, faith, and moral ambiguity.
+            </p>
+            <p class="lang-en">
+              Han lives and works between Beijing and Los Angeles.
+            </p>
+            <p class="lang-zh" style="margin-bottom:1.5rem;">
+              牛涵是一位电影导演与当代艺术家，其创作围绕记忆、身份认同与日常生活的诗意展开。横跨叙事电影、纪录片与装置艺术，他的实践植根于观察——人类经验的静谧节奏、言语之间的空隙、以及时间的肌理。
+            </p>
+            <p class="lang-zh" style="margin-bottom:1.5rem;">
+              他的长片作品曾在国际电影节与艺术机构展映。最新作品《诫命》（2026）延续了他对语言、信仰与道德模糊性的探索。
+            </p>
+            <p class="lang-zh">
+              牛涵生活和工作于北京与洛杉矶之间。
+            </p>
+          </div>
+          <div class="about-contact fade-in stagger-2">
+            <p>
+              <span class="lang-en">Contact: </span>
+              <span class="lang-zh">联系方式：</span>
+              <a href="mailto:niuhan@gmail.com">niuhan@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CV ============ -->
+  <section class="page" id="page-cv">
+    <div class="page-inner" style="max-width:900px;">
+      <h2 class="works-title" style="margin-bottom:var(--space-3xl);">
+        <span class="lang-en">Curriculum Vitae</span>
+        <span class="lang-zh">简历</span>
+      </h2>
+
+      <!-- Filmography -->
+      <div class="cv-section">
+        <div class="cv-section-title">
+          <span class="lang-en">Filmography</span>
+          <span class="lang-zh">影片目录</span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2026</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Commandment</span><span class="lang-zh">诫命</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2024</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Certified Groupies</span><span class="lang-zh">合法正果</span></h3>
+            <p><span class="lang-en">Short Film</span><span class="lang-zh">短片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2023</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Word</span><span class="lang-zh">话语</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2019</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Chinese Whispers</span><span class="lang-zh">呢喃</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2017</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">A Sweet Life</span><span class="lang-zh">甜美生活</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2017</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Uncertain Regards</span><span class="lang-zh">不确定的问候</span></h3>
+            <p><span class="lang-en">Short Film</span><span class="lang-zh">短片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2016</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Warm Smell of Coriander</span><span class="lang-zh">空中弥漫温热的香菜气息</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2015</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Between Yes and No</span><span class="lang-zh">是与不是之间</span></h3>
+            <p><span class="lang-en">Short Film</span><span class="lang-zh">短片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2013</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Land of Nobody</span><span class="lang-zh">不毛之国</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2009</span>
+          <div class="cv-details">
+            <h3><span class="lang-en">Freedom Hills</span><span class="lang-zh">自由之丘</span></h3>
+            <p><span class="lang-en">Feature Film</span><span class="lang-zh">长片</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenings & Festivals -->
+      <div class="cv-section">
+        <div class="cv-section-title">
+          <span class="lang-en">Screenings &amp; Festivals</span>
+          <span class="lang-zh">展映与电影节</span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">Year</span>
+          <div class="cv-details">
+            <h3 style="color:var(--color-text-tertiary); font-weight:400; font-style:italic;">
+              <span class="lang-en">Placeholder — add screenings here</span>
+              <span class="lang-zh">占位 — 在此添加展映信息</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exhibitions -->
+      <div class="cv-section">
+        <div class="cv-section-title">
+          <span class="lang-en">Exhibitions</span>
+          <span class="lang-zh">展览</span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">Year</span>
+          <div class="cv-details">
+            <h3 style="color:var(--color-text-tertiary); font-weight:400; font-style:italic;">
+              <span class="lang-en">Placeholder — add exhibitions here</span>
+              <span class="lang-zh">占位 — 在此添加展览信息</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-section">
+        <div class="cv-section-title">
+          <span class="lang-en">Education</span>
+          <span class="lang-zh">教育背景</span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">Year</span>
+          <div class="cv-details">
+            <h3 style="color:var(--color-text-tertiary); font-weight:400; font-style:italic;">
+              <span class="lang-en">Placeholder — add education here</span>
+              <span class="lang-zh">占位 — 在此添加教育信息</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards -->
+      <div class="cv-section">
+        <div class="cv-section-title">
+          <span class="lang-en">Awards &amp; Grants</span>
+          <span class="lang-zh">奖项与资助</span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">Year</span>
+          <div class="cv-details">
+            <h3 style="color:var(--color-text-tertiary); font-weight:400; font-style:italic;">
+              <span class="lang-en">Placeholder — add awards here</span>
+              <span class="lang-zh">占位 — 在此添加奖项信息</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Journal ============ -->
+  <section class="page" id="page-journal">
+    <div class="page-inner">
+      <h2 class="works-title" style="margin-bottom:var(--space-xl);">
+        <span class="lang-en">Journal</span>
+        <span class="lang-zh">日志</span>
+      </h2>
+
+      <div class="journal-list">
+        <article class="journal-entry fade-in">
+          <div class="journal-date">2026.03.30</div>
+          <h3 class="journal-title">
+            <span class="lang-en">Placeholder Entry — On Beginning</span>
+            <span class="lang-zh">占位条目 — 关于开始</span>
+          </h3>
+          <p class="journal-excerpt">
+            <span class="lang-en">This journal is a space for notes, reflections, and fragments from the process of making work. More entries coming soon.</span>
+            <span class="lang-zh">这个日志是一个记录笔记、思考和创作过程中片段的空间。更多内容即将发布。</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer" id="siteFooter">
+    <span>© 2026
+      <span class="lang-en">Niu Han. All rights reserved.</span>
+      <span class="lang-zh">牛涵 版权所有</span>
+    </span>
+    <span>
+      <a href="mailto:niuhan@gmail.com">niuhan@gmail.com</a>
+    </span>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
