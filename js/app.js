@@ -114,6 +114,8 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/woman-descending-thumb.jpg',
+      heroImage: 'images/woman-descending-hero.jpg',
       descEn: 'Description placeholder for Woman Descending the Staircase.',
       descZh: '《下楼梯的女人》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
