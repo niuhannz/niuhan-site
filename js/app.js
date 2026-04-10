@@ -110,6 +110,8 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/between-yes-and-no-thumb.jpg',
+      heroImage: 'images/between-yes-and-no-hero.jpg',
       descEn: 'Description placeholder for Between Yes and No.',
       descZh: '《是与不是之间》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
