@@ -150,6 +150,8 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/melancholia-i-thumb.jpg',
+      heroImage: 'images/melancholia-i-hero.jpg',
       descEn: 'Description placeholder for Melancholia I.',
       descZh: '《忧郁 I》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
