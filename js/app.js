@@ -409,6 +409,8 @@
   function toggleMobileMenu() {
     mobileMenuOpen = !mobileMenuOpen;
     navLinksContainer.classList.toggle('mobile-open', mobileMenuOpen);
+    document.querySelector('.nav').classList.toggle('nav-menu-open', mobileMenuOpen);
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
     var spans = mobileToggle.querySelectorAll('span');
     if (mobileMenuOpen) {
       spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
