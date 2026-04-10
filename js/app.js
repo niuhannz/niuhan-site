@@ -216,6 +216,28 @@
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
     },
+    {
+      id: 'wild-duck',
+      titleZh: '野鸟',
+      titleEn: 'The Wild Duck',
+      year: 2023,
+      type: 'translation',
+      format: { en: 'Translation', zh: '译著' },
+      descEn: 'A translation by Niu Han.',
+      descZh: '牛涵译著。',
+      publisher: { en: '', zh: '' }
+    },
+    {
+      id: 'art-of-dramatic-writing',
+      titleZh: '戏剧写作的艺术',
+      titleEn: 'The Art of Dramatic Writing',
+      year: 2023,
+      type: 'translation',
+      format: { en: 'Translation', zh: '译著' },
+      descEn: 'A translation by Niu Han.',
+      descZh: '牛涵译著。',
+      publisher: { en: '', zh: '' }
+    },
     // {
     //   id: 'cinema-impromptu',
     //   titleZh: '即兴电影',
