@@ -52,16 +52,16 @@
 
 /* ---------- Dark Theme ---------- */
 [data-theme="dark"] {
-  --color-bg: #0a0a0a;
-  --color-bg-secondary: #111111;
+  --color-bg: #1a1a1a;
+  --color-bg-secondary: #222222;
   --color-text: #e5e5e5;
   --color-text-secondary: #999999;
   --color-text-tertiary: #666666;
-  --color-border: #222222;
-  --color-border-light: #1a1a1a;
-  --color-overlay: rgba(10, 10, 10, 0.97);
-  --color-placeholder: #1a1a1a;
-  --color-placeholder-hover: #252525;
+  --color-border: #2a2a2a;
+  --color-border-light: #242424;
+  --color-overlay: rgba(26, 26, 26, 0.97);
+  --color-placeholder: #242424;
+  --color-placeholder-hover: #2e2e2e;
   --color-accent: #e5e5e5;
   --color-tag-bg: #1a1a1a;
   --color-tag-text: #aaaaaa;
@@ -435,7 +435,7 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0a0a0a;
+  background: #1a1a1a;
   z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
@@ -570,7 +570,7 @@ h1, h2, h3, h4 {
 
 /* ── Below-the-fold body ── */
 .wd-body {
-  background: #0a0a0a;
+  background: #1a1a1a;
   max-width: 900px;
   margin: 0 auto;
   padding: clamp(48px, 8vh, 96px) clamp(24px, 5vw, 80px) clamp(64px, 10vh, 120px);
@@ -622,7 +622,7 @@ h1, h2, h3, h4 {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #000;
+  background: #111;
   margin-bottom: var(--space-xl);
   overflow: hidden;
   cursor: pointer;
