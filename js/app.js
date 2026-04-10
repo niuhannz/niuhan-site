@@ -205,13 +205,13 @@
     },
     {
       id: 'force-and-source',
-      titleZh: '',
+      titleZh: '老子德道二篇',
       titleEn: 'The Force and the Source',
       year: 2023,
-      type: 'nonfiction',
-      format: { en: 'Non-Fiction', zh: '非虚构' },
-      descEn: 'A non-fiction work by Niu Han.',
-      descZh: '牛涵非虚构作品。',
+      type: 'translation',
+      format: { en: 'Translation', zh: '译著' },
+      descEn: 'A translation by Niu Han.',
+      descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
     },
     {
