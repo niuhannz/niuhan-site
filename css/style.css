@@ -896,10 +896,21 @@ h1, h2, h3, h4 {
 }
 
 .about-photo {
+  position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
   background: var(--color-placeholder);
   transition: background var(--transition-base);
+}
+
+.about-photo-credit {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
 }
 
 .about-content { padding-top: var(--space-lg); }
