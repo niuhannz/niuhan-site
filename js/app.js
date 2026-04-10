@@ -868,6 +868,7 @@
     themeToggle.addEventListener('click', toggleTheme);
     langToggle.addEventListener('click', toggleLang);
     mobileToggle.addEventListener('click', toggleMobileMenu);
+    document.getElementById('mobileMenuClose').addEventListener('click', toggleMobileMenu);
 
     subFilters.forEach(function(btn) {
       btn.addEventListener('click', function() {

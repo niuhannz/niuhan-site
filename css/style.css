@@ -205,6 +205,11 @@ h1, h2, h3, h4 {
   border-color: var(--color-text);
 }
 
+/* Mobile menu close button — hidden by default, shown inside overlay */
+.mobile-menu-close {
+  display: none;
+}
+
 /* Mobile menu */
 .nav-mobile-toggle {
   display: none;
@@ -1078,6 +1083,23 @@ h1, h2, h3, h4 {
     gap: var(--space-md);
     z-index: 99;
     animation: mobileMenuIn 0.2s ease-out;
+  }
+
+  .nav-links.mobile-open .mobile-menu-close {
+    display: block;
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-text);
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+    padding: var(--space-sm);
+    line-height: 1;
+  }
+  .nav-links.mobile-open .mobile-menu-close:hover {
+    opacity: 1;
   }
 
   .nav-links.mobile-open .nav-link {
