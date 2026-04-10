@@ -18,8 +18,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/commandment-thumb.jpg',
       heroImage: 'images/commandment-hero.jpg',
-      descEn: 'Submitted to Cannes. The subtitles weren\'t finished, but the deadline was the deadline. Sometimes you just have to send it. I was sitting in a Nashville gas station when I realized: every film I\'ve ever made has been about the same thing — the gap between what a person wants and what life actually gives them. Seven films. All the same question.',
-      descZh: '送去了戛纳。字幕还没做完，但截止日期到了，就这样送出去了。有时候就是得先送出去。我在Nashville的一个加油站里坐着，想清楚了一件事：我一直在拍的东西，其实是同一个问题——人和自己执念之间的那道裂缝。七部片子，都是这个。',
+      descEn: 'A devout church elder believes God has called him to take a second wife. His faith is genuine. His logic is airtight. His situation is absurd.',
+      descZh: '一名虔诚的教会长老相信，上帝呼召他娶第二个妻子。他的信念是真实的，他的逻辑是自洽的，他的处境是荒诞的。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -32,8 +32,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/legitimate-fruit-thumb.jpg',
       heroImage: 'images/legitimate-fruit-hero.jpg',
-      descEn: 'Italy, Victor Erice\'s workshop. I arrived with the script for Commandment and ended up making a different film entirely. A Bangladeshi woman walked up to my camera and spoke for over an hour in a language I don\'t understand — her own story, in her own words. The memory card failed. Most of it is gone. After the workshop, Erice wrote to me: When you surrender everything to fate, fate turns out to be surprisingly reliable.',
-      descZh: '意大利，Victor Erice的工作坊。我带着《诫命》的剧本去，结果拍了另一部片子。一个孟加拉女人走到我摄影机前，用我一句也听不懂的语言，说了一个多小时她自己的故事。存储卡坏了，大部分没有留下来。工作坊结束后，Erice给我写了一封信，说：当你放弃一切，把它交给命运，命运会出其不意地可靠。',
+      descEn: 'A group of young directors from around the world gather in an Italian village, waiting for a legendary master. Each arrives with their ambitions, their leading ladies, their stories — and expectations far too large to carry. The master doesn\'t come.',
+      descZh: '一群来自世界各地的青年导演，聚集在意大利一个小镇，等待一位传奇大师的到来。每个人都带着自己的野心、自己的女演员、自己的故事——和一份过于巨大的期待。大师没有来。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -46,8 +46,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/words-thumb.jpg',
       heroImage: 'images/words-hero.jpg',
-      descEn: 'Tom stands shirtless on a Nashville street, raising his fist at the sky. A rainbow appeared. We kept filming. The second time we shot the same scene, the rainbow came back. I didn\'t stop to point it out to anyone. I just kept rolling.',
-      descZh: 'Tom站在Nashville街头，光着上身，向天空挥拳。天上出现了彩虹。我们继续拍。第二次拍同样的场景，彩虹又出现了。我没有停下来指给任何人看。我只是继续拍。',
+      descEn: 'Adapted from the play by Danish playwright Kaj Munk. Matt is called back to the hometown he has long despised. His second brother believes he is Jesus of Nazareth. His third brother is drowning in emotional wreckage. His father\'s mind is slipping. The family is already in ruins — and then his wife dies without warning. In a place where faith has collapsed, is miracle still possible?',
+      descZh: '改编自丹麦剧作家Kaj Munk同名舞台剧。Matt被召回他鄙夷已久的家乡。二弟深信自己是拿撒勒人耶稣，三弟深陷情感的泥沼，父亲的精神状况每况愈下。这个家早已是废墟，妻子的突然离世将他推向最深的绝境。在信仰崩塌的地方，奇迹是否还有可能发生？',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -60,8 +60,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/murmur-thumb.jpg',
       heroImage: 'images/murmur-hero.jpg',
-      descEn: 'My first film. A short called Amorelio. Two gangsters kill a man. We never learn why. I didn\'t know why either. Someone watched it and said: you have a gift for this. That was how it started.',
-      descZh: '第一次拍片。短片，叫《阿莫利欧》。两个黑帮的人杀了一个人，我们不知道为什么。我也不知道为什么。拍完之后有人说，你有电影的天分。我就这样开始了。',
+      descEn: 'An old friend, lost for years, appears at the door. Her arrival disturbs the calm surface of a family. The husband finds something long buried beginning to stir — and what stirs will bring more trouble than the old wounds ever did. Some things, once spoken, can never be taken back.',
+      descZh: '一个失散多年的旧友，突然登门。她的出现搅动了一个家庭原本平静的表面。男主人发现，埋藏多年的情感正在悄悄复苏——而这份复苏，将带来比旧日恩怨更难收拾的麻烦。有些话说出口，就再也回不去了。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -74,8 +74,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/sweet-life-thumb.jpg',
       heroImage: 'images/sweet-life-hero.jpg',
-      descEn: 'Location scouting in Qingdao. Found a building shaped like the White House, sitting in an empty back alley. We started filming outside. Cars blocked us front and back. Phones were confiscated. We waited under guard for an hour or two. I called the police. They said it wasn\'t their jurisdiction. Eventually our phones were returned and we were let go. My Japanese art director spent the entire time hiding his small camera, terrified of being identified as Japanese.',
-      descZh: '在青岛看景，找到一栋外表像白宫的建筑，在一条荒郊的小巷里。我们拿着摄影机在外面拍。前后被车堵住，手机被搜走，被人看着等了一两个小时。我打电话报警，警察说管不了。后来手机还回来了，我们走了。我的日本美术师全程死死攥着他的小相机，怕被发现是日本人。',
+      descEn: 'Two kindergarten children go missing. The adults begin to search. And in searching, they find other things — the hollow spaces behind the noise, the cracks quietly buried by an era of relentless progress. A melancholy comedy. A fable about the way we live.',
+      descZh: '两个幼儿园的孩子失踪了。大人们开始寻找。找着找着，找出了自己生活里那些说不清楚的东西——那些藏在热闹背后的空洞，那些被高歌猛进的时代顺手掩埋的裂缝。一篇基调忧伤的喜剧。一则关于我们如何生活的寓言。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -102,8 +102,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/cilantro-thumb.jpg',
       heroImage: 'images/cilantro-hero.jpg',
-      descEn: 'Abbas was filming a cow in a Cuban village. I walked over and asked for a photo. We have plenty of time, he said, and went back to his cow. He died not long after. We only have one blurry photograph together. He was right. The cow mattered more.',
-      descZh: '阿巴斯在古巴的村子里拍牛。我走过去问他能不能合张影。他说我们有很多时间。然后继续拍那头牛。后来他去世了。我们只有一张模糊的合影。他是对的，那头牛比合影重要。',
+      descEn: 'A down-and-out American director flies to Cuba with his Japanese girlfriend to attend a legendary master\'s workshop. The taxi gets lost. The girlfriend\'s heart has moved on. The workshop is nowhere to be found. Somewhere in the Cuban countryside, a relationship ends quietly — no announcement, no confirmation. Just sugarcane fields passing in reverse.',
+      descZh: '一个落魄的美国导演，带着他的日本女友，飞到古巴，追随一位传奇大师。出租车迷路了。女友变心了。大师班找不到。在古巴的乡野之间，一段关系悄悄走到了尽头，没有人宣布，没有人确认，只是车窗外的蔗田一直在后退。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -116,8 +116,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/woman-descending-thumb.jpg',
       heroImage: 'images/woman-descending-hero.jpg',
-      descEn: 'Cuba, Abbas Kiarostami\'s workshop. I arrived with a script called The Woman Descending the Stairs. What I found instead: a lost red taxi, a relationship that had quietly ended, and a master crouching in the dirt filming a cow. The script went unused. I came back with a different film.',
-      descZh: '古巴，阿巴斯工作坊。去之前带了一个剧本，叫《下楼梯的女人》。去之后遇见了一辆迷路的红色计程车，一段变了心的感情，和一个蹲在地上拍牛的大师。带去的剧本没有用上。带回来的是另一部电影。',
+      descEn: 'The new housekeeper is quiet, diligent, flawless. The mistress of the house begins to notice things. A painting. A glance. Strangers coming and going. Someone in this house is waiting for something.',
+      descZh: '新来的女佣，安静，勤快，无懈可击。女主人开始注意到一些细节。那幅画，那个眼神，那些来来去去的陌生人。这栋房子里，有人在等待什么。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -130,8 +130,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/between-yes-and-no-thumb.jpg',
       heroImage: 'images/between-yes-and-no-hero.jpg',
-      descEn: 'Golden Horse Film Academy, Taipei. First encounter with Hou Hsiao-hsien in a slow elevator. I told him I admired him; he assumed I was a regular fan. He only realized I was a student when the doors opened on the third floor. That month he said many things. I wrote them all down. But one sentence I never needed to write: Why doesn\'t anyone just follow a person onto a bus with a camera, and follow them off again?',
-      descZh: '金马学院，台北。第一次在电梯里遇见侯孝贤导演。电梯很慢，我说了一句崇拜您，他以为我是普通粉丝。到了三楼他才知道我也是学员。那个月他说了很多话，我都记下来了。但有一句话我不需要笔记本就能记住：为什么没有人拿着摄影机跟着一个人上公共汽车，跟着他下公共汽车？',
+      descEn: 'At a wrap party, a director introduces his ex to the girl he now likes. He asks: what do you think of her? He shouldn\'t have asked. The glasses aren\'t even empty yet, and something has already broken.',
+      descZh: '庆功宴上，一个男导演向前恋人介绍他新喜欢的女孩。他问：你觉得她怎么样？这句话，不该问的。酒杯还没空，什么东西已经碎了。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -158,8 +158,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/barren-land-thumb.jpg',
       heroImage: 'images/barren-land-hero.jpg',
-      descEn: 'There\'s a scene where a drunk old vagrant fills a boy\'s head with his view of the world. Every word true. Every word devastating. After we shot it, I sat on set for a long time without moving.',
-      descZh: '有一场戏是一个醉酒的老流浪汉给一个男孩灌输他对世界的看法。句句是真理，句句令人绝望。拍完那场戏，我在片场坐了很久。',
+      descEn: 'A boy runs away from school, away from the play nobody believed in. In some corner of the city, he meets a drunk old vagrant with a lot to say about the world. Every word true. Every word crushing. The boy takes it all in. At night, another story moves quietly through his dreams.',
+      descZh: '一个男孩逃离了学校，逃离了那出没有人信的戏剧。在某个角落，他遇见了一个醉酒的老流浪汉。老头对这个世界有很多话要说，句句是真理，句句令人绝望。男孩听进去了。夜里，另一个故事在梦里悄悄行进。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -172,8 +172,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/melancholia-i-thumb.jpg',
       heroImage: 'images/melancholia-i-hero.jpg',
-      descEn: 'Shooting a real estate commercial in the suburbs of Shenyang. The village produced their oldest resident — a man in his nineties. He opened his mouth and the first thing he talked about was Manchukuo. I filmed him for nearly an hour without interrupting. None of it made the ad. I\'ve never forgotten the look in his eyes.',
-      descZh: '在沈阳郊区拍一个地产广告。村子里有一个九十几岁的老人，他们把他推到我摄影机前，说他是村里活得最久的人。他开口第一句话讲的是满洲国。我录了将近一个小时，没有打断他。那些素材没有进广告。我一直没有忘记他的眼神。',
+      descEn: 'The seaside. Years later. A writer who can no longer write. A woman whose life hasn\'t turned out right. They were in love once. Now they\'re here again, with all those years between them. Some conversations can only happen in a place like this.',
+      descZh: '海边，多年之后。一个写不出东西的作家，一个生活不幸福的女人。他们曾经相爱，现在重逢，中间隔着说不清楚的岁月。有些对话，只能在这里说。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -186,8 +186,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/autumn-of-freedom-thumb.jpg',
       heroImage: 'images/autumn-of-freedom-hero.jpg',
-      descEn: 'Three people, none of them understanding what life is about. I didn\'t understand either. I still don\'t. But I started to think that maybe not understanding is exactly what\'s worth filming.',
-      descZh: '三个人，没有一个搞清楚生活是关于什么的。我当时也没搞清楚。现在也没有。但我开始觉得，搞不清楚这件事本身，可能才是值得拍的东西。',
+      descEn: 'A man meets a girl. The girl has another man in her nights. Three people, each carrying some idea of what life should be — none of them living it. Freedom is somewhere over the hills. Nobody\'s ever actually been.',
+      descZh: '一个普通男人，遇见了一个女孩。女孩的夜里还有另一个男人。三个人，各自怀揣着对生活的某种想象，却没有一个人活在那个想象里。自由在山那边。没有人真的去过。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     }
   ];
