@@ -333,19 +333,11 @@
     renderWritings();
     bindEvents();
 
-    // Set home hero featured image from first work with a heroImage
-    var heroEl = document.getElementById('heroImage');
-    if (heroEl) {
-      var featured = WORKS.find(function(w) { return w.heroImage; });
-      if (featured) {
-        var heroImg = document.createElement('img');
-        heroImg.src = featured.heroImage;
-        heroImg.alt = featured.titleEn;
-        heroImg.style.width = '100%';
-        heroImg.style.height = '100%';
-        heroImg.style.objectFit = 'cover';
-        heroEl.appendChild(heroImg);
-      }
+    // Hero image is now hardcoded in HTML — no JS injection needed
+
+    // Transparent nav on home (initial state)
+    if (currentPage === 'home') {
+      document.querySelector('.nav').classList.add('nav-transparent');
     }
   }
 
@@ -380,6 +372,14 @@
     currentPage = page;
     if (pushState) window.location.hash = page === 'home' ? '' : page;
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Transparent nav on home page
+    var nav = document.querySelector('.nav');
+    if (page === 'home') {
+      nav.classList.add('nav-transparent');
+    } else {
+      nav.classList.remove('nav-transparent');
+    }
   }
 
   // ---------- Theme ----------
@@ -574,94 +574,118 @@
     detailsSection.appendChild(detGrid);
     body.appendChild(detailsSection);
 
-    // Video / Trailer section
+    // Video / Trailer section — only show full player if videoSrc exists
     var videoSection = createEl('div', { className: 'wd-section' });
     var vidLabel = createEl('div', { className: 'wd-section-label' });
     vidLabel.appendChild(langSpan('Trailer', '预告片'));
     videoSection.appendChild(vidLabel);
 
-    var videoId = 'video-' + work.id;
-    var container = createEl('div', { className: 'video-container', id: 'videoContainer-' + work.id });
+    if (work.videoSrc) {
+      // Full custom video player
+      var videoId = 'video-' + work.id;
+      var container = createEl('div', { className: 'video-container', id: 'videoContainer-' + work.id });
 
-    var video = document.createElement('video');
-    video.id = videoId;
-    video.preload = 'metadata';
-    video.setAttribute('controlsList', 'nodownload');
-    video.setAttribute('playsinline', '');
-    video.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-    container.appendChild(video);
+      var video = document.createElement('video');
+      video.id = videoId;
+      video.preload = 'metadata';
+      video.setAttribute('controlsList', 'nodownload');
+      video.setAttribute('playsinline', '');
+      video.src = work.videoSrc;
+      video.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+      container.appendChild(video);
 
-    // Play overlay
-    var overlay = createEl('div', { className: 'video-play-overlay', id: 'playOverlay-' + work.id });
-    var overlaySvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    overlaySvg.setAttribute('viewBox', '0 0 24 24');
-    var overlayPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-    overlayPoly.setAttribute('points', '5,3 19,12 5,21');
-    overlaySvg.appendChild(overlayPoly);
-    overlay.appendChild(overlaySvg);
-    container.appendChild(overlay);
+      // Play overlay
+      var overlay = createEl('div', { className: 'video-play-overlay', id: 'playOverlay-' + work.id });
+      var overlaySvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      overlaySvg.setAttribute('viewBox', '0 0 24 24');
+      var overlayPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      overlayPoly.setAttribute('points', '5,3 19,12 5,21');
+      overlaySvg.appendChild(overlayPoly);
+      overlay.appendChild(overlaySvg);
+      container.appendChild(overlay);
 
-    // Controls
-    var controls = createEl('div', { className: 'video-controls' });
-    var progressWrapper = createEl('div', { className: 'video-progress-wrapper', id: 'progressWrapper-' + work.id });
-    var progressBuffer = createEl('div', { className: 'video-progress-buffer', id: 'progressBuffer-' + work.id });
-    var progressBar = createEl('div', { className: 'video-progress-bar', id: 'progressBar-' + work.id });
-    progressWrapper.appendChild(progressBuffer);
-    progressWrapper.appendChild(progressBar);
-    controls.appendChild(progressWrapper);
+      // Controls
+      var controls = createEl('div', { className: 'video-controls' });
+      var progressWrapper = createEl('div', { className: 'video-progress-wrapper', id: 'progressWrapper-' + work.id });
+      var progressBuffer = createEl('div', { className: 'video-progress-buffer', id: 'progressBuffer-' + work.id });
+      var progressBar = createEl('div', { className: 'video-progress-bar', id: 'progressBar-' + work.id });
+      progressWrapper.appendChild(progressBuffer);
+      progressWrapper.appendChild(progressBar);
+      controls.appendChild(progressWrapper);
 
-    var bottom = createEl('div', { className: 'video-bottom-controls' });
-    var left = createEl('div', { className: 'video-left-controls' });
+      var bottom = createEl('div', { className: 'video-bottom-controls' });
+      var left = createEl('div', { className: 'video-left-controls' });
 
-    var playBtn = createEl('button', { className: 'video-btn', id: 'playBtn-' + work.id, 'aria-label': 'Play/Pause' });
-    var playSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    playSvg.setAttribute('viewBox', '0 0 24 24');
-    playSvg.id = 'playIcon-' + work.id;
-    var playPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-    playPoly.setAttribute('points', '5,3 19,12 5,21');
-    playSvg.appendChild(playPoly);
-    playBtn.appendChild(playSvg);
-    left.appendChild(playBtn);
+      var playBtn = createEl('button', { className: 'video-btn', id: 'playBtn-' + work.id, 'aria-label': 'Play/Pause' });
+      var playSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      playSvg.setAttribute('viewBox', '0 0 24 24');
+      playSvg.id = 'playIcon-' + work.id;
+      var playPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      playPoly.setAttribute('points', '5,3 19,12 5,21');
+      playSvg.appendChild(playPoly);
+      playBtn.appendChild(playSvg);
+      left.appendChild(playBtn);
 
-    var volWrap = createEl('div', { className: 'video-volume-wrapper' });
-    var muteBtn = createEl('button', { className: 'video-btn', id: 'muteBtn-' + work.id, 'aria-label': 'Mute' });
-    var muteSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    muteSvg.setAttribute('viewBox', '0 0 24 24');
-    var mutePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    mutePath.setAttribute('d', 'M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z');
-    muteSvg.appendChild(mutePath);
-    muteBtn.appendChild(muteSvg);
-    volWrap.appendChild(muteBtn);
+      var volWrap = createEl('div', { className: 'video-volume-wrapper' });
+      var muteBtn = createEl('button', { className: 'video-btn', id: 'muteBtn-' + work.id, 'aria-label': 'Mute' });
+      var muteSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      muteSvg.setAttribute('viewBox', '0 0 24 24');
+      var mutePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      mutePath.setAttribute('d', 'M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z');
+      muteSvg.appendChild(mutePath);
+      muteBtn.appendChild(muteSvg);
+      volWrap.appendChild(muteBtn);
 
-    var volSlider = document.createElement('input');
-    volSlider.type = 'range';
-    volSlider.className = 'video-volume-slider';
-    volSlider.id = 'volumeSlider-' + work.id;
-    volSlider.min = '0';
-    volSlider.max = '1';
-    volSlider.step = '0.05';
-    volSlider.value = '1';
-    volWrap.appendChild(volSlider);
-    left.appendChild(volWrap);
+      var volSlider = document.createElement('input');
+      volSlider.type = 'range';
+      volSlider.className = 'video-volume-slider';
+      volSlider.id = 'volumeSlider-' + work.id;
+      volSlider.min = '0';
+      volSlider.max = '1';
+      volSlider.step = '0.05';
+      volSlider.value = '1';
+      volWrap.appendChild(volSlider);
+      left.appendChild(volWrap);
 
-    var timeDisplay = createEl('span', { className: 'video-time', id: 'videoTime-' + work.id, textContent: '0:00 / 0:00' });
-    left.appendChild(timeDisplay);
-    bottom.appendChild(left);
+      var timeDisplay = createEl('span', { className: 'video-time', id: 'videoTime-' + work.id, textContent: '0:00 / 0:00' });
+      left.appendChild(timeDisplay);
+      bottom.appendChild(left);
 
-    var right = createEl('div', { className: 'video-right-controls' });
-    var fsBtn = createEl('button', { className: 'video-btn', id: 'fullscreenBtn-' + work.id, 'aria-label': 'Fullscreen' });
-    var fsSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    fsSvg.setAttribute('viewBox', '0 0 24 24');
-    var fsPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    fsPath.setAttribute('d', 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z');
-    fsSvg.appendChild(fsPath);
-    fsBtn.appendChild(fsSvg);
-    right.appendChild(fsBtn);
-    bottom.appendChild(right);
+      var right = createEl('div', { className: 'video-right-controls' });
+      var fsBtn = createEl('button', { className: 'video-btn', id: 'fullscreenBtn-' + work.id, 'aria-label': 'Fullscreen' });
+      var fsSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      fsSvg.setAttribute('viewBox', '0 0 24 24');
+      var fsPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      fsPath.setAttribute('d', 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z');
+      fsSvg.appendChild(fsPath);
+      fsBtn.appendChild(fsSvg);
+      right.appendChild(fsBtn);
+      bottom.appendChild(right);
 
-    controls.appendChild(bottom);
-    container.appendChild(controls);
-    videoSection.appendChild(container);
+      controls.appendChild(bottom);
+      container.appendChild(controls);
+      videoSection.appendChild(container);
+    } else {
+      // "Coming soon" placeholder
+      var placeholder = createEl('div', { className: 'video-coming-soon' });
+      var phSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      phSvg.setAttribute('viewBox', '0 0 24 24');
+      var phRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      phRect.setAttribute('x', '2'); phRect.setAttribute('y', '4');
+      phRect.setAttribute('width', '20'); phRect.setAttribute('height', '16');
+      phRect.setAttribute('rx', '2');
+      var phPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      phPoly.setAttribute('points', '10,8 10,16 16,12');
+      phPoly.setAttribute('fill', 'rgba(255,255,255,0.15)');
+      phPoly.setAttribute('stroke', 'none');
+      phSvg.appendChild(phRect);
+      phSvg.appendChild(phPoly);
+      placeholder.appendChild(phSvg);
+      var phText = createEl('span', { className: 'video-coming-soon-text' });
+      phText.appendChild(langSpan('Coming Soon', '即将发布'));
+      placeholder.appendChild(phText);
+      videoSection.appendChild(placeholder);
+    }
     body.appendChild(videoSection);
 
     workDetailInner.appendChild(body);
@@ -670,8 +694,10 @@
     workDetail.classList.add('open');
     document.body.style.overflow = 'hidden';
 
-    // Initialize player
-    requestAnimationFrame(function() { initVideoPlayer(work.id); });
+    // Initialize player if video source exists
+    if (work.videoSrc) {
+      requestAnimationFrame(function() { initVideoPlayer(work.id); });
+    }
   }
 
   function closeWorkDetail() {
@@ -695,7 +721,14 @@
         className: 'work-card fade-in stagger-' + Math.min(i + 1, 9)
       });
 
-      card.appendChild(createEl('div', { className: 'work-card-image' }));
+      // Typographic cover: title displayed inside the card image area
+      var cardImage = createEl('div', { className: 'work-card-image' });
+      var coverTitle = createEl('div', {
+        className: 'writing-cover-title'
+      });
+      coverTitle.appendChild(langSpan(item.titleEn, item.titleZh));
+      cardImage.appendChild(coverTitle);
+      card.appendChild(cardImage);
 
       var meta = createEl('div', { className: 'work-card-meta' });
       meta.appendChild(createEl('span', { className: 'work-card-year', textContent: String(item.year) }));
@@ -707,6 +740,11 @@
       var cardTitle = createEl('div', { className: 'work-card-title' });
       cardTitle.appendChild(langSpan(item.titleEn, item.titleZh));
       card.appendChild(cardTitle);
+
+      // Description line
+      var desc = createEl('div', { className: 'writing-card-desc' });
+      desc.appendChild(langSpan(item.descEn, item.descZh));
+      card.appendChild(desc);
 
       writingGrid.appendChild(card);
     });

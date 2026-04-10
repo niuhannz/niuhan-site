@@ -235,62 +235,112 @@ h1, h2, h3, h4 {
   opacity: 1;
 }
 
+/* Home page: full-bleed hero sits behind the nav */
+#page-home {
+  padding-top: 0;
+}
+
+/* When home is active, make nav blend with the hero image */
+.nav.nav-transparent {
+  background: transparent;
+  border-bottom-color: transparent;
+  color: #fff;
+}
+.nav.nav-transparent .nav-logo,
+.nav.nav-transparent .nav-link,
+.nav.nav-transparent .nav-btn,
+.nav.nav-transparent .nav-mobile-toggle span {
+  color: #fff;
+}
+.nav.nav-transparent .nav-btn {
+  border-color: rgba(255,255,255,0.3);
+}
+.nav.nav-transparent .nav-btn:hover {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+}
+.nav.nav-transparent .nav-mobile-toggle span {
+  background: #fff;
+}
+.nav.nav-transparent .nav-link.active::after {
+  background: #fff;
+}
+
 .page-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--space-lg);
 }
 
-/* ---------- Home / Hero ---------- */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: calc(100vh - var(--nav-height));
-  padding: var(--space-3xl) var(--space-lg);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.hero-name {
-  font-family: var(--font-heading);
-  font-size: clamp(3.5rem, 9vw, 8rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin-bottom: var(--space-lg);
-}
-
-.hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-text-secondary);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-bottom: var(--space-3xl);
-}
-
-.hero-featured {
-  width: 100%;
-  max-width: 900px;
-}
-
-.hero-featured-image {
-  width: 100%;
-  aspect-ratio: 21 / 9;
-  background: var(--color-placeholder);
-  transition: background var(--transition-base);
+/* ---------- Home / Cinematic Hero ---------- */
+.hero-cinematic {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
   overflow: hidden;
 }
 
-.hero-featured-caption {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-top: var(--space-sm);
-  font-size: 0.8125rem;
-  color: var(--color-text-tertiary);
+.hero-cinematic-image {
+  position: absolute;
+  inset: 0;
+}
+.hero-cinematic-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-cinematic-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.25) 40%,
+    rgba(0,0,0,0.05) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.hero-cinematic-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 clamp(32px, 5vw, 80px) clamp(56px, 10vh, 100px);
+  z-index: 2;
+}
+
+.hero-cinematic-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.hero-cinematic-subtitle {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  color: rgba(255,255,255,0.5);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-cinematic-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: wdBounce 2.5s ease-in-out infinite;
+  opacity: 0.6;
 }
 
 /* ---------- Works ---------- */
@@ -370,9 +420,12 @@ h1, h2, h3, h4 {
   cursor: pointer;
   transition: opacity var(--transition-base);
 }
-.work-card:hover { opacity: 0.8; }
+.work-card:hover { opacity: 0.85; }
 .work-card:hover .work-card-image {
   background: var(--color-placeholder-hover);
+}
+.work-card:hover .work-card-image img {
+  transform: scale(1.03);
 }
 
 .work-card-image {
@@ -387,14 +440,50 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Writing cards: portrait book-cover aspect ratio */
+/* Writing cards: typographic book-cover style */
 #writingGrid .work-card-image {
   aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  position: relative;
+}
+#writingGrid .work-card-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition-base);
+}
+#writingGrid .work-card:hover .work-card-image::before {
+  border-color: var(--color-text-tertiary);
+}
+#writingGrid .work-card-image {
+  background: var(--color-bg-secondary);
 }
 #writingGrid.works-grid {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+/* Typographic title inside writing card cover */
+.writing-cover-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-text-secondary);
+  letter-spacing: -0.01em;
+}
+
+/* Writing card description below card */
+.writing-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+  margin-top: var(--space-xs);
 }
 
 .work-card-meta {
@@ -772,6 +861,32 @@ h1, h2, h3, h4 {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
+/* Video coming soon placeholder */
+.video-coming-soon {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.video-coming-soon-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+.video-coming-soon svg {
+  width: 32px;
+  height: 32px;
+  stroke: rgba(255,255,255,0.15);
+  fill: none;
+  stroke-width: 1.5;
+}
+
 /* ---------- About ---------- */
 .about-layout {
   display: grid;
@@ -924,13 +1039,9 @@ h1, h2, h3, h4 {
     z-index: 99;
   }
 
-  .hero {
-    padding: var(--space-xl) var(--space-lg);
-    min-height: auto;
-    padding-top: calc(var(--nav-height) + var(--space-xl));
+  .hero-cinematic {
+    min-height: 100svh; /* use small viewport height on mobile for better fit */
   }
-
-  .hero-name { font-size: clamp(2.5rem, 12vw, 4rem); }
 
   .works-grid {
     grid-template-columns: 1fr;
@@ -978,6 +1089,22 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
   .works-header {
     flex-direction: column;
+  }
+
+  #writingGrid.works-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) var(--space-sm);
+  }
+
+  #writingGrid .work-card-image {
+    padding: 1rem;
+  }
+}
+
+/* Touch devices: always show video controls */
+@media (hover: none) {
+  .video-controls {
+    opacity: 1;
   }
 }
 
