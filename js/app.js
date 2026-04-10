@@ -54,6 +54,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/murmur-thumb.jpg',
+      heroImage: 'images/murmur-hero.jpg',
       descEn: 'Description placeholder for Chinese Whispers.',
       descZh: '《呢喃》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
@@ -66,6 +68,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/sweet-life-thumb.jpg',
+      heroImage: 'images/sweet-life-hero.jpg',
       descEn: 'Description placeholder for A Sweet Life.',
       descZh: '《甜美生活》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
@@ -78,6 +82,8 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/uncertain-regards-thumb.jpg',
+      heroImage: 'images/uncertain-regards-hero.jpg',
       descEn: 'Description placeholder for Uncertain Regards.',
       descZh: '《不确定的问候》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
@@ -109,6 +115,20 @@
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
+      id: 'home',
+      titleZh: '家',
+      titleEn: 'Home',
+      year: 2015,
+      type: 'omnibus',
+      format: { en: 'Omnibus Film', zh: '合集片' },
+      duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/home-thumb.jpg',
+      heroImage: 'images/home-hero.jpg',
+      descEn: 'Description placeholder for Home.',
+      descZh: '《家》简介占位。',
+      credits: { en: 'Directed by Niu Han', zh: '导演：牛涵' }
+    },
+    {
       id: 'barren-land',
       titleZh: '不毛之国',
       titleEn: 'Land of Nobody',
@@ -116,6 +136,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/barren-land-thumb.jpg',
+      heroImage: 'images/barren-land-hero.jpg',
       descEn: 'Description placeholder for Land of Nobody.',
       descZh: '《不毛之国》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
@@ -140,6 +162,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/autumn-of-freedom-thumb.jpg',
+      heroImage: 'images/autumn-of-freedom-hero.jpg',
       descEn: 'Description placeholder for Freedom Hills.',
       descZh: '《自由之丘》简介占位。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
