@@ -18,8 +18,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/commandment-thumb.jpg',
       heroImage: 'images/commandment-hero.jpg',
-      descEn: 'A meditation on language, faith, and moral ambiguity. The latest work by Niu Han explores the tension between commandments spoken and those left unspoken — the weight of words that bind, and the silence that sets free.',
-      descZh: '一部关于语言、信仰与道德模糊性的沉思。牛涵的最新作品探索了被言说的诫命与未被言说的诫命之间的张力——束缚的话语之重，与解放的沉默之轻。',
+      descEn: 'Submitted to Cannes. The subtitles weren\'t finished, but the deadline was the deadline. Sometimes you just have to send it. I was sitting in a Nashville gas station when I realized: every film I\'ve ever made has been about the same thing — the gap between what a person wants and what life actually gives them. Seven films. All the same question.',
+      descZh: '送去了戛纳。字幕还没做完，但截止日期到了，就这样送出去了。有时候就是得先送出去。我在Nashville的一个加油站里坐着，想清楚了一件事：我一直在拍的东西，其实是同一个问题——人和自己执念之间的那道裂缝。七部片子，都是这个。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -32,8 +32,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/legitimate-fruit-thumb.jpg',
       heroImage: 'images/legitimate-fruit-hero.jpg',
-      descEn: 'Description placeholder — a short film by Niu Han.',
-      descZh: '简介占位 — 牛涵短片作品。',
+      descEn: 'Italy, Victor Erice\'s workshop. I arrived with the script for Commandment and ended up making a different film entirely. A Bangladeshi woman walked up to my camera and spoke for over an hour in a language I don\'t understand — her own story, in her own words. The memory card failed. Most of it is gone. After the workshop, Erice wrote to me: When you surrender everything to fate, fate turns out to be surprisingly reliable.',
+      descZh: '意大利，Victor Erice的工作坊。我带着《诫命》的剧本去，结果拍了另一部片子。一个孟加拉女人走到我摄影机前，用我一句也听不懂的语言，说了一个多小时她自己的故事。存储卡坏了，大部分没有留下来。工作坊结束后，Erice给我写了一封信，说：当你放弃一切，把它交给命运，命运会出其不意地可靠。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -46,8 +46,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/words-thumb.jpg',
       heroImage: 'images/words-hero.jpg',
-      descEn: 'Description placeholder for Word.',
-      descZh: '《话语》简介占位。',
+      descEn: 'Tom stands shirtless on a Nashville street, raising his fist at the sky. A rainbow appeared. We kept filming. The second time we shot the same scene, the rainbow came back. I didn\'t stop to point it out to anyone. I just kept rolling.',
+      descZh: 'Tom站在Nashville街头，光着上身，向天空挥拳。天上出现了彩虹。我们继续拍。第二次拍同样的场景，彩虹又出现了。我没有停下来指给任何人看。我只是继续拍。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -60,8 +60,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/murmur-thumb.jpg',
       heroImage: 'images/murmur-hero.jpg',
-      descEn: 'Description placeholder for Chinese Whispers.',
-      descZh: '《呢喃》简介占位。',
+      descEn: 'My first film. A short called Amorelio. Two gangsters kill a man. We never learn why. I didn\'t know why either. Someone watched it and said: you have a gift for this. That was how it started.',
+      descZh: '第一次拍片。短片，叫《阿莫利欧》。两个黑帮的人杀了一个人，我们不知道为什么。我也不知道为什么。拍完之后有人说，你有电影的天分。我就这样开始了。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -74,8 +74,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/sweet-life-thumb.jpg',
       heroImage: 'images/sweet-life-hero.jpg',
-      descEn: 'Description placeholder for A Sweet Life.',
-      descZh: '《甜美生活》简介占位。',
+      descEn: 'Location scouting in Qingdao. Found a building shaped like the White House, sitting in an empty back alley. We started filming outside. Cars blocked us front and back. Phones were confiscated. We waited under guard for an hour or two. I called the police. They said it wasn\'t their jurisdiction. Eventually our phones were returned and we were let go. My Japanese art director spent the entire time hiding his small camera, terrified of being identified as Japanese.',
+      descZh: '在青岛看景，找到一栋外表像白宫的建筑，在一条荒郊的小巷里。我们拿着摄影机在外面拍。前后被车堵住，手机被搜走，被人看着等了一两个小时。我打电话报警，警察说管不了。后来手机还回来了，我们走了。我的日本美术师全程死死攥着他的小相机，怕被发现是日本人。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -88,8 +88,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/uncertain-regards-thumb.jpg',
       heroImage: 'images/uncertain-regards-hero.jpg',
-      descEn: 'Description placeholder for Uncertain Regards.',
-      descZh: '《不确定的问候》简介占位。',
+      descEn: 'Drove across the North China Plain with Wang Xiaomu to photograph the Yan and Yellow Emperor statues. Along the way: a Sphinx with its head removed and placed beside its body — Egypt had threatened a copyright lawsuit, so human face and lion body were now legally separate entities. Nearby, a building that was half Temple of Heaven, half US Capitol. On the drive back, thick fog. Visibility: a few meters. Xiaomu said we\'ll make it, then fell asleep. I drove alone until dawn.',
+      descZh: '和王小木开车穿越华北平原，去炎黄二帝山拍参考照片。路上看见狮身人面像，头被截掉放在一边——因为埃及告侵权，所以人面是人面，狮身是狮身。旁边有座建筑，半边是天坛，半边是美国国会山。返程夜里起了大雾，能见度只有几米。小木说咱必干，然后睡着了。我一个人开到天亮。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -102,8 +102,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/cilantro-thumb.jpg',
       heroImage: 'images/cilantro-hero.jpg',
-      descEn: 'Description placeholder for Warm Smell of Coriander.',
-      descZh: '《空中弥漫温热的香菜气息》简介占位。',
+      descEn: 'Abbas was filming a cow in a Cuban village. I walked over and asked for a photo. We have plenty of time, he said, and went back to his cow. He died not long after. We only have one blurry photograph together. He was right. The cow mattered more.',
+      descZh: '阿巴斯在古巴的村子里拍牛。我走过去问他能不能合张影。他说我们有很多时间。然后继续拍那头牛。后来他去世了。我们只有一张模糊的合影。他是对的，那头牛比合影重要。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -116,8 +116,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/woman-descending-thumb.jpg',
       heroImage: 'images/woman-descending-hero.jpg',
-      descEn: 'Description placeholder for Woman Descending the Staircase.',
-      descZh: '《下楼梯的女人》简介占位。',
+      descEn: 'Cuba, Abbas Kiarostami\'s workshop. I arrived with a script called The Woman Descending the Stairs. What I found instead: a lost red taxi, a relationship that had quietly ended, and a master crouching in the dirt filming a cow. The script went unused. I came back with a different film.',
+      descZh: '古巴，阿巴斯工作坊。去之前带了一个剧本，叫《下楼梯的女人》。去之后遇见了一辆迷路的红色计程车，一段变了心的感情，和一个蹲在地上拍牛的大师。带去的剧本没有用上。带回来的是另一部电影。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -130,8 +130,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/between-yes-and-no-thumb.jpg',
       heroImage: 'images/between-yes-and-no-hero.jpg',
-      descEn: 'Description placeholder for Between Yes and No.',
-      descZh: '《是与不是之间》简介占位。',
+      descEn: 'Golden Horse Film Academy, Taipei. First encounter with Hou Hsiao-hsien in a slow elevator. I told him I admired him; he assumed I was a regular fan. He only realized I was a student when the doors opened on the third floor. That month he said many things. I wrote them all down. But one sentence I never needed to write: Why doesn\'t anyone just follow a person onto a bus with a camera, and follow them off again?',
+      descZh: '金马学院，台北。第一次在电梯里遇见侯孝贤导演。电梯很慢，我说了一句崇拜您，他以为我是普通粉丝。到了三楼他才知道我也是学员。那个月他说了很多话，我都记下来了。但有一句话我不需要笔记本就能记住：为什么没有人拿着摄影机跟着一个人上公共汽车，跟着他下公共汽车？',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -144,8 +144,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/home-thumb.jpg',
       heroImage: 'images/home-hero.jpg',
-      descEn: 'Description placeholder for Home.',
-      descZh: '《家》简介占位。',
+      descEn: 'My son was born. I\'ve been thinking about what I\'ll tell him one day, if he ever wants to pick up a camera. I think I\'ll say: don\'t wait until you\'re ready. Just take the camera and go. Let yourself get lost.',
+      descZh: '儿子出生。我在想，等他长大，等他某一天也想拿起摄影机，我会告诉他什么。我想我会告诉他：不要等到准备好了再去拍。带上摄影机出门。让自己迷路。',
       credits: { en: 'Directed by Niu Han', zh: '导演：牛涵' }
     },
     {
@@ -158,8 +158,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/barren-land-thumb.jpg',
       heroImage: 'images/barren-land-hero.jpg',
-      descEn: 'Description placeholder for Land of Nobody.',
-      descZh: '《不毛之国》简介占位。',
+      descEn: 'There\'s a scene where a drunk old vagrant fills a boy\'s head with his view of the world. Every word true. Every word devastating. After we shot it, I sat on set for a long time without moving.',
+      descZh: '有一场戏是一个醉酒的老流浪汉给一个男孩灌输他对世界的看法。句句是真理，句句令人绝望。拍完那场戏，我在片场坐了很久。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -172,8 +172,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/melancholia-i-thumb.jpg',
       heroImage: 'images/melancholia-i-hero.jpg',
-      descEn: 'Description placeholder for Melancholia I.',
-      descZh: '《忧郁 I》简介占位。',
+      descEn: 'Shooting a real estate commercial in the suburbs of Shenyang. The village produced their oldest resident — a man in his nineties. He opened his mouth and the first thing he talked about was Manchukuo. I filmed him for nearly an hour without interrupting. None of it made the ad. I\'ve never forgotten the look in his eyes.',
+      descZh: '在沈阳郊区拍一个地产广告。村子里有一个九十几岁的老人，他们把他推到我摄影机前，说他是村里活得最久的人。他开口第一句话讲的是满洲国。我录了将近一个小时，没有打断他。那些素材没有进广告。我一直没有忘记他的眼神。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -186,8 +186,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/autumn-of-freedom-thumb.jpg',
       heroImage: 'images/autumn-of-freedom-hero.jpg',
-      descEn: 'Description placeholder for Freedom Hills.',
-      descZh: '《自由之丘》简介占位。',
+      descEn: 'Three people, none of them understanding what life is about. I didn\'t understand either. I still don\'t. But I started to think that maybe not understanding is exactly what\'s worth filming.',
+      descZh: '三个人，没有一个搞清楚生活是关于什么的。我当时也没搞清楚。现在也没有。但我开始觉得，搞不清楚这件事本身，可能才是值得拍的东西。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     }
   ];
