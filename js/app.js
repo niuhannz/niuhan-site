@@ -16,6 +16,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/commandment-thumb.jpg',
+      heroImage: 'images/commandment-hero.jpg',
       descEn: 'A meditation on language, faith, and moral ambiguity. The latest work by Niu Han explores the tension between commandments spoken and those left unspoken — the weight of words that bind, and the silence that sets free.',
       descZh: '一部关于语言、信仰与道德模糊性的沉思。牛涵的最新作品探索了被言说的诫命与未被言说的诫命之间的张力——束缚的话语之重，与解放的沉默之轻。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
@@ -28,6 +30,8 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: 'TBD', zh: '待定' },
+      thumbnail: 'images/legitimate-fruit-thumb.jpg',
+      heroImage: 'images/legitimate-fruit-hero.jpg',
       descEn: 'Description placeholder — a short film by Niu Han.',
       descZh: '简介占位 — 牛涵短片作品。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
