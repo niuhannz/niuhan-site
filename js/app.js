@@ -219,7 +219,7 @@
     {
       id: 'wild-duck',
       titleZh: '野鸟',
-      titleEn: 'The Wild Duck',
+      titleEn: 'Stray Birds',
       year: 2014,
       type: 'translation',
       format: { en: 'Translation', zh: '译著' },
