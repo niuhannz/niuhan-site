@@ -363,7 +363,7 @@ h1, h2, h3, h4 {
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: var(--space-xl) var(--space-lg);
+  gap: var(--space-lg) var(--space-md);
 }
 
 .work-card {
@@ -379,7 +379,7 @@ h1, h2, h3, h4 {
   width: 100%;
   aspect-ratio: 16 / 10;
   background: var(--color-placeholder);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   transition: background var(--transition-base);
   overflow: hidden;
 }
