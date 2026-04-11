@@ -510,10 +510,7 @@
       var meta = createEl('div', { className: 'work-card-meta' });
       meta.appendChild(createEl('span', { className: 'work-card-year', textContent: String(work.year) }));
       var tag = createEl('span', { className: 'work-card-tag' });
-      tag.appendChild(langSpan(
-        work.type === 'feature' ? 'Feature' : 'Short',
-        work.type === 'feature' ? '长片' : '短片'
-      ));
+      tag.appendChild(langSpan(work.format.en, work.format.zh));
       meta.appendChild(tag);
       card.appendChild(meta);
 
