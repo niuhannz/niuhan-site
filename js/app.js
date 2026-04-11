@@ -136,7 +136,7 @@
     },
     {
       id: 'fear-ali',
-      titleZh: '恐惧阿里吞噬灵魂',
+      titleZh: '恐惧：阿里吞噬灵魂',
       titleEn: 'Fear: Ali Eats the Soul',
       year: 2024,
       type: 'study',
@@ -149,9 +149,23 @@
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
-      id: 'maria-fascism',
-      titleZh: '玛利亚谈法西斯',
-      titleEn: 'Maria on Fascism',
+      id: 'maria',
+      titleZh: '玛丽亚',
+      titleEn: 'Maria',
+      year: 2024,
+      type: 'study',
+      format: { en: 'Study — Italy', zh: '速写 — 意大利' },
+      duration: { en: 'TBD', zh: '待定' },
+      thumbnail: '',
+      heroImage: '',
+      descEn: '',
+      descZh: '',
+      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+    },
+    {
+      id: 'andre',
+      titleZh: '安德烈',
+      titleEn: 'Andre',
       year: 2024,
       type: 'study',
       format: { en: 'Study — Italy', zh: '速写 — 意大利' },
