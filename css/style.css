@@ -141,11 +141,9 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--space-lg);
-  background: var(--color-overlay);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: transparent;
   z-index: 100;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: none;
   transition: background var(--transition-base), border-color var(--transition-base);
 }
 
@@ -166,8 +164,8 @@ h1, h2, h3, h4 {
 }
 
 .nav-link {
-  font-size: 0.8125rem;
-  letter-spacing: 0.04em;
+  font-size: 0.9375rem;
+  letter-spacing: 0.03em;
   transition: opacity var(--transition-fast);
   position: relative;
   padding: 4px 0;
@@ -275,15 +273,15 @@ h1, h2, h3, h4 {
 /* Nav when mobile menu is open — frosted glass to match overlay */
 .nav.nav-menu-open,
 .nav.nav-menu-open.nav-transparent {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(24px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
   border-bottom-color: transparent !important;
   color: var(--color-text);
 }
 [data-theme="dark"] .nav.nav-menu-open,
 [data-theme="dark"] .nav.nav-menu-open.nav-transparent {
-  background: rgba(20, 20, 20, 0.92) !important;
+  background: rgba(20, 20, 20, 0.65) !important;
 }
 .nav.nav-menu-open .nav-logo,
 .nav.nav-menu-open .nav-btn,
@@ -1083,9 +1081,9 @@ h1, h2, h3, h4 {
     inset: 0;
     min-height: 100vh;
     min-height: 100dvh; /* dynamic viewport height for mobile Safari */
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
     padding: var(--space-2xl);
     padding-top: calc(var(--nav-height) + var(--space-xl));
     gap: var(--space-md);
@@ -1095,7 +1093,7 @@ h1, h2, h3, h4 {
   }
 
   [data-theme="dark"] .nav-links.mobile-open {
-    background: rgba(20, 20, 20, 0.92);
+    background: rgba(20, 20, 20, 0.65);
   }
 
   /* Force text color in overlay — overrides nav-transparent white */
