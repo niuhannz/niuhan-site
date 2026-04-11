@@ -16,7 +16,7 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: '108 min', zh: '108 分钟' },
-      thumbnail: 'images/commandment-thumb.jpg',
+      thumbnail: 'images/Commandment3.png',
       heroImage: 'images/commandment-hero.jpg',
       descEn: 'A devout church elder believes God has called him to take a second wife. His faith is genuine. His logic is airtight. His situation is absurd.',
       descZh: '一名虔诚的教会长老相信，上帝呼召他娶第二个妻子。他的信念是真实的，他的逻辑是自洽的，他的处境是荒诞的。',
