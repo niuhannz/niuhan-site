@@ -121,6 +121,20 @@
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
+      id: 'deliberation',
+      titleZh: '众议',
+      titleEn: 'The Deliberation',
+      year: 2016,
+      type: 'study',
+      format: { en: 'Study', zh: '速写' },
+      duration: { en: 'TBD', zh: '待定' },
+      thumbnail: '',
+      heroImage: '',
+      descEn: '',
+      descZh: '',
+      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+    },
+    {
       id: 'between-yes-and-no',
       titleZh: '是与不是之间',
       titleEn: 'Between Yes and No',
