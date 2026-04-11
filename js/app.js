@@ -403,7 +403,22 @@
     renderWritings();
     bindEvents();
 
-    // Hero image is now hardcoded in HTML — no JS injection needed
+    // Random hero image from works on each visit
+    (function setRandomHero() {
+      var images = [];
+      WORKS.forEach(function (w) {
+        if (w.heroImage) images.push(w.heroImage);
+        if (w.thumbnail) images.push(w.thumbnail);
+      });
+      if (images.length > 0) {
+        var pick = images[Math.floor(Math.random() * images.length)];
+        var heroImg = document.querySelector('#heroImage img');
+        if (heroImg) {
+          heroImg.src = pick;
+          heroImg.alt = 'Niu Han — film still';
+        }
+      }
+    })();
 
     // Transparent nav on home (initial state)
     if (currentPage === 'home') {
