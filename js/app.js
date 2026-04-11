@@ -182,7 +182,7 @@
       titleEn: 'The Picnic',
       year: 2025,
       type: 'study',
-      format: { en: 'Study — Italy', zh: '速写 — 意大利' },
+      format: { en: 'Study — Taiwan', zh: '速写 — 台湾' },
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: '',
       heroImage: '',
