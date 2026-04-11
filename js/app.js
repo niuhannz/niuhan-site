@@ -277,7 +277,7 @@
     },
     {
       id: 'force-and-source',
-      titleZh: '老子德道二篇',
+      titleZh: '老子德道经',
       titleEn: 'The Force and the Source',
       year: 2026,
       type: 'translation',
