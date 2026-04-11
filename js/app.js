@@ -142,8 +142,8 @@
       type: 'study',
       format: { en: 'Study — Italy', zh: '速写 — 意大利' },
       duration: { en: 'TBD', zh: '待定' },
-      thumbnail: 'images/woman-descending-thumb.jpg',
-      heroImage: 'images/woman-descending-hero.jpg',
+      thumbnail: 'images/FearAli.jpg',
+      heroImage: 'images/FearAli.jpg',
       descEn: 'Three Muslim men working in Italy. One is convinced that music is evil. The other two have different fears. Under the olive trees, the will of God and the weakness of man sit quietly together.',
       descZh: '三个穆斯林男人在意大利打工。其中一个坚信音乐是邪恶的。另外两个有别的恐惧。橄榄树下，神的旨意与人的软弱安静地坐在一起。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
