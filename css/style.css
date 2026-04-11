@@ -979,7 +979,7 @@ h1, h2, h3, h4 {
 
 /* ---------- CV ---------- */
 .cv-section {
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-xl);
 }
 
 .cv-section-title {
@@ -987,16 +987,16 @@ h1, h2, h3, h4 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-tertiary);
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
   border-bottom: 1px solid var(--color-border);
 }
 
 .cv-entry {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: var(--space-lg);
-  padding: var(--space-md) 0;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
 }
 
 .cv-year {
@@ -1009,13 +1009,13 @@ h1, h2, h3, h4 {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .cv-details p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* ---------- Journal ---------- */
