@@ -273,15 +273,15 @@ h1, h2, h3, h4 {
 /* Nav when mobile menu is open — frosted glass to match overlay */
 .nav.nav-menu-open,
 .nav.nav-menu-open.nav-transparent {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(24px) saturate(1.8) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(40px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(1.8) !important;
   border-bottom-color: transparent !important;
   color: var(--color-text);
 }
 [data-theme="dark"] .nav.nav-menu-open,
 [data-theme="dark"] .nav.nav-menu-open.nav-transparent {
-  background: rgba(20, 20, 20, 0.65) !important;
+  background: rgba(20, 20, 20, 0.45) !important;
 }
 .nav.nav-menu-open .nav-logo,
 .nav.nav-menu-open .nav-btn,
@@ -1081,9 +1081,9 @@ h1, h2, h3, h4 {
     inset: 0;
     min-height: 100vh;
     min-height: 100dvh; /* dynamic viewport height for mobile Safari */
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(24px) saturate(1.8);
-    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(40px) saturate(1.8);
+    -webkit-backdrop-filter: blur(40px) saturate(1.8);
     padding: var(--space-2xl);
     padding-top: calc(var(--nav-height) + var(--space-xl));
     gap: var(--space-md);
@@ -1093,7 +1093,7 @@ h1, h2, h3, h4 {
   }
 
   [data-theme="dark"] .nav-links.mobile-open {
-    background: rgba(20, 20, 20, 0.65);
+    background: rgba(20, 20, 20, 0.45);
   }
 
   /* Force text color in overlay — overrides nav-transparent white */
