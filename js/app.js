@@ -163,10 +163,10 @@
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
-      id: 'roadside',
-      titleZh: '路边',
-      titleEn: 'Roadside',
-      year: 2024,
+      id: 'roadside-picnic',
+      titleZh: '路边野餐',
+      titleEn: 'The Picnic',
+      year: 2025,
       type: 'study',
       format: { en: 'Study — Italy', zh: '速写 — 意大利' },
       duration: { en: 'TBD', zh: '待定' },
