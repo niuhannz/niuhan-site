@@ -928,6 +928,10 @@ h1, h2, h3, h4 {
   align-items: start;
 }
 
+.about-photo-wrap {
+  width: 100%;
+}
+
 .about-photo {
   position: relative;
   width: 100%;
@@ -1161,6 +1165,7 @@ h1, h2, h3, h4 {
     gap: var(--space-xl);
   }
 
+  .about-photo-wrap,
   .about-photo {
     max-width: 400px;
   }
