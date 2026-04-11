@@ -111,8 +111,8 @@
       titleZh: '下楼梯的女人',
       titleEn: 'Woman Descending the Staircase',
       year: 2016,
-      type: 'short',
-      format: { en: 'Short Film', zh: '短片' },
+      type: 'study',
+      format: { en: 'Study', zh: '速写' },
       duration: { en: '17 min', zh: '17 分钟' },
       thumbnail: 'images/woman-descending-thumb.jpg',
       heroImage: 'images/woman-descending-hero.jpg',
@@ -429,6 +429,7 @@
     var filtered = WORKS;
     if (currentSubFilter === 'feature') filtered = WORKS.filter(function(w) { return w.type === 'feature'; });
     if (currentSubFilter === 'short') filtered = WORKS.filter(function(w) { return w.type === 'short'; });
+    if (currentSubFilter === 'study') filtered = WORKS.filter(function(w) { return w.type === 'study'; });
 
     // Clear grid
     while (worksGrid.firstChild) worksGrid.removeChild(worksGrid.firstChild);
