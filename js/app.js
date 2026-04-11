@@ -136,7 +136,7 @@
     },
     {
       id: 'fear-ali',
-      titleZh: 'Fear: Ali Eats the Soul',
+      titleZh: '恐惧阿里吞噬灵魂',
       titleEn: 'Fear: Ali Eats the Soul',
       year: 2024,
       type: 'study',
@@ -486,6 +486,7 @@
     if (currentSubFilter === 'feature') filtered = WORKS.filter(function(w) { return w.type === 'feature'; });
     if (currentSubFilter === 'short') filtered = WORKS.filter(function(w) { return w.type === 'short'; });
     if (currentSubFilter === 'study') filtered = WORKS.filter(function(w) { return w.type === 'study'; });
+    filtered = filtered.slice().sort(function(a, b) { return b.year - a.year; });
 
     // Clear grid
     while (worksGrid.firstChild) worksGrid.removeChild(worksGrid.firstChild);
