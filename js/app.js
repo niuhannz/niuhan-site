@@ -124,7 +124,7 @@
       id: 'deliberation',
       titleZh: '众议',
       titleEn: 'The Deliberation',
-      year: 2016,
+      year: 2024,
       type: 'study',
       format: { en: 'Study', zh: '速写' },
       duration: { en: 'TBD', zh: '待定' },
