@@ -67,8 +67,8 @@
       duration: { en: '84 min', zh: '84 分钟' },
       thumbnail: 'images/murmur-thumb.jpg',
       heroImage: 'images/murmur-hero.jpg',
-      descEn: 'An old friend, lost for years, appears at the door. Her arrival disturbs the calm surface of a family. The husband finds something long buried beginning to stir — and what stirs will bring more trouble than the old wounds ever did. Some things, once spoken, can never be taken back.',
-      descZh: '一个失散多年的旧友，突然登门。她的出现搅动了一个家庭原本平静的表面。男主人发现，埋藏多年的情感正在悄悄复苏——而这份复苏，将带来比旧日恩怨更难收拾的麻烦。有些话说出口，就再也回不去了。',
+      descEn: 'An old friend, lost for years, appears at the door. Her arrival disturbs the calm surface of a family.',
+      descZh: '一个失散多年的旧友，突然登门。她的出现搅动了一个家庭原本平静的表面。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
