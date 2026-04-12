@@ -472,6 +472,15 @@
       nav.classList.remove('nav-transparent');
       if (fade) fade.style.display = '';
     }
+
+    // Reset journal to list view when navigating to journal
+    if (page === 'journal') {
+      var jList = document.getElementById('journalList');
+      if (jList) jList.style.display = '';
+      document.querySelectorAll('.journal-article').forEach(function(a) {
+        a.style.display = 'none';
+      });
+    }
   }
 
   // ---------- Theme ----------
@@ -988,6 +997,32 @@
     workDetailClose.addEventListener('click', closeWorkDetail);
     workDetail.addEventListener('click', function(e) {
       if (e.target === workDetail) closeWorkDetail();
+    });
+
+    // Journal: click entry → show article
+    document.querySelectorAll('.journal-entry').forEach(function(entry) {
+      entry.addEventListener('click', function() {
+        var id = entry.dataset.journal;
+        var article = document.getElementById('journal-' + id);
+        var list = document.getElementById('journalList');
+        if (article && list) {
+          list.style.display = 'none';
+          article.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Journal: back button
+    document.querySelectorAll('.journal-back').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var article = btn.closest('.journal-article');
+        var list = document.getElementById('journalList');
+        if (article && list) {
+          article.style.display = 'none';
+          list.style.display = 'block';
+        }
+      });
     });
 
     document.addEventListener('keydown', function(e) {
