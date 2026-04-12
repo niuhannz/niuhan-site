@@ -761,5 +761,92 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="js/app.js?v=66"></script>
+
+  <!-- ============ Lightweight Analytics ============ -->
+  <script>
+  (function () {
+    'use strict';
+
+    var SUPABASE_URL = 'https://lseucirlimmyymyqugay.supabase.co';
+    var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxzZXVjaXJsaW1teXlteXF1Z2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0NjU0NjQsImV4cCI6MjA4NjA0MTQ2NH0.U4Minc9UjTQhYHKGp_YVvovyxkHpG8u9K5rnKsUl8Hk';
+    var REST_URL = SUPABASE_URL + '/rest/v1/page_views';
+    var HEADERS = {
+      'apikey': ANON_KEY,
+      'Authorization': 'Bearer ' + ANON_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=representation'
+    };
+
+    // Session ID — persists per browser tab session, no cookies
+    var sessionId = sessionStorage.getItem('_nh_sid');
+    if (!sessionId) {
+      sessionId = crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36);
+      sessionStorage.setItem('_nh_sid', sessionId);
+    }
+
+    var pageLoadTime = Date.now();
+    var rowId = null;
+
+    // Record page view
+    function recordPageView() {
+      var payload = {
+        page_path: location.pathname + location.hash,
+        session_id: sessionId,
+        referrer: document.referrer || '',
+        user_agent: navigator.userAgent || '',
+        screen_width: window.screen ? window.screen.width : null,
+        language: navigator.language || ''
+      };
+
+      fetch(REST_URL, {
+        method: 'POST',
+        headers: HEADERS,
+        body: JSON.stringify(payload)
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data[0] && data[0].id) rowId = data[0].id;
+      })
+      .catch(function () {});
+    }
+
+    // Update duration on page leave
+    function updateDuration() {
+      if (!rowId) return;
+      var seconds = Math.round((Date.now() - pageLoadTime) / 1000);
+      if (seconds < 1 || seconds > 7200) return; // sanity: ignore >2h
+
+      var url = REST_URL + '?id=eq.' + rowId;
+      var body = JSON.stringify({ duration_seconds: seconds });
+
+      // Use sendBeacon for reliability on page unload
+      if (navigator.sendBeacon) {
+        var blob = new Blob([body], { type: 'application/json' });
+        // sendBeacon doesn't support custom headers, so fall back to fetch with keepalive
+        fetch(url, {
+          method: 'PATCH',
+          headers: HEADERS,
+          body: body,
+          keepalive: true
+        }).catch(function () {});
+      } else {
+        fetch(url, {
+          method: 'PATCH',
+          headers: HEADERS,
+          body: body
+        }).catch(function () {});
+      }
+    }
+
+    // Fire on page load
+    recordPageView();
+
+    // Update duration when user leaves or hides page
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') updateDuration();
+    });
+    window.addEventListener('beforeunload', updateDuration);
+  })();
+  </script>
 </body>
 </html>
