@@ -208,8 +208,8 @@
       duration: { en: '7 min', zh: '7 分钟' },
       thumbnail: 'images/between-yes-and-no-thumb.jpg',
       heroImage: 'images/between-yes-and-no-hero.jpg',
-      descEn: 'At a wrap party, a director introduces his ex to the girl he now likes. He asks: what do you think of her? He shouldn\'t have asked. The glasses aren\'t even empty yet, and something has already broken.',
-      descZh: '庆功宴上，一个男导演向前恋人介绍他新喜欢的女孩。他问：你觉得她怎么样？这句话，不该问的。酒杯还没空，什么东西已经碎了。',
+      descEn: 'At a wrap party, a director introduces his ex to the girl he now likes. He asks: what do you think of her? He shouldn\'t have asked.',
+      descZh: '庆功宴上，一个男导演向前恋人介绍他新喜欢的女孩。他问：你觉得她怎么样？这句话，不该问的。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
