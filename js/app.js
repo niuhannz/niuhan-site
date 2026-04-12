@@ -44,8 +44,8 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: '98 min', zh: '98 分钟' },
-      thumbnail: 'images/Word502.png',
-      heroImage: 'images/words-hero.jpg',
+      thumbnail: 'images/Word-thumb-new.jpg',
+      heroImage: 'images/Word502.png',
       descEn: 'Adapted from the play by Danish playwright Kaj Munk. Matt is called back to the hometown he has long despised. His second brother believes he is Jesus of Nazareth. His third brother is drowning in emotional wreckage. His father\'s mind is slipping. The family is already in ruins — and then his wife dies without warning. In a place where faith has collapsed, is miracle still possible?',
       descZh: '改编自丹麦剧作家Kaj Munk同名话剧。Matt被召回他鄙夷已久的家乡。二弟深信自己是拿撒勒人耶稣，三弟深陷情感的泥沼，父亲的精神状况每况愈下。这个家早已是废墟，妻子的突然离世将他推向最深的绝境。在信仰崩塌的地方，奇迹是否还有可能发生？',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
