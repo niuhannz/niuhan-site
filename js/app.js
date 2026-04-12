@@ -224,7 +224,7 @@
       heroImage: 'images/home-hero.jpg',
       descEn: 'May 1949, Shanghai. He and a friend went to the harbor for fun and boarded a ship bound for Hualien, Taiwan.',
       descZh: '1949年5月，上海。他和朋友去港口玩，上了一艘去台湾花莲旅游的船。',
-      credits: { en: 'Co-directed & Co-photographed by Niu Han, Chen Ko-chin, Meteor Cheung, Cheung Chin-hung', zh: '联合导演/摄影：牛涵、陈克勤、张宇翰、张展雄' }
+      credits: { en: 'Co-directed by Leong Wei-ping, Tan Seng-kiat, Vincent Liu, Niu Han · Cinematography: Chen Ko-chin, Meteor Cheung, Cheung Chin-hung', zh: '联合导演：梁卉彬、陈胜吉、刘振南、牛涵 · 摄影：陈克勤、张宇翰、张展雄' }
     },
     {
       id: 'barren-land',
