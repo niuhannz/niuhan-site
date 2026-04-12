@@ -222,8 +222,8 @@
       duration: { en: '20 min', zh: '20 分钟' },
       thumbnail: 'images/home-thumb.jpg',
       heroImage: 'images/home-hero.jpg',
-      descEn: 'He just went to the harbor to hang around. Shanghai, 1949. He boarded a ship with some friends. The ship went to Taiwan. He spent the rest of his life there. Decades later, when the borders finally opened, he went back. His parents were gone. The streets didn\'t recognize him. Everything had changed. He just went to the harbor to hang around.',
-      descZh: '他只是去港口玩了一下。1949年，上海，他跟朋友上了一艘船。船去了台湾。他就这样在台湾过了一辈子。几十年后，两岸开放，他回去了。父母不在了，街道不认识了，什么都变了。他只是去港口玩了一下。',
+      descEn: 'May 1949, Shanghai. He and a friend went to the harbor for fun and boarded a ship bound for Hualien, Taiwan.',
+      descZh: '1949年5月，上海。他和朋友去港口玩，上了一艘去台湾花莲旅游的船。',
       credits: { en: 'Directed by Niu Han', zh: '导演：牛涵' }
     },
     {
