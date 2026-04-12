@@ -74,9 +74,9 @@
       duration: { en: '96 min', zh: '96 分钟' },
       thumbnail: 'images/sweet-life-thumb.jpg',
       heroImage: 'images/sweet-life-hero.jpg',
-      descEn: 'Two kindergarten children go missing. The adults begin to search. And in searching, they find other things — the hollow spaces behind the noise, the cracks quietly buried by an era of relentless progress. A melancholy comedy. A fable about the way we live.',
-      descZh: '两个幼儿园的孩子失踪了。大人们开始寻找。找着找着，找出了自己生活里那些说不清楚的东西——那些藏在热闹背后的空洞，那些被高歌猛进的时代顺手掩埋的裂缝。一篇基调忧伤的喜剧。一则关于我们如何生活的寓言。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      descEn: 'Two kindergarten children go missing. The adults begin to search.',
+      descZh: '两个幼儿园的孩子失踪了。大人们开始寻找。',
+      credits: { en: 'Written & Directed by Niu Han · Executive Producer: Ning Hao', zh: '编剧/导演：牛涵 · 监制：宁浩' }
     },
     {
       id: 'uncertain-regards',
