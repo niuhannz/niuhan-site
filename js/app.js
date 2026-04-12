@@ -294,6 +294,7 @@
       year: 2014,
       type: 'translation',
       format: { en: 'Translation', zh: '译著' },
+      coverImage: 'images/straybirds.jpg',
       descEn: 'A translation by Niu Han.',
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
