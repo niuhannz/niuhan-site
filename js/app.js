@@ -420,9 +420,11 @@
       }
     })();
 
-    // Transparent nav on home (initial state)
+    // Transparent nav on home (initial state); hide scroll-fade
     if (currentPage === 'home') {
       document.querySelector('.nav').classList.add('nav-transparent');
+      var fade = document.getElementById('scrollFade');
+      if (fade) fade.style.display = 'none';
     }
   }
 
@@ -458,12 +460,15 @@
     if (pushState) window.location.hash = page === 'home' ? '' : page;
     window.scrollTo({ top: 0, behavior: 'instant' });
 
-    // Transparent nav on home page
+    // Transparent nav on home page; hide scroll-fade on home
     var nav = document.querySelector('.nav');
+    var fade = document.getElementById('scrollFade');
     if (page === 'home') {
       nav.classList.add('nav-transparent');
+      if (fade) fade.style.display = 'none';
     } else {
       nav.classList.remove('nav-transparent');
+      if (fade) fade.style.display = '';
     }
   }
 

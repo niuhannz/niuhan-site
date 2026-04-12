@@ -223,6 +223,23 @@ h1, h2, h3, h4 {
   transition: all var(--transition-fast);
 }
 
+/* ---------- Scroll fade under nav ---------- */
+.scroll-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--nav-height) + 32px);
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    var(--color-bg) 50%,
+    transparent 100%
+  );
+  z-index: 50;
+  pointer-events: none;
+}
+
 /* ---------- Page Sections ---------- */
 .page {
   display: none;
