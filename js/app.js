@@ -112,7 +112,7 @@
       titleEn: 'Woman Descending the Staircase',
       year: 2016,
       type: 'study',
-      format: { en: 'Study', zh: '速写' },
+      format: { en: 'Study — Cuba', zh: '速写 — 古巴' },
       duration: { en: '17 min', zh: '17 分钟' },
       thumbnail: 'images/woman-descending-thumb.jpg',
       heroImage: 'images/woman-descending-hero.jpg',
