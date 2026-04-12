@@ -918,6 +918,24 @@ h1, h2, h3, h4 {
   stroke-width: 1.5;
 }
 
+/* ---------- Systems ---------- */
+.systems-intro {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+}
+
+.systems-empty {
+  padding: var(--space-3xl) 0;
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+}
+
 /* ---------- About ---------- */
 .about-layout {
   display: grid;
