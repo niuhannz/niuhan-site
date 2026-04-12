@@ -306,6 +306,9 @@ h1, h2, h3, h4 {
 .nav.nav-menu-open.nav-transparent .nav-btn {
   color: var(--color-text);
 }
+.nav.nav-menu-open .nav-mobile-toggle {
+  display: none;
+}
 .nav.nav-menu-open .nav-mobile-toggle span,
 .nav.nav-menu-open.nav-transparent .nav-mobile-toggle span {
   background: var(--color-text);
