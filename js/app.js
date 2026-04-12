@@ -137,8 +137,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/Deliberation.jpg',
       heroImage: 'images/Deliberation.jpg',
-      descEn: '',
-      descZh: '',
+      descEn: 'A group argues over a fictional act of immorality. Then someone is asked to tell a true story of their own.',
+      descZh: '众人对一件虚构的不道德事件众说纷纭。有人被要求讲出自己的真实故事。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -165,8 +165,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/Maria.jpg',
       heroImage: 'images/MariaHero.jpg',
-      descEn: '',
-      descZh: '',
+      descEn: 'A mother in her nineties recounts the glories of fascist Italy to her family.',
+      descZh: '一个九十多岁的母亲，向家人回忆意大利法西斯时代的光荣。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -179,8 +179,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/Andre.jpg',
       heroImage: 'images/Andre.jpg',
-      descEn: '',
-      descZh: '',
+      descEn: 'The power goes out. The life of an artist and a designer.',
+      descZh: '停电了。一个艺术家和一个设计师的生活。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     // Hidden until images are found — restore when ready
