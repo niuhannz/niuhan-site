@@ -321,8 +321,8 @@
       format: { en: 'Translation', zh: '译著' },
       coverImage: 'images/straybirds.jpg',
       author: { en: 'Rabindranath Tagore', zh: 'Rabindranath Tagore' },
-      descEn: 'A translation by Niu Han.',
-      descZh: '牛涵译著。',
+      descEn: 'A translation by Niu Han. Out of print.',
+      descZh: '牛涵译著。已停印。',
       publisher: { en: '', zh: '' }
     },
     // {
