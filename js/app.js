@@ -170,8 +170,8 @@
       type: 'study',
       format: { en: 'Study — Italy', zh: '速写 — 意大利' },
       duration: { en: 'TBD', zh: '待定' },
-      thumbnail: '',
-      heroImage: '',
+      thumbnail: 'images/Andre.jpg',
+      heroImage: 'images/Andre.jpg',
       descEn: '',
       descZh: '',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
