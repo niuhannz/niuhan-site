@@ -39,8 +39,8 @@
       duration: { en: '24 min', zh: '24 分钟' },
       thumbnail: 'images/legitimate-fruit-thumb.jpg',
       heroImage: 'images/legitimate-fruit-hero.jpg',
-      descEn: 'A group of young directors from around the world gather in an Italian village, waiting for a legendary master. Each arrives with their ambitions, their leading ladies, their stories — and expectations far too large to carry. The master doesn\'t come.',
-      descZh: '一群来自世界各地的青年导演，聚集在意大利一个小镇，等待一位传奇大师的到来。每个人都带着自己的野心、自己的女演员、自己的故事——和一份过于巨大的期待。大师没有来。',
+      descEn: 'A group of young directors from around the world gather in an Italian village, waiting for a legendary master. Each arrives with their ambitions, their leading ladies, their stories — and expectations far too large to carry.',
+      descZh: '一群来自世界各地的青年导演，聚集在意大利一个小镇，等待一位传奇大师的到来。每个人都带着自己的野心、自己的女演员、自己的故事——和一份过于巨大的期待。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
