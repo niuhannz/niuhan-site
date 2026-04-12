@@ -814,7 +814,7 @@
       });
 
       // Cover: use image if available, otherwise typographic title
-      var cardImage = createEl('div', { className: 'work-card-image' });
+      var cardImage = createEl('div', { className: 'work-card-image' + (item.coverImage ? ' has-cover' : '') });
       if (item.coverImage) {
         var img = createEl('img', { src: item.coverImage, alt: item.titleEn });
         img.style.width = '100%';
