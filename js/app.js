@@ -264,8 +264,8 @@
       duration: { en: '75 min', zh: '75 分钟' },
       thumbnail: 'images/autumn-of-freedom-thumb.jpg',
       heroImage: 'images/autumn-of-freedom-hero.jpg',
-      descEn: 'A man meets a girl. The girl has another man in her nights. Three people, each carrying some idea of what life should be — none of them living it. Freedom is somewhere over the hills. Nobody\'s ever actually been.',
-      descZh: '一个普通男人，遇见了一个女孩。女孩的夜里还有另一个男人。三个人，各自怀揣着对生活的某种想象，却没有一个人活在那个想象里。自由在山那边。没有人真的去过。',
+      descEn: 'Hachi, a man who lives on luck, meets Rene. But she has another man.',
+      descZh: '靠好运过活的八遇见了里奈，可她还有另一个男人。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     }
   ];
