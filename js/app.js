@@ -179,8 +179,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/Andre.jpg',
       heroImage: 'images/Andre.jpg',
-      descEn: 'The power goes out. The life of an artist and a designer.',
-      descZh: '停电了。一个艺术家和一个设计师的生活。',
+      descEn: 'Andre is an artist in pursuit of the absolute object. But the power is out.',
+      descZh: '安德烈是个追求绝对之物的艺术家。但他家停电了。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     // Hidden until images are found — restore when ready
