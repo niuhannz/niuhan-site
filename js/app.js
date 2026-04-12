@@ -301,7 +301,7 @@
     },
     {
       id: 'art-of-dramatic-writing',
-      titleZh: '戏剧写作的艺术',
+      titleZh: '戏张力写作法',
       titleEn: 'The Art of Dramatic Writing',
       year: 2019,
       type: 'translation',
