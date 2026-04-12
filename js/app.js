@@ -283,6 +283,19 @@
       year: 2026,
       type: 'translation',
       format: { en: 'Translation', zh: '译著' },
+      author: { en: 'Laozi', zh: '老子' },
+      descEn: 'A translation by Niu Han.',
+      descZh: '牛涵译著。',
+      publisher: { en: '', zh: '' }
+    },
+    {
+      id: 'art-of-dramatic-writing',
+      titleZh: '戏张力写作法',
+      titleEn: 'The Art of Dramatic Writing',
+      year: 2019,
+      type: 'translation',
+      format: { en: 'Translation', zh: '译著' },
+      author: { en: 'Lajos Egri', zh: 'Lajos Egri' },
       descEn: 'A translation by Niu Han.',
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
@@ -295,17 +308,7 @@
       type: 'translation',
       format: { en: 'Translation', zh: '译著' },
       coverImage: 'images/straybirds.jpg',
-      descEn: 'A translation by Niu Han.',
-      descZh: '牛涵译著。',
-      publisher: { en: '', zh: '' }
-    },
-    {
-      id: 'art-of-dramatic-writing',
-      titleZh: '戏张力写作法',
-      titleEn: 'The Art of Dramatic Writing',
-      year: 2019,
-      type: 'translation',
-      format: { en: 'Translation', zh: '译著' },
+      author: { en: 'Rabindranath Tagore', zh: 'Rabindranath Tagore' },
       descEn: 'A translation by Niu Han.',
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
@@ -848,6 +851,13 @@
       var cardTitle = createEl('div', { className: 'work-card-title' });
       cardTitle.appendChild(langSpan(item.titleEn, item.titleZh));
       card.appendChild(cardTitle);
+
+      // Author line for translations
+      if (item.author) {
+        var authorLine = createEl('div', { className: 'writing-card-author' });
+        authorLine.appendChild(langSpan(item.author.en, item.author.zh));
+        card.appendChild(authorLine);
+      }
 
       // Description line
       var desc = createEl('div', { className: 'writing-card-desc' });

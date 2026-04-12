@@ -541,6 +541,12 @@ h1, h2, h3, h4 {
 }
 
 /* Writing card description below card */
+.writing-card-author {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
 .writing-card-desc {
   font-size: 0.8125rem;
   color: var(--color-text-tertiary);
