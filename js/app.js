@@ -282,7 +282,8 @@
       coverImage: 'images/BASEBORN_CoverFIN.jpg',
       descEn: 'A novel by Niu Han.',
       descZh: '牛涵长篇小说。',
-      publisher: { en: '', zh: '' }
+      publisher: { en: '', zh: '' },
+      amazonUrl: 'https://www.amazon.com/BASEBORN-Heavenfall-Nolan-R-Highmoor/dp/B0GKK64424/'
     },
     {
       id: 'force-and-source',
@@ -295,7 +296,8 @@
       author: { en: 'Lao Tzu', zh: '老子' },
       descEn: 'A translation by Niu Han.',
       descZh: '牛涵译著。',
-      publisher: { en: '', zh: '' }
+      publisher: { en: '', zh: '' },
+      amazonUrl: 'https://www.amazon.com/Lao-Tzu-Translation-Restored-Traditionally/dp/B0GLP1V162/'
     },
     // HIDDEN: 戏张力写作法 — uncomment when republished
     // {
@@ -433,7 +435,8 @@
       author: (r.author_en || r.author_zh) ? { en: r.author_en || '', zh: r.author_zh || '' } : null,
       descEn: r.desc_en || '',
       descZh: r.desc_zh || '',
-      publisher: { en: r.publisher_en || '', zh: r.publisher_zh || '' }
+      publisher: { en: r.publisher_en || '', zh: r.publisher_zh || '' },
+      amazonUrl: r.amazon_url || ''
     };
   }
 
@@ -1076,6 +1079,18 @@
       var desc = createEl('div', { className: 'writing-card-desc' });
       desc.appendChild(langSpan(item.descEn, item.descZh));
       card.appendChild(desc);
+
+      // Amazon purchase link
+      if (item.amazonUrl) {
+        var buyLink = createEl('a', {
+          className: 'writing-card-buy',
+          href: item.amazonUrl,
+          target: '_blank',
+          rel: 'noopener noreferrer'
+        });
+        buyLink.appendChild(langSpan('Buy on Amazon', '在亚马逊购买'));
+        card.appendChild(buyLink);
+      }
 
       writingGrid.appendChild(card);
     });
