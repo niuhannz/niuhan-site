@@ -271,6 +271,7 @@
       year: 2026,
       type: 'novel',
       format: { en: 'Novel', zh: '小说' },
+      coverImage: 'images/BASEBORN_CoverFIN.jpg',
       descEn: 'A novel by Niu Han.',
       descZh: '牛涵长篇小说。',
       publisher: { en: '', zh: '' }
@@ -812,13 +813,19 @@
         className: 'work-card fade-in stagger-' + Math.min(i + 1, 9)
       });
 
-      // Typographic cover: title displayed inside the card image area
+      // Cover: use image if available, otherwise typographic title
       var cardImage = createEl('div', { className: 'work-card-image' });
-      var coverTitle = createEl('div', {
-        className: 'writing-cover-title'
-      });
-      coverTitle.appendChild(langSpan(item.titleEn, item.titleZh));
-      cardImage.appendChild(coverTitle);
+      if (item.coverImage) {
+        var img = createEl('img', { src: item.coverImage, alt: item.titleEn });
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        cardImage.appendChild(img);
+      } else {
+        var coverTitle = createEl('div', { className: 'writing-cover-title' });
+        coverTitle.appendChild(langSpan(item.titleEn, item.titleZh));
+        cardImage.appendChild(coverTitle);
+      }
       card.appendChild(cardImage);
 
       var meta = createEl('div', { className: 'work-card-meta' });
