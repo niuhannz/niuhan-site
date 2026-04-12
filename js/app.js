@@ -1,13 +1,20 @@
 /* ============================================
    niuhan.net — Application Logic
    Routing, i18n, theme, works grid, video player
+   Now with Supabase CMS integration
    ============================================ */
 
 (function () {
   'use strict';
 
-  // ---------- Works Data ----------
-  const WORKS = [
+  // ---------- Supabase Client ----------
+  var _sb = window.supabase.createClient(
+    'https://lseucirlimmyymyqugay.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxzZXVjaXJsaW1teXlteXF1Z2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0NjU0NjQsImV4cCI6MjA4NjA0MTQ2NH0.U4Minc9UjTQhYHKGp_YVvovyxkHpG8u9K5rnKsUl8Hk'
+  );
+
+  // ---------- Works Data (fallback; replaced by Supabase fetch) ----------
+  var WORKS = [
     {
       id: 'commandment',
       titleZh: '诫命',
@@ -262,8 +269,8 @@
     }
   ];
 
-  // ---------- Writing Data ----------
-  const WRITINGS = [
+  // ---------- Writing Data (fallback; replaced by Supabase fetch) ----------
+  var WRITINGS = [
     {
       id: 'baseborn',
       titleZh: '贱生',
@@ -394,8 +401,208 @@
     return frag;
   }
 
+  // ---------- Supabase Data Fetching ----------
+  function mapWorkRow(r) {
+    return {
+      id: r.id,
+      titleZh: r.title_zh || '',
+      titleEn: r.title_en || '',
+      year: r.year || 0,
+      type: r.type || 'feature',
+      format: { en: r.format_en || '', zh: r.format_zh || '' },
+      duration: { en: r.duration_en || '', zh: r.duration_zh || '' },
+      thumbnail: r.thumbnail || '',
+      heroImage: r.hero_image || '',
+      descEn: r.desc_en || '',
+      descZh: r.desc_zh || '',
+      credits: { en: r.credits_en || '', zh: r.credits_zh || '' },
+      videoSrc: r.video_src || ''
+    };
+  }
+
+  function mapWritingRow(r) {
+    return {
+      id: r.id,
+      titleZh: r.title_zh || '',
+      titleEn: r.title_en || '',
+      year: r.year || 0,
+      type: r.type || 'novel',
+      format: { en: r.format_en || '', zh: r.format_zh || '' },
+      coverImage: r.cover_image || '',
+      author: (r.author_en || r.author_zh) ? { en: r.author_en || '', zh: r.author_zh || '' } : null,
+      descEn: r.desc_en || '',
+      descZh: r.desc_zh || '',
+      publisher: { en: r.publisher_en || '', zh: r.publisher_zh || '' }
+    };
+  }
+
+  async function fetchCmsData() {
+    try {
+      var wRes = await _sb.from('works').select('*').eq('visible', true).order('sort_order');
+      if (wRes.data && wRes.data.length > 0) {
+        WORKS = wRes.data.map(mapWorkRow);
+      }
+
+      var wrRes = await _sb.from('writings').select('*').eq('visible', true).order('sort_order');
+      if (wrRes.data && wrRes.data.length > 0) {
+        WRITINGS = wrRes.data.map(mapWritingRow);
+      }
+
+      var abRes = await _sb.from('about_content').select('*').eq('id', 'main').single();
+      if (abRes.data) {
+        renderAboutFromDb(abRes.data);
+      }
+
+      var jRes = await _sb.from('journal_articles').select('*').eq('visible', true).order('sort_order');
+      if (jRes.data && jRes.data.length > 0) {
+        renderJournalFromDb(jRes.data);
+      }
+    } catch (e) {
+      console.warn('CMS fetch failed, using fallback data:', e);
+    }
+  }
+
+  function renderAboutFromDb(about) {
+    var nameEl = document.querySelector('.about-name');
+    if (nameEl) {
+      var zhName = nameEl.querySelector('.lang-zh');
+      var enName = nameEl.querySelector('.lang-en');
+      if (zhName) zhName.textContent = about.name_zh;
+      if (enName) enName.textContent = about.name_en;
+    }
+
+    var bioEl = document.querySelector('.about-bio');
+    if (bioEl) {
+      while (bioEl.firstChild) bioEl.removeChild(bioEl.firstChild);
+
+      var enParas = (about.bio_en || '').split(/\n\n+/);
+      var zhParas = (about.bio_zh || '').split(/\n\n+/);
+
+      enParas.forEach(function(text, i) {
+        var p = document.createElement('p');
+        p.className = 'lang-en';
+        if (i < enParas.length - 1) p.style.marginBottom = '1.5rem';
+        p.textContent = text;
+        bioEl.appendChild(p);
+      });
+
+      zhParas.forEach(function(text, i) {
+        var p = document.createElement('p');
+        p.className = 'lang-zh';
+        if (i < zhParas.length - 1) p.style.marginBottom = '1.5rem';
+        p.textContent = text;
+        bioEl.appendChild(p);
+      });
+    }
+
+    var contactLink = document.querySelector('.about-contact a');
+    if (contactLink && about.contact_email) {
+      contactLink.href = 'mailto:' + about.contact_email;
+      contactLink.textContent = about.contact_email;
+    }
+
+    var photoImg = document.querySelector('.about-photo img');
+    if (photoImg && about.photo_path) {
+      photoImg.src = about.photo_path;
+    }
+    var creditEl = document.querySelector('.about-photo-credit');
+    if (creditEl && about.photo_credit) {
+      creditEl.textContent = about.photo_credit;
+    }
+  }
+
+  function renderJournalFromDb(articles) {
+    var listEl = document.getElementById('journalList');
+    if (!listEl) return;
+
+    while (listEl.firstChild) listEl.removeChild(listEl.firstChild);
+
+    document.querySelectorAll('.journal-article').forEach(function(el) {
+      el.parentNode.removeChild(el);
+    });
+
+    var journalPage = document.getElementById('page-journal');
+    var pageInner = journalPage ? journalPage.querySelector('.page-inner') : null;
+
+    articles.forEach(function(article) {
+      var entry = document.createElement('article');
+      entry.className = 'journal-entry fade-in';
+      entry.setAttribute('data-journal', article.id);
+
+      var dateDiv = document.createElement('div');
+      dateDiv.className = 'journal-date';
+      dateDiv.textContent = article.date;
+      entry.appendChild(dateDiv);
+
+      var titleH3 = document.createElement('h3');
+      titleH3.className = 'journal-title';
+      titleH3.appendChild(langSpan(article.title_en, article.title_zh));
+      entry.appendChild(titleH3);
+
+      listEl.appendChild(entry);
+
+      var artDiv = document.createElement('div');
+      artDiv.className = 'journal-article';
+      artDiv.id = 'journal-' + article.id;
+      artDiv.style.display = 'none';
+
+      var backBtn = document.createElement('button');
+      backBtn.className = 'journal-back';
+      backBtn.appendChild(document.createTextNode('\u2190 '));
+      backBtn.appendChild(langSpan('Back', '\u8FD4\u56DE'));
+      artDiv.appendChild(backBtn);
+
+      var header = document.createElement('div');
+      header.className = 'journal-article-header fade-in';
+      var hDate = document.createElement('div');
+      hDate.className = 'journal-date';
+      hDate.textContent = article.date;
+      header.appendChild(hDate);
+      var hTitle = document.createElement('h2');
+      hTitle.className = 'journal-article-title';
+      hTitle.appendChild(langSpan(article.title_en, article.title_zh));
+      header.appendChild(hTitle);
+      artDiv.appendChild(header);
+
+      var body = document.createElement('div');
+      body.className = 'journal-article-body fade-in';
+
+      var zhParas = (article.body_zh || '').split(/\n\n+/);
+      var enParas = (article.body_en || '').split(/\n\n+/);
+      var maxLen = Math.max(zhParas.length, enParas.length);
+
+      for (var pi = 0; pi < maxLen; pi++) {
+        if (pi < zhParas.length && zhParas[pi].trim()) {
+          var pZh = document.createElement('p');
+          pZh.className = 'lang-zh';
+          pZh.textContent = zhParas[pi].trim();
+          body.appendChild(pZh);
+        }
+        if (pi < enParas.length && enParas[pi].trim()) {
+          var pEn = document.createElement('p');
+          pEn.className = 'lang-en';
+          pEn.textContent = enParas[pi].trim();
+          body.appendChild(pEn);
+        }
+      }
+
+      artDiv.appendChild(body);
+      if (pageInner) pageInner.appendChild(artDiv);
+
+      entry.addEventListener('click', function() {
+        listEl.style.display = 'none';
+        artDiv.style.display = '';
+      });
+
+      backBtn.addEventListener('click', function() {
+        artDiv.style.display = 'none';
+        listEl.style.display = '';
+      });
+    });
+  }
+
   // ---------- Initialize ----------
-  function init() {
+  async function init() {
     var savedTheme = localStorage.getItem('nh-theme');
     var savedLang = localStorage.getItem('nh-lang');
     if (savedTheme) setTheme(savedTheme);
@@ -405,6 +612,9 @@
     if (hash && document.getElementById('page-' + hash)) {
       navigateTo(hash, false);
     }
+
+    // Fetch CMS data (replaces hardcoded arrays if successful)
+    await fetchCmsData();
 
     renderWorks();
     renderWritings();
