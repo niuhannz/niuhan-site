@@ -278,12 +278,13 @@
     },
     {
       id: 'force-and-source',
-      titleZh: '老子德道经',
-      titleEn: 'The Force and the Source',
+      titleZh: '德道经',
+      titleEn: 'The Force and The Source',
       year: 2026,
       type: 'translation',
       format: { en: 'Translation', zh: '译著' },
-      author: { en: 'Laozi', zh: '老子' },
+      coverImage: 'images/LaotzuPerfect.jpg',
+      author: { en: 'Lao Tzu', zh: '老子' },
       descEn: 'A translation by Niu Han.',
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
