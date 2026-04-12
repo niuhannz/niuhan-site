@@ -137,8 +137,8 @@
       duration: { en: 'TBD', zh: '待定' },
       thumbnail: 'images/Deliberation.jpg',
       heroImage: 'images/Deliberation.jpg',
-      descEn: 'A group argues over a fictional act of immorality. Then someone is asked to tell a true story of their own.',
-      descZh: '众人对一件虚构的不道德事件众说纷纭。有人被要求讲出自己的真实故事。',
+      descEn: 'A group argues over a fictional act of immorality. Then someone volunteers a true story of their own.',
+      descZh: '众人对一件虚构的不道德事件众说纷纭。有人自愿讲出自己的真实故事。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
