@@ -95,8 +95,8 @@
       duration: { en: '5 min', zh: '5 分钟' },
       thumbnail: 'images/uncertain-regards-thumb.jpg',
       heroImage: 'images/uncertain-regards-hero.jpg',
-      descEn: 'Cannes Film Festival. Outside the red carpet entrance. A director has one spare ticket. A girl approaches — she doesn\'t want one, she wants two. Her and her boyfriend. He gives her both. Then he stands outside alone.',
-      descZh: '戛纳电影节，红毯外。一个导演手里多出一张票。人群里，一个女孩走过来——她不要一张，她要两张，她和她男朋友一起进去。导演把两张票都给了她。然后他自己站在门外。',
+      descEn: 'Outside the red carpet screening at Cannes, a crowd holds signs begging for tickets. A director has one and invites a girl. But she wants more than just the one.',
+      descZh: '戛纳电影节红毯场门外，举牌求票的人群。一个导演有票，约女孩同看，但女孩想要的不止是一张。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
