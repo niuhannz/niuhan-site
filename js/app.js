@@ -27,7 +27,7 @@
       heroImage: 'images/commandment-hero.jpg',
       descEn: 'A devout church elder believes God has called him to take a second wife. His faith is genuine. His logic is airtight. His situation is absurd.',
       descZh: '一名虔诚的教会长老相信，上帝呼召他娶第二个妻子。他的信念是真实的，他的逻辑是自洽的，他的处境是荒诞的。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'legitimate-fruit',
@@ -41,7 +41,7 @@
       heroImage: 'images/legitimate-fruit-hero.jpg',
       descEn: 'A group of young directors from around the world gather in an Italian village, waiting for a legendary master. Each arrives with their ambitions, their leading ladies, their stories — and expectations far too large to carry.',
       descZh: '一群来自世界各地的青年导演，聚集在意大利一个小镇，等待一位传奇大师的到来。每个人都带着自己的野心、自己的女演员、自己的故事——和一份过于巨大的期待。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'words',
@@ -55,7 +55,7 @@
       heroImage: 'images/Word502.png',
       descEn: 'Adapted from the play by Danish playwright Kaj Munk. Matt is called back to the hometown he has long despised. His second brother believes he is Jesus of Nazareth. His third brother is drowning in emotional wreckage. His father\'s mind is slipping. The family is already in ruins — and then his wife dies without warning. In a place where faith has collapsed, is miracle still possible?',
       descZh: '改编自丹麦剧作家Kaj Munk同名话剧。Matt被召回他鄙夷已久的家乡。二弟深信自己是拿撒勒人耶稣，三弟深陷情感的泥沼，父亲的精神状况每况愈下。这个家早已是废墟，妻子的突然离世将他推向最深的绝境。在信仰崩塌的地方，奇迹是否还有可能发生？',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'murmur',
@@ -69,7 +69,7 @@
       heroImage: 'images/murmur-hero.jpg',
       descEn: 'An old friend, lost for years, appears at the door. Her arrival disturbs the calm surface of a family.',
       descZh: '一个失散多年的旧友，突然登门。她的出现搅动了一个家庭原本平静的表面。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'sweet-life',
@@ -83,7 +83,7 @@
       heroImage: 'images/sweet-life-hero.jpg',
       descEn: 'Two kindergarten children go missing. The adults begin to search.',
       descZh: '两个幼儿园的孩子失踪了。大人们开始寻找。',
-      credits: { en: 'Written & Directed by Niu Han · Executive Producer: Ning Hao', zh: '编剧/导演：牛涵 · 监制：宁浩' }
+      credits: { en: 'Written & Directed by Niu Han · Cinematography: Eliot Rockett · Executive Producer: Ning Hao', zh: '编剧/导演：牛涵 · 摄影：艾略特·罗克特 · 监制：宁浩' }
     },
     {
       id: 'uncertain-regards',
@@ -97,7 +97,7 @@
       heroImage: 'images/uncertain-regards-hero.jpg',
       descEn: 'Outside the red carpet screening at Cannes, a crowd holds signs begging for tickets. A director has one and invites a girl. But she wants more than just the one.',
       descZh: '戛纳电影节红毯场门外，举牌求票的人群。一个导演有票，约女孩同看，但女孩想要的不止是一张。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'cilantro',
@@ -111,7 +111,7 @@
       heroImage: 'images/cilantro-hero.jpg',
       descEn: 'A down-and-out American director flies to Cuba with his Japanese girlfriend to attend a legendary master\'s workshop. The taxi gets lost. The girlfriend\'s heart has moved on. The workshop is nowhere to be found. Somewhere in the Cuban countryside, a relationship ends quietly — no announcement, no confirmation. Just sugarcane fields passing in reverse.',
       descZh: '一个落魄的美国导演，带着他的日本女友，飞到古巴，追随一位传奇大师。出租车迷路了。女友变心了。大师班找不到。在古巴的乡野之间，一段关系悄悄走到了尽头，没有人宣布，没有人确认，只是车窗外的蔗田一直在后退。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'woman-descending',
@@ -125,7 +125,7 @@
       heroImage: 'images/woman-descending-hero.jpg',
       descEn: 'The new housekeeper is quiet, diligent, flawless. The mistress of the house begins to notice things. A painting. A glance. Strangers coming and going. Someone in this house is waiting for something.',
       descZh: '新来的女佣，安静，勤快，无懈可击。女主人开始注意到一些细节。那幅画，那个眼神，那些来来去去的陌生人。这栋房子里，有人在等待什么。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'deliberation',
@@ -139,7 +139,7 @@
       heroImage: 'images/Deliberation.jpg',
       descEn: 'A group argues over a fictional act of immorality. Then someone volunteers a true story of their own.',
       descZh: '众人对一件虚构的不道德事件众说纷纭。有人自愿讲出自己的真实故事。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'fear-ali',
@@ -153,7 +153,7 @@
       heroImage: 'images/FearAli.jpg',
       descEn: 'Three Muslim men working in Italy. One is convinced that music is evil. The other two have different fears. Under the olive trees, the will of God and the weakness of man sit quietly together.',
       descZh: '三个穆斯林男人在意大利打工。其中一个坚信音乐是邪恶的。另外两个有别的恐惧。橄榄树下，神的旨意与人的软弱安静地坐在一起。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'maria',
@@ -167,7 +167,7 @@
       heroImage: 'images/MariaHero.jpg',
       descEn: 'A mother in her nineties recounts the glories of fascist Italy to her family.',
       descZh: '一个九十多岁的母亲，向家人回忆意大利法西斯时代的光荣。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'andre',
@@ -181,7 +181,7 @@
       heroImage: 'images/Andre.jpg',
       descEn: 'Andre is an artist in pursuit of the absolute object. But the power is out.',
       descZh: '安德烈是个追求绝对之物的艺术家。但他家停电了。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     // Hidden until images are found — restore when ready
     // {
@@ -196,7 +196,7 @@
     //   heroImage: '',
     //   descEn: '',
     //   descZh: '',
-    //   credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+    //   credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     // },
     {
       id: 'between-yes-and-no',
@@ -210,7 +210,7 @@
       heroImage: 'images/between-yes-and-no-hero.jpg',
       descEn: 'At a wrap party, a director introduces his ex to the girl he now likes. He asks: what do you think of her? He shouldn\'t have asked.',
       descZh: '庆功宴上，一个男导演向前恋人介绍他新喜欢的女孩。他问：你觉得她怎么样？这句话，不该问的。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'home',
@@ -224,7 +224,7 @@
       heroImage: 'images/home-hero.jpg',
       descEn: 'May 1949, Shanghai. He and a friend went to the harbor for fun and boarded a ship bound for Hualien, Taiwan.',
       descZh: '1949年5月，上海。他和朋友去港口玩，上了一艘去台湾花莲旅游的船。',
-      credits: { en: 'Directed by Niu Han', zh: '导演：牛涵' }
+      credits: { en: 'Co-directed & Co-photographed by Niu Han, Chen Ko-chin, Meteor Cheung, Cheung Chin-hung', zh: '联合导演/摄影：牛涵、陈克勤、张宇翰、张展雄' }
     },
     {
       id: 'barren-land',
@@ -238,7 +238,7 @@
       heroImage: 'images/barren-land-hero.jpg',
       descEn: 'A boy runs away from school, away from the play nobody believed in. In some corner of the city, he meets a drunk old vagrant with a lot to say about the world. Every word true. Every word crushing. The boy takes it all in. At night, another story moves quietly through his dreams.',
       descZh: '一个男孩逃离了学校，逃离了那出没有人信的戏剧。在某个角落，他遇见了一个醉酒的老流浪汉。老头对这个世界有很多话要说，句句是真理，句句令人绝望。男孩听进去了。夜里，另一个故事在梦里悄悄行进。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'melancholia-i',
@@ -252,7 +252,7 @@
       heroImage: 'images/melancholia-i-hero.jpg',
       descEn: 'A reunion by the sea. A conversation across time.',
       descZh: '一次海边重逢，两人跨时空的对话。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     },
     {
       id: 'autumn-of-freedom',
@@ -266,7 +266,7 @@
       heroImage: 'images/autumn-of-freedom-hero.jpg',
       descEn: 'Hachi, a man who lives on luck, meets Rene. But she has another man.',
       descZh: '靠好运过活的八遇见了里奈，可她还有另一个男人。',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     }
   ];
 
