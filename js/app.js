@@ -250,8 +250,8 @@
       duration: { en: '8 min', zh: '8 分钟' },
       thumbnail: 'images/melancholia-i-thumb.jpg',
       heroImage: 'images/melancholia-i-hero.jpg',
-      descEn: 'The seaside. Years later. A writer who can no longer write. A woman whose life hasn\'t turned out right. They were in love once. Now they\'re here again, with all those years between them. Some conversations can only happen in a place like this.',
-      descZh: '海边，多年之后。一个写不出东西的作家，一个生活不幸福的女人。他们曾经相爱，现在重逢，中间隔着说不清楚的岁月。有些对话，只能在这里说。',
+      descEn: 'A reunion by the sea. A conversation across time.',
+      descZh: '一次海边重逢，两人跨时空的对话。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
     {
@@ -264,8 +264,8 @@
       duration: { en: '75 min', zh: '75 分钟' },
       thumbnail: 'images/autumn-of-freedom-thumb.jpg',
       heroImage: 'images/autumn-of-freedom-hero.jpg',
-      descEn: 'A reunion by the sea. A conversation across time.',
-      descZh: '一次海边重逢，两人跨时空的对话。',
+      descEn: 'A man meets a girl. The girl has another man in her nights. Three people, each carrying some idea of what life should be — none of them living it. Freedom is somewhere over the hills. Nobody\'s ever actually been.',
+      descZh: '一个普通男人，遇见了一个女孩。女孩的夜里还有另一个男人。三个人，各自怀揣着对生活的某种想象，却没有一个人活在那个想象里。自由在山那边。没有人真的去过。',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     }
   ];
