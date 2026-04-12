@@ -516,9 +516,13 @@ h1, h2, h3, h4 {
 /* Writing cards with cover images: no padding/border */
 #writingGrid .work-card-image.has-cover {
   padding: 0;
+  background: var(--color-bg);
 }
 #writingGrid .work-card-image.has-cover::before {
   display: none;
+}
+#writingGrid .work-card-image.has-cover img {
+  object-fit: contain;
 }
 #writingGrid.works-grid {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
