@@ -638,38 +638,6 @@
       }
     })();
 
-    // ---------- Tool Cards: 3D tilt + click ----------
-    (function initToolCards() {
-      var wraps = document.querySelectorAll('.tool-card-wrap');
-      wraps.forEach(function (wrap) {
-        var card = wrap.querySelector('.tool-card');
-        var toolId = wrap.getAttribute('data-tool');
-        var detail = document.getElementById('detail-' + toolId);
-
-        // Mouse-tracking 3D tilt
-        wrap.addEventListener('mousemove', function (e) {
-          var rect = card.getBoundingClientRect();
-          var x = (e.clientX - rect.left) / rect.width - 0.5;   // -0.5 to 0.5
-          var y = (e.clientY - rect.top) / rect.height - 0.5;
-          var rotY = x * 14;   // max 7deg each side
-          var rotX = y * -10;  // max 5deg each side
-          card.style.transform =
-            'rotateY(' + rotY + 'deg) rotateX(' + rotX + 'deg) translateZ(16px)';
-        });
-
-        wrap.addEventListener('mouseleave', function () {
-          card.style.transform = 'rotateY(0deg) rotateX(0deg) translateZ(0px)';
-        });
-
-        // Click to expand detail
-        wrap.addEventListener('click', function (e) {
-          if (detail) {
-            detail.classList.toggle('open');
-          }
-        });
-      });
-    })();
-
     // Transparent nav on home (initial state); hide scroll-fade
     if (currentPage === 'home') {
       document.querySelector('.nav').classList.add('nav-transparent');
