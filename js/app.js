@@ -289,18 +289,19 @@
       descZh: '牛涵译著。',
       publisher: { en: '', zh: '' }
     },
-    {
-      id: 'art-of-dramatic-writing',
-      titleZh: '戏张力写作法',
-      titleEn: 'The Art of Dramatic Writing',
-      year: 2019,
-      type: 'translation',
-      format: { en: 'Translation', zh: '译著' },
-      author: { en: 'Lajos Egri', zh: 'Lajos Egri' },
-      descEn: 'A translation by Niu Han.',
-      descZh: '牛涵译著。',
-      publisher: { en: '', zh: '' }
-    },
+    // HIDDEN: 戏张力写作法 — uncomment when republished
+    // {
+    //   id: 'art-of-dramatic-writing',
+    //   titleZh: '戏张力写作法',
+    //   titleEn: 'The Art of Dramatic Writing',
+    //   year: 2019,
+    //   type: 'translation',
+    //   format: { en: 'Translation', zh: '译著' },
+    //   author: { en: 'Lajos Egri', zh: 'Lajos Egri' },
+    //   descEn: 'A translation by Niu Han.',
+    //   descZh: '牛涵译著。',
+    //   publisher: { en: '', zh: '' }
+    // },
     {
       id: 'wild-duck',
       titleZh: '野鸟',
