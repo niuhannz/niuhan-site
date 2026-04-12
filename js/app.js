@@ -183,20 +183,21 @@
       descZh: '',
       credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
     },
-    {
-      id: 'roadside-picnic',
-      titleZh: '路边野餐',
-      titleEn: 'The Picnic',
-      year: 2025,
-      type: 'study',
-      format: { en: 'Study — Taiwan', zh: '速写 — 台湾' },
-      duration: { en: 'TBD', zh: '待定' },
-      thumbnail: '',
-      heroImage: '',
-      descEn: '',
-      descZh: '',
-      credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
-    },
+    // Hidden until images are found — restore when ready
+    // {
+    //   id: 'roadside-picnic',
+    //   titleZh: '路边野餐',
+    //   titleEn: 'The Picnic',
+    //   year: 2025,
+    //   type: 'study',
+    //   format: { en: 'Study — Taiwan', zh: '速写 — 台湾' },
+    //   duration: { en: 'TBD', zh: '待定' },
+    //   thumbnail: '',
+    //   heroImage: '',
+    //   descEn: '',
+    //   descZh: '',
+    //   credits: { en: 'Written & Directed by Niu Han', zh: '编剧/导演：牛涵' }
+    // },
     {
       id: 'between-yes-and-no',
       titleZh: '是与不是之间',
