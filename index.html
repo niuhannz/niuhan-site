@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=31">
+  <link rel="stylesheet" href="css/style.css?v=32">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>牛</text></svg>">
 </head>
 <body>
@@ -205,64 +205,81 @@
         <span class="lang-zh">正在造的东西。不是产品，是工程。</span>
       </p>
 
-      <!-- Digital 8mm Camera -->
-      <div class="tool-project fade-in">
-        <div class="tool-project-header">
-          <div class="tool-project-title">
-            <span class="lang-en">Digital 8mm Camera Project</span>
-            <span class="lang-zh">数字8mm摄影机工程</span>
+      <div class="tools-shelf fade-in">
+
+        <!-- Digital 8mm Camera Card -->
+        <div class="tool-card-wrap" data-tool="camera">
+          <div class="tool-card">
+            <div class="tool-card-face tool-card-face--camera">
+              <div class="tool-card-icon">8mm</div>
+              <div class="tool-card-title">
+                <span class="lang-en">Digital 8mm Camera</span>
+                <span class="lang-zh">数字8mm摄影机</span>
+              </div>
+              <div class="tool-card-sub">
+                <span class="lang-en">Digital sensor, analog soul.</span>
+                <span class="lang-zh">数字传感器，模拟灵魂。</span>
+              </div>
+              <div class="tool-card-status">
+                <span class="lang-en">Design Phase</span>
+                <span class="lang-zh">设计阶段</span>
+              </div>
+            </div>
           </div>
-          <div class="tool-project-subtitle">
-            <span class="lang-en">A cinema camera that thinks in 8mm. Digital sensor, analog soul.</span>
-            <span class="lang-zh">一台用8mm思考的电影摄影机。数字传感器，模拟灵魂。</span>
-          </div>
-          <div class="tool-project-status">
-            <span class="lang-en">Status: Design Phase</span>
-            <span class="lang-zh">状态：设计阶段</span>
-          </div>
-        </div>
-        <div class="tool-log">
-          <div class="tool-log-entry">
-            <div class="tool-log-date">2025</div>
-            <div class="tool-log-content">
-              <p>
-                <span class="lang-en">Project begins. Why does every digital camera try to look like 35mm? The 8mm image has its own language — grain, breathing, a frame that doesn't pretend to be a window. Starting from the question: what if a digital camera was born as 8mm, not downgraded to it?</span>
-                <span class="lang-zh">项目启动。为什么每台数码相机都想长成35mm的样子？8mm影像有自己的语言——颗粒、呼吸、一个不假装是窗户的画框。从一个问题开始：如果一台数码相机生来就是8mm，而不是被降格成8mm？</span>
-              </p>
+          <div class="tool-card-reflection"></div>
+          <div class="tool-detail" id="detail-camera">
+            <div class="tool-detail-inner">
+              <div class="tool-detail-text">
+                <p>
+                  <span class="lang-en">Why does every digital camera try to look like 35mm? The 8mm image has its own language — grain, breathing, a frame that doesn't pretend to be a window. Starting from the question: what if a digital camera was born as 8mm, not downgraded to it?</span>
+                  <span class="lang-zh">为什么每台数码相机都想长成35mm的样子？8mm影像有自己的语言——颗粒、呼吸、一个不假装是窗户的画框。从一个问题开始：如果一台数码相机生来就是8mm，而不是被降格成8mm？</span>
+                </p>
+              </div>
+              <div class="tool-detail-status-label">
+                <span class="lang-en">2025 — Project begins</span>
+                <span class="lang-zh">2025 — 项目启动</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Color Science -->
-      <div class="tool-project fade-in">
-        <div class="tool-project-header">
-          <div class="tool-project-title">
-            <span class="lang-en">Color Science</span>
-            <span class="lang-zh">色彩科学</span>
+        <!-- Color Science Card -->
+        <div class="tool-card-wrap" data-tool="color">
+          <div class="tool-card">
+            <div class="tool-card-face tool-card-face--color">
+              <div class="tool-card-icon">&#9673;</div>
+              <div class="tool-card-title">
+                <span class="lang-en">Color Science</span>
+                <span class="lang-zh">色彩科学</span>
+              </div>
+              <div class="tool-card-sub">
+                <span class="lang-en">LUTs, transforms, and a personal color space.</span>
+                <span class="lang-zh">LUT、色彩变换，与个人色彩空间。</span>
+              </div>
+              <div class="tool-card-status">
+                <span class="lang-en">Ongoing</span>
+                <span class="lang-zh">进行中</span>
+              </div>
+            </div>
           </div>
-          <div class="tool-project-subtitle">
-            <span class="lang-en">LUTs, color transforms, and the pursuit of a personal color space.</span>
-            <span class="lang-zh">LUT、色彩变换，以及对个人色彩空间的追求。</span>
-          </div>
-          <div class="tool-project-status">
-            <span class="lang-en">Status: Ongoing</span>
-            <span class="lang-zh">状态：进行中</span>
-          </div>
-        </div>
-        <div class="tool-log">
-          <div class="tool-log-entry">
-            <div class="tool-log-date">2025</div>
-            <div class="tool-log-content">
-              <p>
-                <span class="lang-en">Notes and tools to come.</span>
-                <span class="lang-zh">笔记和工具即将更新。</span>
-              </p>
+          <div class="tool-card-reflection"></div>
+          <div class="tool-detail" id="detail-color">
+            <div class="tool-detail-inner">
+              <div class="tool-detail-text">
+                <p>
+                  <span class="lang-en">Notes and tools to come.</span>
+                  <span class="lang-zh">笔记和工具即将更新。</span>
+                </p>
+              </div>
+              <div class="tool-detail-status-label">
+                <span class="lang-en">2025 — Ongoing</span>
+                <span class="lang-zh">2025 — 进行中</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
@@ -813,6 +830,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="js/app.js?v=63"></script>
+  <script src="js/app.js?v=64"></script>
 </body>
 </html>

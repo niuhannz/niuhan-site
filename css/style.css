@@ -955,7 +955,7 @@ h1, h2, h3, h4 {
   stroke-width: 1.5;
 }
 
-/* ---------- Tools / Project Log ---------- */
+/* ---------- Tools / 3D Cards ---------- */
 .tools-intro {
   font-size: 1rem;
   color: var(--color-text-secondary);
@@ -964,98 +964,238 @@ h1, h2, h3, h4 {
   max-width: 600px;
 }
 
-.tool-project {
-  margin-bottom: var(--space-3xl);
+.tools-shelf {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  perspective: 1200px;
+  padding: 3rem 0 5rem;
 }
 
-.tool-project-header {
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-border);
+/* --- Card wrapper with 3D --- */
+.tool-card-wrap {
+  width: 280px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.tool-project-title {
+.tool-card {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease;
+  transform: rotateY(0deg) rotateX(0deg);
+  will-change: transform;
+}
+
+/* Glossy surface */
+.tool-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem;
+  backface-visibility: hidden;
+}
+
+/* Gradient background per card */
+.tool-card-face--camera {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color: #e0e0e0;
+}
+
+.tool-card-face--color {
+  background: linear-gradient(145deg, #2d1b3d 0%, #1a1a2e 40%, #162447 100%);
+  color: #e0e0e0;
+}
+
+/* Gloss / light reflection overlay */
+.tool-card-face::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 60%
+  );
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Edge highlight — simulates bezel */
+.tool-card-face::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Reflection underneath */
+.tool-card-reflection {
+  width: 100%;
+  height: 60px;
+  margin-top: 2px;
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 120, 0.15),
+    transparent
+  );
+  transform: scaleY(-1);
+  filter: blur(4px);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover — tilt + lift + glow */
+.tool-card-wrap:hover .tool-card {
+  transform: rotateY(-5deg) rotateX(3deg) translateZ(20px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(100, 120, 200, 0.08);
+}
+
+.tool-card-wrap:hover .tool-card-face::before {
+  opacity: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.08) 35%,
+    transparent 55%
+  );
+}
+
+.tool-card-wrap:hover .tool-card-reflection {
+  opacity: 0.7;
+}
+
+/* Active press */
+.tool-card-wrap:active .tool-card {
+  transform: rotateY(-2deg) rotateX(1deg) translateZ(8px) scale(0.97);
+  transition-duration: 0.1s;
+}
+
+/* Card content */
+.tool-card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 4;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.tool-card-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.tool-project-subtitle {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
+.tool-card-sub {
+  font-size: 0.82rem;
   line-height: 1.5;
+  opacity: 0.7;
+  position: relative;
+  z-index: 4;
 }
 
-.tool-project-status {
-  display: inline-block;
+.tool-card-status {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 0.8rem;
+  position: relative;
+  z-index: 4;
+}
+
+/* Resting shadow */
+.tool-card {
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Detail panel (click to expand) --- */
+.tool-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease,
+              margin 0.4s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.tool-detail.open {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.tool-detail-inner {
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.tool-detail-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.tool-detail-text p {
+  margin-bottom: 0.8rem;
+}
+
+.tool-detail-status-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-tertiary);
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 
-.tool-log {
-  position: relative;
-  padding-left: 1.5rem;
-}
+/* --- Responsive --- */
+@media (max-width: 680px) {
+  .tools-shelf {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    perspective: 800px;
+  }
 
-.tool-log::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.4rem;
-  bottom: 0;
-  width: 1px;
-  background: var(--color-border);
-}
+  .tool-card-wrap {
+    width: 260px;
+  }
 
-.tool-log-entry {
-  position: relative;
-  margin-bottom: var(--space-lg);
-}
+  .tool-card {
+    width: 260px;
+    height: 340px;
+  }
 
-.tool-log-entry::before {
-  content: '';
-  position: absolute;
-  left: -1.5rem;
-  top: 0.45rem;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-text-tertiary);
-}
-
-.tool-log-date {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--color-text-tertiary);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.3rem;
-}
-
-.tool-log-content {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--color-text);
-}
-
-.tool-log-content p {
-  margin-bottom: 0.5rem;
-}
-
-.tool-log-note {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-  font-style: italic;
-}
-
-@media (max-width: 768px) {
-  .tool-project-title {
-    font-size: 1.25rem;
+  .tool-card-wrap:hover .tool-card {
+    transform: rotateY(-3deg) rotateX(2deg) translateZ(12px);
   }
 }
 
