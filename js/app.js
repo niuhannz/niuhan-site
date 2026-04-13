@@ -374,8 +374,8 @@
       nameEn: 'Mudflood AI',
       nameZh: 'Mudflood AI',
       category: 'plugin',
-      descEn: 'AI plugin for Unreal Engine 5. Integrates Claude, GPT-4, and Gemini into the editor for code generation, blueprint assistance, and level design.',
-      descZh: '虚幻引擎5 AI插件。将Claude、GPT-4、Gemini集成到编辑器中，支持代码生成、蓝图辅助和关卡设计。',
+      descEn: 'AI plugin for Unreal Engine 5. Integrates Claude, GPT-4, and Gemini into the editor for code generation, blueprint assistance, and level design. Actively expanding — building the definitive bridge between Unreal Engine and LLMs.',
+      descZh: '虚幻引擎5 AI插件。将Claude、GPT-4、Gemini集成到编辑器中，支持代码生成、蓝图辅助和关卡设计。计划继续扩展，彻底打通虚幻引擎对接大模型的任督二脉。',
       url: 'https://mudflood.ai',
       hoverImage: 'images/mudflood-ai-hover.jpg'
     }
