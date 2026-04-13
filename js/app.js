@@ -613,6 +613,25 @@
       titleH3.appendChild(langSpan(article.title_en, article.title_zh));
       entry.appendChild(titleH3);
 
+      // Excerpt
+      if (article.excerpt_en || article.excerpt_zh) {
+        var excerptP = document.createElement('p');
+        excerptP.className = 'journal-excerpt';
+        excerptP.appendChild(langSpan(article.excerpt_en || '', article.excerpt_zh || ''));
+        entry.appendChild(excerptP);
+      }
+
+      // Hover image
+      if (article.cover_image) {
+        var img = document.createElement('img');
+        img.className = 'journal-entry-img';
+        img.alt = article.title_en || '';
+        img.loading = 'lazy';
+        img.onload = function() { entry.classList.add('has-image'); };
+        img.src = article.cover_image;
+        entry.appendChild(img);
+      }
+
       listEl.appendChild(entry);
 
       var artDiv = document.createElement('div');

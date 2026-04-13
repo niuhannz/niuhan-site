@@ -1200,15 +1200,11 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
   .journal-entry {
-    grid-template-columns: 56px 1fr;
-    padding: 16px 18px;
-    min-height: 90px;
-  }
-  .journal-date {
-    font-size: 1.5rem;
+    padding: 18px;
+    min-height: 130px;
   }
   .journal-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -1324,25 +1320,25 @@ h1, h2, h3, h4 {
 /* ---------- Journal ---------- */
 .journal-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 12px;
   align-items: start;
 }
 
 .journal-entry {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  grid-template-rows: auto auto;
-  gap: 0 16px;
-  padding: 20px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
   border: 1.5px solid var(--color-border);
   background: var(--color-bg);
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  min-height: 110px;
-  align-content: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 160px;
+  overflow: hidden;
 }
-.journal-entry:first-child { padding-top: 20px; }
+.journal-entry:first-child { padding-top: 24px; }
 
 .journal-entry:hover {
   border-color: var(--color-text);
@@ -1350,36 +1346,90 @@ h1, h2, h3, h4 {
 }
 
 .journal-date {
-  grid-column: 1;
-  grid-row: 1 / -1;
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.04em;
   line-height: 1;
-  align-self: center;
   margin-bottom: 0;
 }
 
 .journal-title {
-  grid-column: 2;
-  grid-row: 1;
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   line-height: 1.3;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .journal-excerpt {
-  grid-column: 2;
-  grid-row: 2;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: var(--color-text-tertiary);
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Journal hover image overlay */
+.journal-entry-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.journal-entry.has-image:hover .journal-entry-img {
+  opacity: 1;
+}
+
+.journal-entry.has-image:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.journal-entry.has-image:hover .journal-title,
+.journal-entry.has-image:hover .journal-excerpt {
+  color: #fff;
+  z-index: 2;
+}
+
+.journal-entry.has-image:hover .journal-date {
+  color: rgba(255,255,255,0.7);
+  z-index: 2;
+}
+
+/* No-image hover: subtle glow like element cards */
+.journal-entry:not(.has-image):hover {
+  background: var(--color-accent);
+}
+
+.journal-entry:not(.has-image):hover .journal-title {
+  color: var(--color-bg);
+}
+
+.journal-entry:not(.has-image):hover .journal-date,
+.journal-entry:not(.has-image):hover .journal-excerpt {
+  color: var(--color-bg);
+  opacity: 0.6;
 }
 
 /* Journal Article Detail */
