@@ -1139,6 +1139,9 @@ h1, h2, h3, h4 {
 .element-card[data-category="library"] {
   border-left: 3px solid #4ad97a;
 }
+.element-card[data-category="hardware"] {
+  border-left: 3px solid #c9956b;
+}
 .element-card[data-category="service"] {
   border-left: 3px solid #d9a84a;
 }

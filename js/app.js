@@ -380,8 +380,20 @@
       hoverImage: ''
     },
     {
-      id: 'mudflood-ai',
+      id: 're8',
       number: 2,
+      symbol: 'Re',
+      nameEn: 'Re8',
+      nameZh: 'Re8',
+      category: 'hardware',
+      descEn: 'A project to digitally revive the 8mm film camera — bridging analog film aesthetics with modern imaging hardware.',
+      descZh: '数字复活8mm胶片摄影机计划——用现代影像硬件重新唤醒胶片时代的质感与仪式感。',
+      url: '',
+      hoverImage: ''
+    },
+    {
+      id: 'mudflood-ai',
+      number: 3,
       symbol: 'Mf',
       nameEn: 'Mudflood AI',
       nameZh: 'Mudflood AI',
