@@ -48,6 +48,10 @@
         <span class="lang-en">Films</span>
         <span class="lang-zh">电影</span>
       </button>
+      <button class="nav-link" data-nav="games">
+        <span class="lang-en">Games</span>
+        <span class="lang-zh">游戏</span>
+      </button>
       <button class="nav-link" data-nav="writing">
         <span class="lang-en">Writing</span>
         <span class="lang-zh">写作</span>
@@ -55,10 +59,6 @@
       <button class="nav-link" data-nav="tools">
         <span class="lang-en">Tools</span>
         <span class="lang-zh">工具</span>
-      </button>
-      <button class="nav-link" data-nav="games">
-        <span class="lang-en">Games</span>
-        <span class="lang-zh">游戏</span>
       </button>
       <button class="nav-link" data-nav="about">
         <span class="lang-en">About</span>
@@ -160,6 +160,23 @@
     </div>
   </div>
 
+  <!-- ============ Games ============ -->
+  <section class="page" id="page-games">
+    <div class="page-inner">
+      <h2 class="section-title fade-in">
+        <span class="lang-en">Games</span>
+        <span class="lang-zh">游戏</span>
+      </h2>
+      <p class="tools-intro fade-in">
+        <span class="lang-en">Interactive worlds, built from scratch.</span>
+        <span class="lang-zh">从零构建的互动世界。</span>
+      </p>
+      <div class="games-periodic-table fade-in" id="games-periodic-table">
+        <!-- Elements rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
   <!-- ============ Writing ============ -->
   <section class="page" id="page-writing">
     <div class="page-inner">
@@ -210,23 +227,6 @@
       </p>
       <div class="periodic-table fade-in" id="periodic-table">
         <!-- Elements are rendered by app.js from TOOLS data -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Games ============ -->
-  <section class="page" id="page-games">
-    <div class="page-inner">
-      <h2 class="section-title fade-in">
-        <span class="lang-en">Games</span>
-        <span class="lang-zh">游戏</span>
-      </h2>
-      <p class="tools-intro fade-in">
-        <span class="lang-en">Interactive worlds, built from scratch.</span>
-        <span class="lang-zh">从零构建的互动世界。</span>
-      </p>
-      <div class="games-periodic-table fade-in" id="games-periodic-table">
-        <!-- Elements rendered by app.js -->
       </div>
     </div>
   </section>
@@ -830,7 +830,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="js/app.js?v=85"></script>
+  <script src="js/app.js?v=86"></script>
 
   <!-- ============ Lightweight Analytics ============ -->
   <script>

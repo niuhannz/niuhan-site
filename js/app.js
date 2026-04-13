@@ -411,8 +411,32 @@
   // ---------- Games Data ----------
   var GAMES = [
     {
-      id: 'game-studio',
+      id: 'scarlet-souls',
       number: 1,
+      symbol: 'Ss',
+      nameEn: 'Scarlet Souls',
+      nameZh: '丹心录',
+      category: 'rpg',
+      descEn: 'A martial arts RPG set in ancient China. Honor, betrayal, and the weight of a crimson oath.',
+      descZh: '一款以古代中国为背景的武侠RPG。忠义、背叛，与丹心之誓的重量。',
+      url: '',
+      hoverImage: ''
+    },
+    {
+      id: 'heavenfall',
+      number: 2,
+      symbol: 'Hf',
+      nameEn: 'Heavenfall',
+      nameZh: '天倾',
+      category: 'adventure',
+      descEn: 'When the sky begins to collapse, one journey to hold it up.',
+      descZh: '当天穹开始倾塌，一段撑天之旅。',
+      url: '',
+      hoverImage: ''
+    },
+    {
+      id: 'game-studio',
+      number: 3,
       symbol: 'Gs',
       nameEn: 'Game Studio',
       nameZh: 'Game Studio',
