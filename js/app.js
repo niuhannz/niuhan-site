@@ -262,7 +262,7 @@
       type: 'feature',
       format: { en: 'Feature Film', zh: '长片' },
       duration: { en: '75 min', zh: '75 分钟' },
-      thumbnail: 'images/autumn-of-freedom-thumb.jpg',
+      thumbnail: 'images/freedom-hills-thumb.jpg',
       heroImage: 'images/autumn-of-freedom-hero.jpg',
       descEn: 'Hachi, a man who lives on luck, meets Rene. But she has another man.',
       descZh: '靠好运过活的八遇见了里奈，可她还有另一个男人。',
