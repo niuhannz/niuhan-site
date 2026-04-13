@@ -276,7 +276,7 @@
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
       duration: { en: '4 min', zh: '4 分钟' },
-      thumbnail: 'images/armadillo-thumb-v2.jpg',
+      thumbnail: 'images/armadillo-thumb-v3.jpg',
       heroImage: 'images/armadillo-hero.jpg',
       descEn: '',
       descZh: '',
