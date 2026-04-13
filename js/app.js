@@ -374,6 +374,7 @@
       nameEn: 'Lucas',
       nameZh: 'Lucas',
       category: 'app',
+      group: 'software',
       descEn: 'All-in-one baby tracker for modern families. Log feedings, sleep, diapers, growth and milestones with real-time family sync. Available on the App Store.',
       descZh: '新手家庭的一站式宝宝记录工具。记录喂养、睡眠、换尿布、发育和里程碑，支持家庭实时同步。已上架App Store。',
       url: 'https://lucasapp.io',
@@ -386,6 +387,7 @@
       nameEn: 'Re8',
       nameZh: 'Re8',
       category: 'hardware',
+      group: 'hardware',
       descEn: 'A project to digitally revive the 8mm film camera — bridging analog film aesthetics with modern imaging hardware.',
       descZh: '数字复活8mm胶片摄影机计划——用现代影像硬件重新唤醒胶片时代的质感与仪式感。',
       url: '',
@@ -398,6 +400,7 @@
       nameEn: 'Mudflood AI',
       nameZh: 'Mudflood AI',
       category: 'plugin',
+      group: 'software',
       descEn: 'AI plugin for Unreal Engine 5. Integrates Claude, GPT-4, and Gemini into the editor for code generation, blueprint assistance, and level design. Actively expanding — building the definitive bridge between Unreal Engine and LLMs.',
       descZh: '虚幻引擎5 AI插件。将Claude、GPT-4、Gemini集成到编辑器中，支持代码生成、蓝图辅助和关卡设计。计划继续扩展，彻底打通虚幻引擎对接大模型的任督二脉。',
       url: 'https://mudflood.ai',
@@ -1165,66 +1168,92 @@
   }
 
   // ---------- Periodic Table of Tools ----------
+  function buildElementCard(tool) {
+    var card = createEl('div', { className: 'element-card' });
+    card.setAttribute('data-category', tool.category);
+
+    // Atomic number
+    var num = createEl('span', { className: 'element-number' });
+    num.textContent = tool.number;
+    card.appendChild(num);
+
+    // Symbol
+    var sym = createEl('span', { className: 'element-symbol' });
+    sym.textContent = tool.symbol;
+    card.appendChild(sym);
+
+    // Name
+    var name = createEl('span', { className: 'element-name' });
+    name.appendChild(langSpan(tool.nameEn, tool.nameZh));
+    card.appendChild(name);
+
+    // Category label
+    var cat = createEl('span', { className: 'element-category' });
+    cat.textContent = tool.category;
+    card.appendChild(cat);
+
+    // Hover image (only if available)
+    if (tool.hoverImage) {
+      var img = createEl('img', {
+        className: 'element-hover-img',
+        loading: 'lazy'
+      });
+      img.alt = tool.nameEn;
+      img.onload = function() { card.classList.add('has-image'); };
+      img.src = tool.hoverImage;
+      card.appendChild(img);
+    }
+
+    // Description element (shown below card on hover)
+    var desc = createEl('div', { className: 'element-desc' });
+    desc.appendChild(langSpan(tool.descEn, tool.descZh));
+
+    // Click → open URL or detail
+    if (tool.url) {
+      card.addEventListener('click', function() {
+        window.open(tool.url, '_blank', 'noopener,noreferrer');
+      });
+    }
+
+    // Wrap card + desc in a container
+    var wrapper = createEl('div', { className: 'element-wrapper' });
+    wrapper.appendChild(card);
+    wrapper.appendChild(desc);
+    return wrapper;
+  }
+
   function renderTools() {
     var container = document.getElementById('periodic-table');
     if (!container) return;
     container.innerHTML = '';
 
-    TOOLS.forEach(function(tool) {
-      var card = createEl('div', {
-        className: 'element-card'
-      });
-      card.setAttribute('data-category', tool.category);
+    // Split tools by group
+    var software = TOOLS.filter(function(t) { return t.group !== 'hardware'; });
+    var hardware = TOOLS.filter(function(t) { return t.group === 'hardware'; });
 
-      // Atomic number
-      var num = createEl('span', { className: 'element-number' });
-      num.textContent = tool.number;
-      card.appendChild(num);
-
-      // Symbol
-      var sym = createEl('span', { className: 'element-symbol' });
-      sym.textContent = tool.symbol;
-      card.appendChild(sym);
-
-      // Name
-      var name = createEl('span', { className: 'element-name' });
-      name.appendChild(langSpan(tool.nameEn, tool.nameZh));
-      card.appendChild(name);
-
-      // Category label
-      var cat = createEl('span', { className: 'element-category' });
-      cat.textContent = tool.category;
-      card.appendChild(cat);
-
-      // Hover image (only if available)
-      if (tool.hoverImage) {
-        var img = createEl('img', {
-          className: 'element-hover-img',
-          loading: 'lazy'
-        });
-        img.alt = tool.nameEn;
-        img.onload = function() { card.classList.add('has-image'); };
-        img.src = tool.hoverImage;
-        card.appendChild(img);
-      }
-
-      // Description element (shown below card on hover)
-      var desc = createEl('div', { className: 'element-desc' });
-      desc.appendChild(langSpan(tool.descEn, tool.descZh));
-
-      // Click → open URL or detail
-      if (tool.url) {
-        card.addEventListener('click', function() {
-          window.open(tool.url, '_blank', 'noopener,noreferrer');
-        });
-      }
-
-      // Wrap card + desc in a container
-      var wrapper = createEl('div', { className: 'element-wrapper' });
-      wrapper.appendChild(card);
-      wrapper.appendChild(desc);
-      container.appendChild(wrapper);
+    // Main grid (software)
+    var mainGrid = createEl('div', { className: 'pt-grid' });
+    software.forEach(function(tool) {
+      mainGrid.appendChild(buildElementCard(tool));
     });
+    container.appendChild(mainGrid);
+
+    // Hardware series (separated like actinides/lanthanides)
+    if (hardware.length > 0) {
+      var separator = createEl('div', { className: 'pt-series-separator' });
+
+      var label = createEl('div', { className: 'pt-series-label' });
+      label.appendChild(langSpan('Hardware Series', '硬件系列'));
+      separator.appendChild(label);
+
+      var hwGrid = createEl('div', { className: 'pt-grid' });
+      hardware.forEach(function(tool) {
+        hwGrid.appendChild(buildElementCard(tool));
+      });
+      separator.appendChild(hwGrid);
+
+      container.appendChild(separator);
+    }
   }
 
   // ---------- Custom Video Player ----------

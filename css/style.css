@@ -981,17 +981,35 @@ h1, h2, h3, h4 {
 
 /* Periodic Table of Tools */
 .periodic-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 140px);
-  gap: 16px 6px;
-  align-items: start;
   margin-top: var(--space-lg);
+}
+
+.pt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 16px 8px;
+  align-items: start;
+}
+
+.pt-series-separator {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border);
+}
+
+.pt-series-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
 }
 
 .element-card {
   position: relative;
-  width: 140px;
-  height: 160px;
+  width: 180px;
+  height: 200px;
   border: 1.5px solid var(--color-border);
   background: var(--color-bg);
   cursor: pointer;
@@ -1006,8 +1024,8 @@ h1, h2, h3, h4 {
 
 .element-number {
   position: absolute;
-  top: 8px;
-  left: 10px;
+  top: 10px;
+  left: 14px;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   color: var(--color-text-tertiary);
@@ -1017,10 +1035,10 @@ h1, h2, h3, h4 {
 
 .element-symbol {
   position: absolute;
-  top: 38px;
-  left: 10px;
+  top: 44px;
+  left: 14px;
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 3.25rem;
   font-weight: 600;
   line-height: 1;
   color: var(--color-text);
@@ -1029,9 +1047,9 @@ h1, h2, h3, h4 {
 
 .element-name {
   position: absolute;
-  bottom: 30px;
-  left: 10px;
-  right: 10px;
+  bottom: 36px;
+  left: 14px;
+  right: 14px;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   color: var(--color-text-secondary);
@@ -1044,8 +1062,8 @@ h1, h2, h3, h4 {
 
 .element-category {
   position: absolute;
-  bottom: 12px;
-  left: 10px;
+  bottom: 14px;
+  left: 14px;
   font-family: var(--font-mono);
   font-size: 0.5625rem;
   color: var(--color-text-tertiary);
@@ -1111,7 +1129,7 @@ h1, h2, h3, h4 {
 }
 
 .element-desc {
-  max-width: 140px;
+  max-width: 180px;
   margin-top: 6px;
   font-family: var(--font-mono);
   font-size: 0.625rem;
@@ -1147,27 +1165,35 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-  .periodic-table {
-    grid-template-columns: repeat(auto-fill, 120px);
+  .pt-grid {
+    grid-template-columns: repeat(auto-fill, 140px);
   }
   .element-card {
-    width: 120px;
-    height: 140px;
+    width: 140px;
+    height: 160px;
   }
   .element-symbol {
-    font-size: 2rem;
-    top: 32px;
+    font-size: 2.5rem;
+    top: 38px;
+    left: 10px;
+  }
+  .element-number {
+    top: 8px;
+    left: 10px;
   }
   .element-name {
-    bottom: 26px;
+    bottom: 28px;
+    left: 10px;
+    right: 10px;
     font-size: 0.625rem;
   }
   .element-category {
     bottom: 10px;
+    left: 10px;
     font-size: 0.5rem;
   }
   .element-desc {
-    max-width: 120px;
+    max-width: 140px;
     font-size: 0.5625rem;
   }
 }
