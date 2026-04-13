@@ -374,8 +374,8 @@
       nameEn: 'Mudflood AI',
       nameZh: 'Mudflood AI',
       category: 'plugin',
-      descEn: 'Multi-LLM AI assistant for Unreal Engine 5',
-      descZh: '虚幻引擎5多模型AI助手',
+      descEn: 'AI plugin for Unreal Engine 5. Integrates Claude, GPT-4, and Gemini into the editor for code generation, blueprint assistance, and level design.',
+      descZh: '虚幻引擎5 AI插件。将Claude、GPT-4、Gemini集成到编辑器中，支持代码生成、蓝图辅助和关卡设计。',
       url: 'https://mudflood.ai',
       hoverImage: 'images/mudflood-ai-hover.jpg'
     }
@@ -1184,6 +1184,10 @@
         card.appendChild(img);
       }
 
+      // Description element (shown below card on hover)
+      var desc = createEl('div', { className: 'element-desc' });
+      desc.appendChild(langSpan(tool.descEn, tool.descZh));
+
       // Click → open URL or detail
       if (tool.url) {
         card.addEventListener('click', function() {
@@ -1191,7 +1195,11 @@
         });
       }
 
-      container.appendChild(card);
+      // Wrap card + desc in a container
+      var wrapper = createEl('div', { className: 'element-wrapper' });
+      wrapper.appendChild(card);
+      wrapper.appendChild(desc);
+      container.appendChild(wrapper);
     });
   }
 
