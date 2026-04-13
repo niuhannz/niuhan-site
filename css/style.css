@@ -1296,7 +1296,7 @@ h1, h2, h3, h4 {
 .cv-details h3 {
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2px;
 }
 
@@ -1313,6 +1313,7 @@ h1, h2, h3, h4 {
 
 .cv-details p {
   font-size: 0.8125rem;
+  font-weight: 300;
   color: var(--color-text-secondary);
   line-height: 1.4;
 }
