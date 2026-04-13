@@ -405,6 +405,19 @@
       descZh: '虚幻引擎5 AI插件。将Claude、GPT-4、Gemini集成到编辑器中，支持代码生成、蓝图辅助和关卡设计。计划继续扩展，彻底打通虚幻引擎对接大模型的任督二脉。',
       url: 'https://mudflood.ai',
       hoverImage: 'images/mudflood-ai-hover.jpg'
+    },
+    {
+      id: 'game-studio',
+      number: 4,
+      symbol: 'Gs',
+      nameEn: 'Game Studio',
+      nameZh: 'Game Studio',
+      category: 'app',
+      group: 'software',
+      descEn: 'An AI-powered game development environment. Creating games through conversation.',
+      descZh: 'AI驱动的游戏开发环境。通过对话创造游戏。',
+      url: '',
+      hoverImage: ''
     }
   ];
 
@@ -431,18 +444,6 @@
       category: 'adventure',
       descEn: 'When the sky begins to collapse, one journey to hold it up.',
       descZh: '当天穹开始倾塌，一段撑天之旅。',
-      url: '',
-      hoverImage: ''
-    },
-    {
-      id: 'game-studio',
-      number: 3,
-      symbol: 'Gs',
-      nameEn: 'Game Studio',
-      nameZh: 'Game Studio',
-      category: 'engine',
-      descEn: 'An AI-powered game development environment. Creating games through conversation.',
-      descZh: 'AI驱动的游戏开发环境。通过对话创造游戏。',
       url: '',
       hoverImage: ''
     }
