@@ -1066,16 +1066,40 @@ h1, h2, h3, h4 {
   pointer-events: none;
 }
 
-.element-card:hover .element-hover-img {
+.element-card.has-image:hover .element-hover-img {
   opacity: 1;
 }
 
-.element-card:hover .element-number,
-.element-card:hover .element-symbol,
-.element-card:hover .element-name,
-.element-card:hover .element-category {
+.element-card.has-image:hover .element-number,
+.element-card.has-image:hover .element-symbol,
+.element-card.has-image:hover .element-name,
+.element-card.has-image:hover .element-category {
   opacity: 0;
   transition: opacity 0.2s ease;
+}
+
+/* No-image hover: glow effect */
+.element-card:not(.has-image):hover {
+  background: var(--color-accent);
+}
+
+.element-card:not(.has-image):hover .element-number {
+  color: var(--color-bg);
+  opacity: 0.5;
+}
+
+.element-card:not(.has-image):hover .element-symbol {
+  color: var(--color-bg);
+}
+
+.element-card:not(.has-image):hover .element-name {
+  color: var(--color-bg);
+  opacity: 0.8;
+}
+
+.element-card:not(.has-image):hover .element-category {
+  color: var(--color-bg);
+  opacity: 0.5;
 }
 
 /* Category color accents — left border stripe */

@@ -1172,14 +1172,15 @@
       cat.textContent = tool.category;
       card.appendChild(cat);
 
-      // Hover image
+      // Hover image (only if available)
       if (tool.hoverImage) {
         var img = createEl('img', {
           className: 'element-hover-img',
           loading: 'lazy'
         });
-        img.src = tool.hoverImage;
         img.alt = tool.nameEn;
+        img.onload = function() { card.classList.add('has-image'); };
+        img.src = tool.hoverImage;
         card.appendChild(img);
       }
 
