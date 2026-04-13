@@ -638,23 +638,26 @@
 
         var detailsDiv = createEl('div', { className: 'cv-details' });
 
-        // Split content by newlines into paragraphs
-        var enLines = (item.content_en || '').split(/\n+/);
-        var zhLines = (item.content_zh || '').split(/\n+/);
+        // Split by first " — " to separate title from description
+        var enParts = (item.content_en || '').split(' — ');
+        var zhParts = (item.content_zh || '').split(' — ');
 
-        // First line as title (h3), rest as description (p)
-        if (enLines[0] || zhLines[0]) {
+        // Title (h3, bold) — first part before " — "
+        var titleEn = enParts[0] || '';
+        var titleZh = zhParts[0] || '';
+        if (titleEn || titleZh) {
           var h3 = document.createElement('h3');
-          h3.appendChild(langSpan(enLines[0] || '', zhLines[0] || ''));
+          h3.appendChild(langSpan(titleEn, titleZh));
           detailsDiv.appendChild(h3);
         }
 
-        for (var i = 1; i < Math.max(enLines.length, zhLines.length); i++) {
-          if ((enLines[i] && enLines[i].trim()) || (zhLines[i] && zhLines[i].trim())) {
-            var p = document.createElement('p');
-            p.appendChild(langSpan(enLines[i] || '', zhLines[i] || ''));
-            detailsDiv.appendChild(p);
-          }
+        // Description (p, light) — everything after first " — "
+        var descEn = enParts.slice(1).join(' — ');
+        var descZh = zhParts.slice(1).join(' — ');
+        if (descEn || descZh) {
+          var p = document.createElement('p');
+          p.appendChild(langSpan(descEn, descZh));
+          detailsDiv.appendChild(p);
         }
 
         entryDiv.appendChild(detailsDiv);
