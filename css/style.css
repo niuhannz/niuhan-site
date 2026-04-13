@@ -981,9 +981,9 @@ h1, h2, h3, h4 {
 
 /* Periodic Table of Tools */
 .periodic-table {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, 140px);
-  gap: 6px;
+  gap: 16px 6px;
   align-items: start;
   margin-top: var(--space-lg);
 }
