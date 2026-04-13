@@ -979,13 +979,139 @@ h1, h2, h3, h4 {
   max-width: 600px;
 }
 
-.tools-empty {
-  padding: var(--space-3xl) 0;
-  text-align: center;
-  color: var(--color-text-tertiary);
+/* Periodic Table of Tools */
+.periodic-table {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, 140px);
+  gap: 6px;
+  margin-top: var(--space-lg);
+}
+
+.element-card {
+  position: relative;
+  width: 140px;
+  height: 160px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.element-card:hover {
+  border-color: var(--color-text);
+  box-shadow: 0 0 0 1px var(--color-text);
+}
+
+.element-number {
+  position: absolute;
+  top: 8px;
+  left: 10px;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.element-symbol {
+  position: absolute;
+  top: 38px;
+  left: 10px;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.element-name {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  right: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
   letter-spacing: 0.04em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-category {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Hover image overlay */
+.element-hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.element-card:hover .element-hover-img {
+  opacity: 1;
+}
+
+.element-card:hover .element-number,
+.element-card:hover .element-symbol,
+.element-card:hover .element-name,
+.element-card:hover .element-category {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Category color accents — left border stripe */
+.element-card[data-category="plugin"] {
+  border-left: 3px solid #4a90d9;
+}
+.element-card[data-category="app"] {
+  border-left: 3px solid #d94a4a;
+}
+.element-card[data-category="library"] {
+  border-left: 3px solid #4ad97a;
+}
+.element-card[data-category="service"] {
+  border-left: 3px solid #d9a84a;
+}
+
+@media (max-width: 768px) {
+  .periodic-table {
+    grid-template-columns: repeat(auto-fill, 120px);
+  }
+  .element-card {
+    width: 120px;
+    height: 140px;
+  }
+  .element-symbol {
+    font-size: 2rem;
+    top: 32px;
+  }
+  .element-name {
+    bottom: 26px;
+    font-size: 0.625rem;
+  }
+  .element-category {
+    bottom: 10px;
+    font-size: 0.5rem;
+  }
 }
 
 /* ---------- About ---------- */

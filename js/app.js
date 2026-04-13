@@ -365,6 +365,22 @@
     // }
   ];
 
+  // ---------- Tools Data (Periodic Table) ----------
+  var TOOLS = [
+    {
+      id: 'mudflood-ai',
+      number: 1,
+      symbol: 'Mf',
+      nameEn: 'Mudflood AI',
+      nameZh: 'Mudflood AI',
+      category: 'plugin',
+      descEn: 'Multi-LLM AI assistant for Unreal Engine 5',
+      descZh: '虚幻引擎5多模型AI助手',
+      url: 'https://mudflood.ai',
+      hoverImage: 'images/mudflood-ai-hover.jpg'
+    }
+  ];
+
   // ---------- State ----------
   let currentPage = 'home';
   let currentLang = 'en';
@@ -649,6 +665,7 @@
 
     renderWorks();
     renderWritings();
+    renderTools();
     bindEvents();
 
     // Random hero image from works on each visit
@@ -1120,6 +1137,60 @@
       }
 
       writingGrid.appendChild(card);
+    });
+  }
+
+  // ---------- Periodic Table of Tools ----------
+  function renderTools() {
+    var container = document.getElementById('periodic-table');
+    if (!container) return;
+    container.innerHTML = '';
+
+    TOOLS.forEach(function(tool) {
+      var card = createEl('div', {
+        className: 'element-card'
+      });
+      card.setAttribute('data-category', tool.category);
+
+      // Atomic number
+      var num = createEl('span', { className: 'element-number' });
+      num.textContent = tool.number;
+      card.appendChild(num);
+
+      // Symbol
+      var sym = createEl('span', { className: 'element-symbol' });
+      sym.textContent = tool.symbol;
+      card.appendChild(sym);
+
+      // Name
+      var name = createEl('span', { className: 'element-name' });
+      name.appendChild(langSpan(tool.nameEn, tool.nameZh));
+      card.appendChild(name);
+
+      // Category label
+      var cat = createEl('span', { className: 'element-category' });
+      cat.textContent = tool.category;
+      card.appendChild(cat);
+
+      // Hover image
+      if (tool.hoverImage) {
+        var img = createEl('img', {
+          className: 'element-hover-img',
+          loading: 'lazy'
+        });
+        img.src = tool.hoverImage;
+        img.alt = tool.nameEn;
+        card.appendChild(img);
+      }
+
+      // Click → open URL or detail
+      if (tool.url) {
+        card.addEventListener('click', function() {
+          window.open(tool.url, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      container.appendChild(card);
     });
   }
 
