@@ -325,6 +325,19 @@
       descZh: '牛涵译著。已停印。',
       publisher: { en: '', zh: '' }
     },
+    {
+      id: 'crescent-moon',
+      titleZh: '新月集',
+      titleEn: 'The Crescent Moon',
+      year: 2015,
+      type: 'translation',
+      format: { en: 'Translation', zh: '译著' },
+      coverImage: '',
+      author: { en: 'Rabindranath Tagore', zh: '拉宾德拉纳特·泰戈尔' },
+      descEn: 'A translation by Niu Han. Out of print.',
+      descZh: '牛涵译著。已停印。',
+      publisher: { en: 'Illiterati', zh: '不文社' }
+    },
     // {
     //   id: 'cinema-impromptu',
     //   titleZh: '即兴电影',
