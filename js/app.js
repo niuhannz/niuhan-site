@@ -267,6 +267,20 @@
       descEn: 'Hachi, a man who lives on luck, meets Rene. But she has another man.',
       descZh: '靠好运过活的八遇见了里奈，可她还有另一个男人。',
       credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
+    },
+    {
+      id: 'armadillo',
+      titleZh: '犰狳',
+      titleEn: 'Armadillo',
+      year: 2004,
+      type: 'short',
+      format: { en: 'Short Film', zh: '短片' },
+      duration: { en: '4 min', zh: '4分钟' },
+      thumbnail: 'images/armadillo-thumb.jpg',
+      heroImage: 'images/armadillo-hero.jpg',
+      descEn: '',
+      descZh: '',
+      credits: { en: 'Cinematography: Niu Han', zh: '摄影：牛涵' }
     }
   ];
 
