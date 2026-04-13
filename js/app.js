@@ -275,12 +275,12 @@
       year: 2004,
       type: 'short',
       format: { en: 'Short Film', zh: '短片' },
-      duration: { en: '4 min', zh: '4分钟' },
-      thumbnail: 'images/armadillo-thumb.jpg',
+      duration: { en: '4 min', zh: '4 分钟' },
+      thumbnail: 'images/armadillo-thumb.png',
       heroImage: 'images/armadillo-hero.jpg',
       descEn: '',
       descZh: '',
-      credits: { en: 'Cinematography: Niu Han', zh: '摄影：牛涵' }
+      credits: { en: 'Written, Directed & Photographed by Niu Han', zh: '编剧/导演/摄影：牛涵' }
     }
   ];
 
