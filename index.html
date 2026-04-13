@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=40">
+  <link rel="stylesheet" href="css/style.css?v=41">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>牛</text></svg>">
 </head>
 <body>
@@ -55,6 +55,10 @@
       <button class="nav-link" data-nav="tools">
         <span class="lang-en">Tools</span>
         <span class="lang-zh">工具</span>
+      </button>
+      <button class="nav-link" data-nav="games">
+        <span class="lang-en">Games</span>
+        <span class="lang-zh">游戏</span>
       </button>
       <button class="nav-link" data-nav="about">
         <span class="lang-en">About</span>
@@ -206,6 +210,23 @@
       </p>
       <div class="periodic-table fade-in" id="periodic-table">
         <!-- Elements are rendered by app.js from TOOLS data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Games ============ -->
+  <section class="page" id="page-games">
+    <div class="page-inner">
+      <h2 class="section-title fade-in">
+        <span class="lang-en">Games</span>
+        <span class="lang-zh">游戏</span>
+      </h2>
+      <p class="tools-intro fade-in">
+        <span class="lang-en">Interactive worlds, built from scratch.</span>
+        <span class="lang-zh">从零构建的互动世界。</span>
+      </p>
+      <div class="games-periodic-table fade-in" id="games-periodic-table">
+        <!-- Elements rendered by app.js -->
       </div>
     </div>
   </section>
@@ -809,7 +830,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="js/app.js?v=84"></script>
+  <script src="js/app.js?v=85"></script>
 
   <!-- ============ Lightweight Analytics ============ -->
   <script>

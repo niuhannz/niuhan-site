@@ -408,6 +408,22 @@
     }
   ];
 
+  // ---------- Games Data ----------
+  var GAMES = [
+    {
+      id: 'game-studio',
+      number: 1,
+      symbol: 'Gs',
+      nameEn: 'Game Studio',
+      nameZh: 'Game Studio',
+      category: 'engine',
+      descEn: 'An AI-powered game development environment. Creating games through conversation.',
+      descZh: 'AI驱动的游戏开发环境。通过对话创造游戏。',
+      url: '',
+      hoverImage: ''
+    }
+  ];
+
   // ---------- State ----------
   let currentPage = 'home';
   let currentLang = 'en';
@@ -809,6 +825,7 @@
     renderWorks();
     renderWritings();
     renderTools();
+    renderGames();
     bindEvents();
 
     // Random hero image from works on each visit
@@ -1370,6 +1387,65 @@
 
       container.appendChild(separator);
     }
+  }
+
+  // ---------- Games Periodic Table ----------
+  function buildGameCard(game) {
+    var card = createEl('div', { className: 'game-card' });
+    card.setAttribute('data-category', game.category);
+
+    var num = createEl('span', { className: 'game-number' });
+    num.textContent = game.number;
+    card.appendChild(num);
+
+    var sym = createEl('span', { className: 'game-symbol' });
+    sym.textContent = game.symbol;
+    card.appendChild(sym);
+
+    var name = createEl('span', { className: 'game-name' });
+    name.appendChild(langSpan(game.nameEn, game.nameZh));
+    card.appendChild(name);
+
+    var cat = createEl('span', { className: 'game-category' });
+    cat.textContent = game.category;
+    card.appendChild(cat);
+
+    if (game.hoverImage) {
+      var img = createEl('img', {
+        className: 'game-hover-img',
+        loading: 'lazy'
+      });
+      img.alt = game.nameEn;
+      img.onload = function() { card.classList.add('has-image'); };
+      img.src = game.hoverImage;
+      card.appendChild(img);
+    }
+
+    var desc = createEl('div', { className: 'game-desc' });
+    desc.appendChild(langSpan(game.descEn, game.descZh));
+
+    if (game.url) {
+      card.addEventListener('click', function() {
+        window.open(game.url, '_blank', 'noopener,noreferrer');
+      });
+    }
+
+    var wrapper = createEl('div', { className: 'game-wrapper' });
+    wrapper.appendChild(card);
+    wrapper.appendChild(desc);
+    return wrapper;
+  }
+
+  function renderGames() {
+    var container = document.getElementById('games-periodic-table');
+    if (!container) return;
+    container.innerHTML = '';
+
+    var grid = createEl('div', { className: 'games-grid' });
+    GAMES.forEach(function(game) {
+      grid.appendChild(buildGameCard(game));
+    });
+    container.appendChild(grid);
   }
 
   // ---------- Custom Video Player ----------
