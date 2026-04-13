@@ -591,6 +591,9 @@
   }
 
   var CV_SECTION_ORDER = ['filmography', 'publications', 'theatre', 'exhibitions', 'distinctions', 'lectures', 'education'];
+  // Sections where content splits into h3 (title) + p (description) via " — "
+  // Other sections render the whole content as a single <p>
+  var CV_TITLE_SECTIONS = ['filmography', 'publications', 'theatre', 'education'];
   var CV_SECTION_LABELS = {
     filmography:   { en: 'Selected Filmography',   zh: '影片目录' },
     publications:  { en: 'Selected Publications',   zh: '出版物' },
@@ -638,26 +641,37 @@
 
         var detailsDiv = createEl('div', { className: 'cv-details' });
 
-        // Split by first " — " to separate title from description
-        var enParts = (item.content_en || '').split(' — ');
-        var zhParts = (item.content_zh || '').split(' — ');
+        var useTitleSplit = CV_TITLE_SECTIONS.indexOf(section) !== -1;
 
-        // Title (h3, bold) — first part before " — "
-        var titleEn = enParts[0] || '';
-        var titleZh = zhParts[0] || '';
-        if (titleEn || titleZh) {
-          var h3 = document.createElement('h3');
-          h3.appendChild(langSpan(titleEn, titleZh));
-          detailsDiv.appendChild(h3);
-        }
+        if (useTitleSplit) {
+          // Split by first " — " to separate title (h3) from description (p)
+          var enParts = (item.content_en || '').split(' — ');
+          var zhParts = (item.content_zh || '').split(' — ');
 
-        // Description (p, light) — everything after first " — "
-        var descEn = enParts.slice(1).join(' — ');
-        var descZh = zhParts.slice(1).join(' — ');
-        if (descEn || descZh) {
-          var p = document.createElement('p');
-          p.appendChild(langSpan(descEn, descZh));
-          detailsDiv.appendChild(p);
+          var titleEn = enParts[0] || '';
+          var titleZh = zhParts[0] || '';
+          if (titleEn || titleZh) {
+            var h3 = document.createElement('h3');
+            h3.appendChild(langSpan(titleEn, titleZh));
+            detailsDiv.appendChild(h3);
+          }
+
+          var descEn = enParts.slice(1).join(' — ');
+          var descZh = zhParts.slice(1).join(' — ');
+          if (descEn || descZh) {
+            var p = document.createElement('p');
+            p.appendChild(langSpan(descEn, descZh));
+            detailsDiv.appendChild(p);
+          }
+        } else {
+          // Description-only sections: render whole content as <p>
+          var contentEn = item.content_en || '';
+          var contentZh = item.content_zh || '';
+          if (contentEn || contentZh) {
+            var p = document.createElement('p');
+            p.appendChild(langSpan(contentEn, contentZh));
+            detailsDiv.appendChild(p);
+          }
         }
 
         entryDiv.appendChild(detailsDiv);
