@@ -531,6 +531,11 @@
       if (jRes.data && jRes.data.length > 0) {
         renderJournalFromDb(jRes.data);
       }
+
+      var cvRes = await _sb.from('cv_entries').select('*').eq('visible', true).order('sort_order');
+      if (cvRes.data && cvRes.data.length > 0) {
+        renderCvFromDb(cvRes.data);
+      }
     } catch (e) {
       console.warn('CMS fetch failed, using fallback data:', e);
     }
@@ -583,6 +588,81 @@
     if (creditEl && about.photo_credit) {
       creditEl.textContent = about.photo_credit;
     }
+  }
+
+  var CV_SECTION_ORDER = ['filmography', 'publications', 'theatre', 'exhibitions', 'distinctions', 'lectures', 'education'];
+  var CV_SECTION_LABELS = {
+    filmography:   { en: 'Selected Filmography',   zh: '影片目录' },
+    publications:  { en: 'Selected Publications',   zh: '出版物' },
+    theatre:       { en: 'Selected Theatre Work',   zh: '戏剧作品' },
+    exhibitions:   { en: 'Selected Exhibitions',    zh: '展览' },
+    distinctions:  { en: 'Selected Distinctions',   zh: '荣誉与入选' },
+    lectures:      { en: 'Guest Lectures',          zh: '客座讲座' },
+    education:     { en: 'Education',               zh: '教育' }
+  };
+
+  function renderCvFromDb(entries) {
+    var cvPage = document.getElementById('page-cv');
+    if (!cvPage) return;
+    var inner = cvPage.querySelector('.page-inner');
+    if (!inner) return;
+
+    // Remove existing cv-sections (keep the title h2)
+    var existing = inner.querySelectorAll('.cv-section');
+    existing.forEach(function(el) { el.parentNode.removeChild(el); });
+
+    // Group by section
+    var grouped = {};
+    entries.forEach(function(e) {
+      if (!grouped[e.section]) grouped[e.section] = [];
+      grouped[e.section].push(e);
+    });
+
+    CV_SECTION_ORDER.forEach(function(section) {
+      var items = grouped[section];
+      if (!items || items.length === 0) return;
+
+      var sectionDiv = createEl('div', { className: 'cv-section' });
+
+      var titleDiv = createEl('div', { className: 'cv-section-title' });
+      var labels = CV_SECTION_LABELS[section] || { en: section, zh: section };
+      titleDiv.appendChild(langSpan(labels.en, labels.zh));
+      sectionDiv.appendChild(titleDiv);
+
+      items.forEach(function(item) {
+        var entryDiv = createEl('div', { className: 'cv-entry' });
+
+        var yearSpan = createEl('span', { className: 'cv-year' });
+        yearSpan.textContent = item.year_label || '';
+        entryDiv.appendChild(yearSpan);
+
+        var detailsDiv = createEl('div', { className: 'cv-details' });
+
+        // Split content by newlines into paragraphs
+        var enLines = (item.content_en || '').split(/\n+/);
+        var zhLines = (item.content_zh || '').split(/\n+/);
+
+        // First line as title (h3), rest as description (p)
+        if (enLines[0] || zhLines[0]) {
+          var h3 = document.createElement('h3');
+          h3.appendChild(langSpan(enLines[0] || '', zhLines[0] || ''));
+          detailsDiv.appendChild(h3);
+        }
+
+        for (var i = 1; i < Math.max(enLines.length, zhLines.length); i++) {
+          if ((enLines[i] && enLines[i].trim()) || (zhLines[i] && zhLines[i].trim())) {
+            var p = document.createElement('p');
+            p.appendChild(langSpan(enLines[i] || '', zhLines[i] || ''));
+            detailsDiv.appendChild(p);
+          }
+        }
+
+        entryDiv.appendChild(detailsDiv);
+        sectionDiv.appendChild(entryDiv);
+      });
+
+      inner.appendChild(sectionDiv);
+    });
   }
 
   function renderJournalFromDb(articles) {
