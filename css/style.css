@@ -1134,7 +1134,7 @@ h1, h2, h3, h4 {
   border-left: 3px solid #4a90d9;
 }
 .element-card[data-category="app"] {
-  border-left: 3px solid #d94a4a;
+  border-left: 3px solid #6fcf97;
 }
 .element-card[data-category="library"] {
   border-left: 3px solid #4ad97a;

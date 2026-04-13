@@ -368,8 +368,20 @@
   // ---------- Tools Data (Periodic Table) ----------
   var TOOLS = [
     {
-      id: 'mudflood-ai',
+      id: 'lucas-baby-tracker',
       number: 1,
+      symbol: 'Lc',
+      nameEn: 'Lucas',
+      nameZh: 'Lucas',
+      category: 'app',
+      descEn: 'All-in-one baby tracker for modern families. Log feedings, sleep, diapers, growth and milestones with real-time family sync. Available on the App Store.',
+      descZh: '新手家庭的一站式宝宝记录工具。记录喂养、睡眠、换尿布、发育和里程碑，支持家庭实时同步。已上架App Store。',
+      url: 'https://lucasapp.io',
+      hoverImage: ''
+    },
+    {
+      id: 'mudflood-ai',
+      number: 2,
       symbol: 'Mf',
       nameEn: 'Mudflood AI',
       nameZh: 'Mudflood AI',
