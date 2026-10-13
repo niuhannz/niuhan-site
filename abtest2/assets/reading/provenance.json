@@ -1,0 +1,362 @@
+{
+  "title": "文化程度检定",
+  "researchDate": "2026-10-13",
+  "purpose": "Transformative timed English-deciphering exercise using small excerpts of actual Xu Bing Square Word Calligraphy. Not an official Xu Bing project or a genuine educational qualification.",
+  "sources": [
+    {
+      "id": "art-for-people",
+      "file": "art-for-people.jpg",
+      "url": "https://www.chinafile.com/sites/default/files/art-for-the-people_0.jpg",
+      "page": "https://www.chinafile.com/photo/square-word-calligraphy-art-people",
+      "artist": "Xu Bing / 徐冰",
+      "title": "Square Word Calligraphy: Art for the People",
+      "year": 2002,
+      "credit": "Courtesy of Xu Bing Studio",
+      "rights": "© Xu Bing; source image not an open-source font",
+      "transcriptionSource": "https://www.xubing.com/en/database/writing/306",
+      "verification": "Artist explicitly decodes ART / FOR / THE / PEOPLE in own essay; source caption identifies artwork.",
+      "sha256": "3f3c5a6dc7c30b7e0fed0ecf2336a6c5df3c1a1849d9a21455c1eb4d534a60c6",
+      "bytes": 90182,
+      "width": 1000,
+      "height": 350
+    },
+    {
+      "id": "award-words",
+      "file": "power-will-dream.jpg",
+      "url": "https://xubing.com/Uploads/UEditor/image/20180131/6365296410503604984443156.jpg",
+      "page": "https://www.xubing.com/en/database/writing/306",
+      "artist": "Xu Bing / 徐冰",
+      "title": "Square Word Calligraphy: Will, Power, Dream (award keywords)",
+      "credit": "Xu Bing official website",
+      "rights": "© Xu Bing; source image not an open-source font",
+      "transcriptionSource": "https://www.xubing.com/en/database/writing/306",
+      "positionVerification": "https://vic.sina.com.cn/news/27/2009/1204/8691.html",
+      "verification": "Artist supplies three words, and captioned 2009 award photo verifies TOP=WILL, BOTTOM LEFT=POWER, BOTTOM RIGHT=DREAM.",
+      "sha256": "040f3b717c26d3962e010061baa606af5c3ee548f56d211b28a6a2f260c956c5",
+      "bytes": 17278,
+      "width": 282,
+      "height": 311
+    },
+    {
+      "id": "infinite",
+      "file": "which-is-infinite.jpg",
+      "url": "https://xubing.com/Uploads/UEditor/image/20180131/6365296411759024283276911.jpg",
+      "page": "https://www.xubing.com/en/database/writing/306",
+      "artist": "Xu Bing / 徐冰",
+      "title": "Which is infinite",
+      "credit": "Xu Bing official website",
+      "rights": "© Xu Bing; source image not an open-source font",
+      "transcriptionSource": "https://www.xubing.com/en/database/writing/306",
+      "verification": "Artist explicitly gives WHICH IS INFINITE left to right; signature at right excluded from word crops.",
+      "sha256": "48fdf31ccfdd8fe0c1c29a87af5f8436fd532fa71e9751d83bbb2164a3dec73b",
+      "bytes": 14220,
+      "width": 433,
+      "height": 175
+    },
+    {
+      "id": "textbook",
+      "file": "practicing.jpg",
+      "url": "https://www.chinafile.com/sites/default/files/10_square-word-calligraphy_red-line-tracing-book-demonstration.jpg",
+      "page": "https://www.chinafile.com/photo/wordplay-practicing-square-word-calligraphy",
+      "artist": "Xu Bing / 徐冰",
+      "title": "An Introduction to Square Word Calligraphy / Square Word Calligraphy Red Line Tracing Book",
+      "year": 1996,
+      "credit": "Courtesy of Xu Bing Studio",
+      "rights": "© Xu Bing; source image not an open-source font",
+      "transcriptionSource": "https://www.reed.edu/artbooks/bing-square-calligraphy.html",
+      "verification": "Studio photograph shows right-hand page reading down each column left-to-right: LITTLE BO PEEP LITTLE / BO PEEP HAS LOST / HER SHEEP AND CAN. Reed College collection account verifies Little Bo Peep nursery rhyme text.",
+      "sha256": "e8e38bcad20384d7e5e7bcf18ea5ce6cf64306009935480b3567e3d638daa324",
+      "bytes": 421821,
+      "width": 1000,
+      "height": 1494
+    }
+  ],
+  "questions": [
+    {
+      "id": "word-01",
+      "word": "ART",
+      "translation": "艺术",
+      "sourceId": "art-for-people",
+      "crop": [
+        18,
+        48,
+        220,
+        245
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "ARM",
+      "distractorTranslation": "手臂",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-02",
+      "word": "FOR",
+      "translation": "为了",
+      "sourceId": "art-for-people",
+      "crop": [
+        240,
+        42,
+        210,
+        250
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "FAR",
+      "distractorTranslation": "远处",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-03",
+      "word": "THE",
+      "translation": "定冠词",
+      "sourceId": "art-for-people",
+      "crop": [
+        455,
+        65,
+        205,
+        190
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "TEN",
+      "distractorTranslation": "十",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-04",
+      "word": "PEOPLE",
+      "translation": "人们",
+      "sourceId": "art-for-people",
+      "crop": [
+        660,
+        45,
+        242,
+        250
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "PURPLE",
+      "distractorTranslation": "紫色",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-05",
+      "word": "WILL",
+      "translation": "意志",
+      "sourceId": "award-words",
+      "crop": [
+        70,
+        12,
+        136,
+        133
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "WELL",
+      "distractorTranslation": "好／井",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-06",
+      "word": "POWER",
+      "translation": "力量",
+      "sourceId": "award-words",
+      "crop": [
+        2,
+        138,
+        137,
+        170
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "TOWER",
+      "distractorTranslation": "塔",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-07",
+      "word": "DREAM",
+      "translation": "梦",
+      "sourceId": "award-words",
+      "crop": [
+        140,
+        144,
+        141,
+        148
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "DREAD",
+      "distractorTranslation": "恐惧",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-08",
+      "word": "WHICH",
+      "translation": "哪一个",
+      "sourceId": "infinite",
+      "crop": [
+        39,
+        35,
+        100,
+        100
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "WITCH",
+      "distractorTranslation": "女巫",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-09",
+      "word": "IS",
+      "translation": "是",
+      "sourceId": "infinite",
+      "crop": [
+        154,
+        36,
+        72,
+        91
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "IF",
+      "distractorTranslation": "如果",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-10",
+      "word": "INFINITE",
+      "translation": "无限的",
+      "sourceId": "infinite",
+      "crop": [
+        229,
+        34,
+        90,
+        111
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "INTIMATE",
+      "distractorTranslation": "亲密的",
+      "verification": "source transcription + visual letter structure"
+    },
+    {
+      "id": "word-11",
+      "word": "LITTLE",
+      "translation": "小的",
+      "sourceId": "textbook",
+      "crop": [
+        532,
+        214,
+        113,
+        108
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "TITLE",
+      "distractorTranslation": "标题",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    },
+    {
+      "id": "word-12",
+      "word": "BO",
+      "translation": "Bo（人名）",
+      "sourceId": "textbook",
+      "crop": [
+        648,
+        228,
+        105,
+        93
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "GO",
+      "distractorTranslation": "去",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    },
+    {
+      "id": "word-13",
+      "word": "PEEP",
+      "translation": "Peep（人名）",
+      "sourceId": "textbook",
+      "crop": [
+        529,
+        453,
+        116,
+        119
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "PEER",
+      "distractorTranslation": "同伴",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    },
+    {
+      "id": "word-14",
+      "word": "HAS",
+      "translation": "有",
+      "sourceId": "textbook",
+      "crop": [
+        655,
+        454,
+        113,
+        117
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "WAS",
+      "distractorTranslation": "曾是",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    },
+    {
+      "id": "word-15",
+      "word": "LOST",
+      "translation": "失去的",
+      "sourceId": "textbook",
+      "crop": [
+        659,
+        577,
+        110,
+        108
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "LAST",
+      "distractorTranslation": "最后的",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    },
+    {
+      "id": "word-16",
+      "word": "SHEEP",
+      "translation": "羊",
+      "sourceId": "textbook",
+      "crop": [
+        774,
+        336,
+        110,
+        116
+      ],
+      "cropUnits": "original source image pixels; x, y, width, height",
+      "distractor": "SLEEP",
+      "distractorTranslation": "睡觉",
+      "verification": "source transcription + visual letter structure",
+      "cropVerification": "Rechecked at original1000×1494 resolution; crops exclude outer book border and surrounding table edges. SHEEP has an inkstroke ending at y449, so must not crop bottom before y452."
+    }
+  ],
+  "optionalPhraseQuestions": [
+    {
+      "sourceId": "art-for-people",
+      "crop": [
+        18,
+        40,
+        884,
+        253
+      ],
+      "transcription": "ART FOR THE PEOPLE"
+    },
+    {
+      "sourceId": "infinite",
+      "crop": [
+        39,
+        34,
+        281,
+        111
+      ],
+      "transcription": "WHICH IS INFINITE"
+    }
+  ],
+  "tutorialSource": "https://education.asianart.org/wp-content/uploads/sites/6/2019/09/Calligraphy-workshop.pdf",
+  "tutorialNote": "Asian Art Museum educational PDF page11 has adapted alphabet reference; label as museum adaptation if used. Do not misattribute to Xu Bing original calligraphy."
+}

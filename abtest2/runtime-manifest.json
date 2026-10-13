@@ -1,0 +1,196 @@
+{
+  "title": "文化程度检定",
+  "version": "1.0",
+  "basePath": "/abtest2/",
+  "questions": 16,
+  "readingSources": 4,
+  "audioAssets": 6,
+  "files": [
+    {
+      "path": "assets/audio/S_ButtonNo.wav",
+      "bytes": 77228,
+      "sha256": "12a5d36d6bafb010afcf2e26b428c7ce9ed0b084a455d996cdd2c632d78bdbab"
+    },
+    {
+      "path": "assets/audio/S_ButtonYes.wav",
+      "bytes": 77228,
+      "sha256": "d0cbd7cbf180f928cdf24899bb16ada161ff49d8b59787293269b92d464cb12d"
+    },
+    {
+      "path": "assets/audio/S_Knock.wav",
+      "bytes": 154028,
+      "sha256": "3ab8c84583aebb54f5e611e843b1167eafd0d2136aebb7382f28fe42e977fe6e"
+    },
+    {
+      "path": "assets/audio/S_RoomLoop.wav",
+      "bytes": 3840428,
+      "sha256": "76fc6a0b9aea76014f4cbf5469326df5bec246fa0a4b706ca585943ea5fc80d9"
+    },
+    {
+      "path": "assets/audio/S_TVChange.wav",
+      "bytes": 84524,
+      "sha256": "f9e93cd883cad38cac1b3bb8c3143c58046bae2582803bc4aad75ba7230e4f87"
+    },
+    {
+      "path": "assets/audio/S_TVLoop.wav",
+      "bytes": 960044,
+      "sha256": "75df8840132914dd68fb7106440ef7c15ea1665ea133ceadc6a3c19b2d8af4af"
+    },
+    {
+      "path": "assets/hardware/SM_TheaterCap.json",
+      "bytes": 88633,
+      "sha256": "6b5e9773111ac4ed9d4b53269d853c295f1aa24c8b6bfbb3507f3f9f16e06b54"
+    },
+    {
+      "path": "assets/hardware/SM_TheaterHousing.json",
+      "bytes": 25976,
+      "sha256": "55926b18c0fdf0134a20c75cb60167a54fe14db500eed6b503092f2e53b096c8"
+    },
+    {
+      "path": "assets/reading/art-for-people.jpg",
+      "bytes": 90182,
+      "sha256": "3f3c5a6dc7c30b7e0fed0ecf2336a6c5df3c1a1849d9a21455c1eb4d534a60c6"
+    },
+    {
+      "path": "assets/reading/power-will-dream.jpg",
+      "bytes": 17278,
+      "sha256": "040f3b717c26d3962e010061baa606af5c3ee548f56d211b28a6a2f260c956c5"
+    },
+    {
+      "path": "assets/reading/practicing.jpg",
+      "bytes": 421821,
+      "sha256": "e8e38bcad20384d7e5e7bcf18ea5ce6cf64306009935480b3567e3d638daa324"
+    },
+    {
+      "path": "assets/reading/provenance.json",
+      "bytes": 12357,
+      "sha256": "5556a4da7940f9c750e73505f3bebbcdfad3b051360089114aa4a5c36b15c67c"
+    },
+    {
+      "path": "assets/reading/which-is-infinite.jpg",
+      "bytes": 14220,
+      "sha256": "48fdf31ccfdd8fe0c1c29a87af5f8436fd532fa71e9751d83bbb2164a3dec73b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3787,
+      "sha256": "d2a414b43dfae5ecc70c269da945881310c9bef31d2ba9fde60c600b14661950"
+    },
+    {
+      "path": "js/analog.js",
+      "bytes": 22117,
+      "sha256": "4dcd292da0dfcdf3545ce68e377865c3cc88b08f1a38ac0729122f583105ff26"
+    },
+    {
+      "path": "js/audio.js",
+      "bytes": 29918,
+      "sha256": "1a72ee8cf313989ab6d8467df922fa05ad7031151e94433e03b2dbea025ff734"
+    },
+    {
+      "path": "js/main.js",
+      "bytes": 18348,
+      "sha256": "f82888702e10220befa4ff006950ad7ab2c5da83d6ebb1b73c3488b7d4ef2ec6"
+    },
+    {
+      "path": "js/projection.js",
+      "bytes": 17202,
+      "sha256": "0fc6117d384cd44b61ec1bef400e449c80cb964c8dcb826e96c9c620141530dd"
+    },
+    {
+      "path": "js/reading-questions.js",
+      "bytes": 8806,
+      "sha256": "68137fbbc0e73ced7b9025518982d4e64373ef203dd86bb7388188bce40b5120"
+    },
+    {
+      "path": "js/scene.js",
+      "bytes": 37194,
+      "sha256": "ff95501d3bf11699b3b5872ea951867be8f77c8310e684731ca17bc5f7512556"
+    },
+    {
+      "path": "js/session.js",
+      "bytes": 6103,
+      "sha256": "ec1b5de35158f2ebf0324d696b3da7a37961e790a4dd2f42dbc365f1bddbfd9a"
+    },
+    {
+      "path": "js/viewport.js",
+      "bytes": 1824,
+      "sha256": "d3048dd6e87a99be5463bd12b6506a3cd94d2d0c983968c1206425d775a6fbcc"
+    },
+    {
+      "path": "licenses/powershot-threejs-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6f1976b108c5f3c9edd9257028582481804563a676917314f27b88c5721ac57f"
+    },
+    {
+      "path": "open-source-effects.json",
+      "bytes": 2622,
+      "sha256": "b8d28264d30e1f3d8d66d0acb349fc58ab1adc5ad80bd52d7b25f5e84a7a7df8"
+    },
+    {
+      "path": "sources.html",
+      "bytes": 3017,
+      "sha256": "a42bfdb1cc32c522b0cd2699331334430efbba34393841fb0e84ef9147673aeb"
+    },
+    {
+      "path": "style.css",
+      "bytes": 10369,
+      "sha256": "df14e4ee30db5607045512f177d24f5c0e695ddd234988258ecaf2b31637e97b"
+    },
+    {
+      "path": "vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/EffectComposer.js",
+      "bytes": 8501,
+      "sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/MaskPass.js",
+      "bytes": 4694,
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/OutputPass.js",
+      "bytes": 4184,
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/Pass.js",
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/RenderPass.js",
+      "bytes": 4280,
+      "sha256": "817f6c3cdcd0fd41515d112359ea0532568eefb5aabd3b33903957ebca1b8a6a"
+    },
+    {
+      "path": "vendor/three/addons/postprocessing/ShaderPass.js",
+      "bytes": 3228,
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d"
+    },
+    {
+      "path": "vendor/three/addons/shaders/CopyShader.js",
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "path": "vendor/three/addons/shaders/OutputShader.js",
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "path": "vendor/three/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ],
+  "totalBytes": 8179998
+}

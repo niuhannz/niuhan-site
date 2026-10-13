@@ -4,17 +4,35 @@
       "source": "/abtest",
       "destination": "/abtest/",
       "permanent": true
+    },
+    {
+      "source": "/abtest2",
+      "destination": "/abtest2/",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/abtest/",
       "destination": "/abtest/index.html"
+    },
+    {
+      "source": "/abtest2/",
+      "destination": "/abtest2/index.html"
     }
   ],
   "headers": [
     {
       "source": "/abtest/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/abtest2/:path*",
       "headers": [
         {
           "key": "Cache-Control",
