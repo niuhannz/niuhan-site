@@ -1,5 +1,27 @@
 {
+  "redirects": [
+    {
+      "source": "/abtest",
+      "destination": "/abtest/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/abtest/",
+      "destination": "/abtest/index.html"
+    }
+  ],
   "headers": [
+    {
+      "source": "/abtest/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
     {
       "source": "/",
       "headers": [

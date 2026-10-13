@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "effects": [
+    {
+      "name": "VHS magnetic tape stage",
+      "localFile": "js/analog.js",
+      "upstreamProject": "powershot-threejs",
+      "upstreamAuthor": "cl0nazepamm",
+      "upstreamPackageVersion": "0.9.0",
+      "upstreamCommit": "0f419f1b24b0170d9856180f96c0c080e11b295f",
+      "repositoryUrl": "https://github.com/cl0nazepamm/powershot-threejs",
+      "sourceUrl": "https://github.com/cl0nazepamm/powershot-threejs/blob/0f419f1b24b0170d9856180f96c0c080e11b295f/src/pipeline.js",
+      "sourceRawUrl": "https://raw.githubusercontent.com/cl0nazepamm/powershot-threejs/0f419f1b24b0170d9856180f96c0c080e11b295f/src/pipeline.js",
+      "upstreamLicenseUrl": "https://github.com/cl0nazepamm/powershot-threejs/blob/0f419f1b24b0170d9856180f96c0c080e11b295f/LICENSE",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2026 cl0nazepamm",
+      "licenseFile": "licenses/powershot-threejs-MIT.txt",
+      "adaptation": "Port of the stAnalogVhs magnetic-tape stage and its bounded hash and RGB/YCbCr helpers from Three.js TSL into the existing WebGL GLSL ShaderPass. The PowerShot package, renderer, demo, camera ISP, Bayer pipeline, JPEG stage, film pipeline and WebGPU adapters are not included.",
+      "adaptedAlgorithms": [
+        "RGB to YCbCr and inverse conversion",
+        "Seven-tap horizontal luma low-pass with center-preserving preemphasis and weak ringing",
+        "Horizontal chroma bandwidth reduction with asymmetric chroma delay",
+        "Four-line correlated time-base error with smooth temporal interpolation and quarter-pixel timing steps",
+        "Bottom-region magnetic head-switch disturbance and phase noise",
+        "Sparse field-row and finite-segment dropouts with localized chroma loss",
+        "Bounded floating-point temporal hashes"
+      ],
+      "localChanges": [
+        "Nine horizontal texture samples for the full tape stage, reusing broad samples for the weak projection glow",
+        "Pixel offsets use a virtual 360-line signal grid independent of CSS pixels and device pixel ratio",
+        "Converted upstream top-down tape coordinates for a bottom-up WebGL fullscreen quad",
+        "Narrowed head-switch disturbance to approximately the bottom eight percent of the picture",
+        "Reduced continuous CRT grille, scan contrast and phosphor ghosts so magnetic-tape damage leads the look",
+        "Protected undamaged true blacks and retained a clean central luma core for projected Chinese type",
+        "Preserved pause freezing, zero-intensity bypass, reduced-motion handling and the existing analog API"
+      ]
+    }
+  ]
+}

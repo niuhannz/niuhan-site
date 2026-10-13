@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <base href="/abtest/">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#030404"><meta name="description" content="静默测试：废旧房间里的 CRT 电视心理恐怖体验。18 题与 8 张原创模糊图像，红黄按钮、弧面显像管与不稳定的 VHS 信号。">
+  <title>静默测试 · 旧电视 — Signal Room</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body data-phase="intro">
+  <main aria-label="静默测试，三维旧电视测试室"><canvas id="view" tabindex="0" aria-label="看 CRT 电视里的画面，点击红黄实体按钮答题，拖动画面环顾"></canvas></main>
+  <button id="settings-open" class="pause-control" aria-label="暂停和设置">Ⅱ <span>暂停 / Esc</span></button>
+  <button id="fullscreen-toggle" class="fullscreen-control" type="button" aria-label="进入全屏" title="进入全屏"><span class="fullscreen-icon" aria-hidden="true">⛶</span><span class="fullscreen-label">全屏</span></button>
+  <div id="live-note" role="status" aria-live="polite"></div>
+  <section id="intro" class="entry" aria-label="开始测试">
+    <button id="start" class="entry-button" disabled>开始测试 <span>ENTER</span></button>
+    <p id="loading">电视正在接收信号…</p>
+  </section>
+  <section id="pause" class="modal" hidden aria-labelledby="pause-title">
+    <div class="panel"><p class="eyebrow">SIGNAL SUSPENDED</p><h1 id="pause-title">信号已暂停。</h1>
+      <p class="subtitle">房间会等你回来。</p>
+      <label>VHS / CRT 信号 <output id="grain-value">85%</output><input id="grain" type="range" min="0" max="100" value="85"></label>
+      <label>音量 <output id="volume-value">65%</output><input id="volume" type="range" min="0" max="100" value="65"></label>
+      <label class="check"><input id="reduced" type="checkbox">减少闪烁与画面漂移</label>
+      <label class="check"><input id="mute" type="checkbox">静音</label>
+      <button id="resume" class="panel-button">继续测试 <span>ESC</span></button>
+      <button id="restart" class="secondary">回到开始 <span>R</span></button>
+      <p class="instructions">点击实体按钮，或 Q / E 答题<br>拖动、方向键 / WASD 环顾 · 空格看左侧<br>F 回到电视画面<br>注视左侧轮廓，可以让它停下。</p>
+    </div>
+  </section>
+  <section id="ending" class="entry" hidden aria-label="测试结束"><p id="end-description"></p><button id="again" class="entry-button">再进行一次 <span>ENTER</span></button></section>
+  <nav id="touch-controls" class="touch-controls" hidden aria-label="触屏控制"><button id="touch-yes">是 <span>Q</span></button><button id="look-left">环顾左侧</button><button id="look-tv">电视</button><button id="touch-no">否 <span>E</span></button></nav>
+  <noscript>此体验需要 JavaScript 和支持 WebGL 的浏览器。</noscript>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
